@@ -12,7 +12,7 @@
 A *living* keyboard that humorously evaluates your attempt to type Malayalam poetry in Manglish — so you grow to type ever faster these classic poems in a form no one will ever read.  At least you had fun, right?
 
 ### The Grand Problem
-There is a tangible absence of a program, that teaches someone to type faster Manglish poetry, in the space-time fabric.  Don't you feel it too?  I do.
+I feel a tangible absence of a program, that teaches someone to type faster Manglish poetry, in the space-time fabric.  Don't you feel it too?
 
 ### The Grand Solution
 This abomination.
