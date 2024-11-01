@@ -1,3 +1,4 @@
+from nava import play, stop
 from sshkeyboard import listen_keyboard, stop_listening
 from colorama import *
 from time import time
@@ -39,6 +40,8 @@ class Checker:
         self.index -= 1 if self.index > 0 else 0
 
     def __update__(self) -> None:
+        '''Updates WPM and accuracy.'''
+
         total_entries = self.correct_entries + self.incorrect_entries
         if len(self.intervals) > 10:
             minutes = (self.intervals[-1] - self.intervals[0]) / 60
@@ -84,13 +87,15 @@ def on_release(key):
     pass
 
 # Here follows the start of execution.
-def main():
+def main() -> None:
+    print(Fore.MAGENTA + "NAVA MANGLISH ACHEZHUTHU PARISHEELANA SHALA" + Fore.RESET)
     try:
         with open(content_file) as f:
             txt = f.read()
             txt = "\n\t" + txt.replace("\n", "\n\t")
             print(txt, flush=True)
 
+        input(Style.DIM + "(Press Enter)" + Style.RESET_ALL)
         listen_keyboard(
                 on_press=on_press,
                 on_release=on_release,
