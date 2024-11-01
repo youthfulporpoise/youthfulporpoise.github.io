@@ -15,7 +15,7 @@
             let pyodide = await loadPyodide();
             await pyodide.loadPackage("micropip");
             const micropip = pyodide.pyimport("micropip");
-            await micropip.install("nava");
+            await micropip.install("https://files.pythonhosted.org/packages/5b/57/f9c64bcfe13b32ee326a58ea31911e6db453bb1e279d212e528279d0270e/nava-0.7-py3-none-any.whl");
         } main();
     </script>
     </head>
