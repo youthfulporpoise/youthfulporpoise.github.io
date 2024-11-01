@@ -1,1 +1,1 @@
-packages = ["nava", "colorama", "sshkeyboard", "fcntl"]
+packages = ["nava", "colorama", "sshkeyboard", "pycopy-fcntl"]
