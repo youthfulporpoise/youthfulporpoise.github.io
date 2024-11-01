@@ -9,6 +9,12 @@ class Checker:
     content_file = ""
     content = ""
     index = 0
+    key_repr = {
+        "space": " ",
+        "backspace": "\b",
+        "tab": "\t",
+        "enter": "\n"
+    }
 
     def __init__(self, content_file="content.txt"):
         self.content_file = content_file
@@ -25,6 +31,7 @@ class Checker:
 
     def check(self, c: str) -> str:
         '''Check the if input character is correct, else rubricate and mock.'''
+        c = self.key_repr.get(c, c)
         if c == '\b':
             self.__prev__()
             return "\b \b"
@@ -34,20 +41,13 @@ class Checker:
             return Fore.RED + c + Fore.RESET
 
 
-key_repr = {
-    "space": " ",
-    "backspace": "\b",
-    "tab": "\t",
-    "enter": "\n"
-}
 
 # Press and release event actions.
 content_file = "content.txt"
 checker = Checker(content_file)
 def on_press(key):
-    k = key_repr.get(key, key)
-    k = checker.check(k)
-    print(k, end='', flush=True)
+    key = checker.check(key)
+    print(key, end='', flush=True)
 
 def on_release(key):
     pass
@@ -56,7 +56,10 @@ def on_release(key):
 def main():
     try:
         with open(content_file) as f:
-            print(f.read() + "\n", flush=True)
+            txt = f.read()
+            txt = "\n\t" + txt.replace("\n", "\n\t")
+            print(txt, flush=True)
+
         listen_keyboard(
                 on_press=on_press,
                 on_release=on_release,
