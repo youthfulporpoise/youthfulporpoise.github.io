@@ -1,10 +1,9 @@
 import asyncio
 import micropip
 
-async def install_nava():
+def install_nava():
     await micropip.install("nava")
-
-await asyncio.ensure_future(install_nava())
+install_nava()
 
 from nava import play, stop
 from sshkeyboard import listen_keyboard, stop_listening
