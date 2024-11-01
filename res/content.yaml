@@ -1,0 +1,46 @@
+simple:
+  - work: "Aanayum Eechayum"
+    author: "Kunjunni Maash"
+    content: |      
+      aa varunnathoraana
+      ee varunnathoreecha
+      aanayumeechayumanganeyangane-
+      yaduthaduthu varunnu
+      aanakkundo pedi
+      eechakkundo pedi
+  - work: "Pallu"
+    author: "A. Ayyappan"
+    content: |
+      ambu eth nimishavum
+      muthukil tharakkaam
+      praananum kond oodukayaanu
+      vedante koora kazhinj raanthanal
+  - work: "Alayothungiya"
+    author: "Madhavikkutty"
+    content: |
+      alayothungiya kadalkkarayil
+      sandhyaa paravakal maranja velayil
+      kanath kazhinja iruttil ekanaay
+      angu nilkkumbol...
+      yugathil ekasaakshiyaay
+
+moderate:
+  - work: "Vidyalayam"
+    author: "Olappamanna"
+    content: |
+      njanoru vidyarthiyaal
+      nen paadameejeevitham;
+      noonamen, gununaadhara-
+      njaathareetho divyar.
+      thingalum thaarangalum
+      thoovelli kathir chinnum
+      thungamaam vaanil chootti-
+      laanente vidyalayam!
+     
+hard:
+  - work: "Lakshmana Santhwanam"
+    content: |
+      bhogangalellam kshanaprabhaachanjalam
+      vegena nashttamaamaayussumorkka nee.
+      vahnisanthapthalohasaambubindhuna
+      sannidam marthyajanmam kshanabhanguram
