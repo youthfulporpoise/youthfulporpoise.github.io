@@ -10,16 +10,9 @@
         <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
         -->
         <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-        <script type="text/javascript">
-        async function main() {
-            let pyodide = await loadPyodide();
-            await pyodide.loadPackage("micropip");
-            const micropip = pyodide.pyimport("micropip");
-            await micropip.install("https://files.pythonhosted.org/packages/5b/57/f9c64bcfe13b32ee326a58ea31911e6db453bb1e279d212e528279d0270e/nava-0.7-py3-none-any.whl");
-        } main();
     </script>
     </head>
     <body>
-        <script type="py" src="main.py" config="pyscript.toml" terminal></script>
+        <script type="py" src="main_web.py" config="pyscript.toml" terminal></script>
     </body>
 </html>
