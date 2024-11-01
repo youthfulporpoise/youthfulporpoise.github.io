@@ -1,6 +1,4 @@
-<img width="1280" alt="readme-banner" src="https://github.com/user-attachments/assets/35332e92-44cb-425b-9dff-27bcf1023c6c">
-
-# ACHEZHUTH SHALA 🎯
+# ACHEZHUTH SHALA
 
 
 ## Basic Details
@@ -23,24 +21,22 @@ An interactive keyboard that comments on our Manglish typing skills.
 
 ## Technical Details
 ### Technologies/Components Used
-For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+Languages used:
+    - Python 3.12
 
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+Packages used:
+    - `sshkeyboard`
+    - `colorama`
+    - `nava`
+    - `yaml`
 
-### Implementation
-For Software:
 # Installation
 [commands]
 
 # Run
-[commands]
+~~~
+python main.py
+~~~
 
 ### Project Documentation
 For Software:
