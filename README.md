@@ -1,37 +1,37 @@
-# ACHEZHUTH SHALA
-
+# Achezhuth Shaala
 
 ## Basic Details
-### Team Name: SINGULARITY
-
+**Team Name**: *Singularity* 
 
 ### Team Members
-- Team Lead: Hathim Ali K.H. - GEC Idukki
-- Member 2: Dalia Susan Thomas - GEC Idukki
-- Member 3: Nidhin Gireesh - GEC Idukki
+- Hathim Ali K. H., GECI
+- Dalia Susan Thomas, GECI
+- Nidhin Gireesh, GECI
 
 ### Project Description
-A "living" keyboard that humorously evaluates your attempt to type prestigious Malayalam poetry in Manglish, offering feedback that’s both helpful and entertaining. Who doesn't like a bit of roasting?😉
+A *living* keyboard that humorously evaluates your attempt to type Malayalam poetry in Manglish — so you grow to type ever faster these classic poems in a form no one will ever read.  At least you had fun, right?
 
-### The Problem (that doesn't exist)
-The boredom that creeps while in typing Malayalam poetry in Manglish.
+### The Grand Problem
+There is a tangible absence of a program, that teaches someone to type faster Manglish poetry, in the space-time fabric.  Don't you feel it too?  I do.
 
-### The Solution (that nobody asked for)
-An interactive keyboard that comments on our Manglish typing skills.
+### The Grand Solution
+This abomination.
 
 ## Technical Details
-### Technologies/Components Used
-Languages used:
-    - Python 3.12
+Languages: Python 3.12
 
 Packages used:
-    - `sshkeyboard`
-    - `colorama`
-    - `nava`
-    - `yaml`
+- `sshkeyboard` to read keystrokes
+- `colorama` for a better interface to manage terminal colors
+- `nava` to play audio
+- `yaml` to parse typing test contents
 
 # Installation
-[commands]
+There are no installations.  Clone this repository.  Install the dependencies.
+~~~
+python3 -m pip install nava sshkeyboard colorama
+~~~
+`yaml` is shipped with the official Python installation.
 
 # Run
 ~~~
@@ -39,7 +39,6 @@ python main.py
 ~~~
 
 ### Project Documentation
-For Software:
 
 # Screenshots (Add at least 3)
 ![Screenshot1](Add screenshot 1 here with proper name)
@@ -51,38 +50,7 @@ For Software:
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
 
-# Diagrams
-![Workflow](Add your workflow/architecture diagram here)
-*Add caption explaining your workflow*
-
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
-# Build Photos
-![Components](Add photo of your components here)
-*List out all components shown*
-
-![Build](Add photos of build process here)
-*Explain the build steps*
-
-![Final](Add photo of final product here)
-*Explain the final build*
-
-### Project Demo
-# Video
-[Add your demo video link here]
-*Explain what the video demonstrates*
-
-# Additional Demos
-[Add any extra demo materials/links]
-
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Dalia Susan Thomas: transliteration of Malayalam into Manglish; editing of audio cuts;
+- Nidhin Gireesh: curation of poems; curation of audio cuts;
+- Hathim Ali: program implementation
