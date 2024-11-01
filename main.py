@@ -4,12 +4,12 @@ from colorama import *
 from time import time
 from os import listdir
 from random import choice
+from yaml import safe_load
 
 class Checker:
     '''This class loads the content to be transcribed and checks the inputs of
     the user.'''
 
-    content_file = ""
     content = ""
     content_length = 0
     index = 0
@@ -28,18 +28,12 @@ class Checker:
     correct_entries = 0
     accuracy = 0  # stores typing accuracy in percentage
 
-    audio_dir = ""
     flavour = ""
     audios = {}
 
-    def __init__(self, audio_dir: str,
-                 content_file="content.txt", flavour="light"):
-        self.content_file = content_file
-        with open(content_file, 'r') as f:
-            self.content = f.read()
-            self.content_length = len(self.content)
+    def __init__(self, content, flavour="light"):
+        self.content = content
 
-        self.audio_dir = audio_dir
         self.flavour = flavour
         self.audios = {
                 "bad": listdir(f"res/{self.flavour}/error/s1"),
@@ -111,8 +105,19 @@ class Checker:
 
 
 # Press and release event actions.
-content_file = "content.txt"
-checker = Checker(content_file)
+content_file = "res/content.yaml"
+print(Fore.MAGENTA + "MANGLISH ACHEZHUTHU PARISHEELANA SHALA" + Fore.RESET + "\n")
+with open(content_file) as f:
+    content = safe_load(f.read())
+    content = content['simple']
+    content = choice(content)
+    print(f"{content['work']} by {content['author']}")
+    txt = content['content']
+    txt = "\n\t" + txt.replace("\n", "\n\t")
+    print(txt)
+
+checker = Checker(content['content'])
+
 def on_press(key):
     is_finished, key = checker.check(key)
     print(key, end='', flush=True)
@@ -124,6 +129,7 @@ def on_press(key):
 
         if wpm >= 50 and accuracy > 90:
             play(f"res/light/appreciation/{choice(listdir('res/light/appreciation'))}")
+        print(Fore.GREEN + "Kollaam!" + Fore.RESET)
         
         stop_listening()
 
@@ -133,28 +139,15 @@ def on_release(key):
 
 # Here follows the start of execution.
 def main() -> None:
-    print(Fore.MAGENTA + "NAVA MANGLISH ACHEZHUTHU PARISHEELANA SHALA" + Fore.RESET)
-    # play(f"res/bgm/{choice(listdir('res/bgm'))}", async_mode=True)
-    # play("res/bgm/tanpura.mp3", async_mode=True)
     try:
-        with open(content_file) as f:
-            txt = f.read()
-            txt = "\n\t" + txt.replace("\n", "\n\t")
-            print(txt, flush=True)
-
-        input(Style.DIM + "(Press Enter)" + Style.RESET_ALL)
         listen_keyboard(
                 on_press=on_press,
                 on_release=on_release,
                 delay_second_char=0.1)
-
     except KeyboardInterrupt:
-        play("res/light/quit/ramankutty.mp3")
+        if checker.index > 10:
+            play("res/light/quit/ramankutty.mp3")
         exit(0);
-
-    except ValueError:
-        print("Quitting ...")
-        exit(0)
 
 
 if __name__ == "__main__":
