@@ -50,14 +50,7 @@ python main.py
 # Project Documentation
 
 ## Screenshots
-![Screenshot1](Add screenshot 1 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot2](Add screenshot 2 here with proper name)
-*Add caption explaining what this shows*
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+*Screenshots will be coming soon.*
 
 ## Team Contributions
 - Dalia Susan Thomas: transliteration of Malayalam into Manglish; editing of
