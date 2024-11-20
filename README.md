@@ -26,7 +26,7 @@ Languages: Python 3.12
 Packages used:
 - `sshkeyboard` to read keystrokes
 - `colorama` for a better interface to manage terminal colors
-- `nava` to play audio
+- `pygame.mixer` for playing audio samples
 - `yaml` to parse typing test contents
 
 The aim is to create a typing speed tester that throws snarky remarks when the
@@ -38,7 +38,7 @@ supporting standard python modules such as `fcntl`.
 # Installation
 There are no installations.  Clone this repository.  Install the dependencies.
 ~~~
-python3 -m pip install nava sshkeyboard colorama
+python3 -m pip install pygame sshkeyboard colorama
 ~~~
 `yaml` is shipped with the official Python installation.
 
