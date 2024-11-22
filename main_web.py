@@ -1,8 +1,4 @@
-import asyncio
-import micropip
-await micropip.install("nava")
-
-from nava import play, stop
+from pygame import mixer
 from sshkeyboard import listen_keyboard, stop_listening
 from colorama import *
 from time import time
@@ -14,42 +10,48 @@ class Checker:
     '''This class loads the content to be transcribed and checks the inputs of
     the user.'''
 
-    content = ""
-    content_length = 0
-    index = 0
-    key_repr = {
+    content: str = ""
+    content_length: int = 0
+    index: int = 0
+    key_repr: {str, str} = {
         "space": " ",
         "backspace": "\b",
         "tab": "\t",
         "enter": "\n"
     }
 
-    intervals = []  # stores time intervals between key presses
-    wpm = 0  # stores WPM
+    intervals: [int] = []  # stores time intervals between key presses
+    wpm: float = 0  # stores WPM
 
-    incorrect_seq = 0  # counts the number mistakes the user makes sequentially
-    incorrect_entries = 0
-    correct_entries = 0
-    accuracy = 0  # stores typing accuracy in percentage
+    incorrect_seq: int = 0  # counts the number mistakes the user makes sequentially
+    incorrect_entries: int = 0
+    correct_entries: int = 0
+    accuracy: int = 0  # stores typing accuracy in percentage
 
-    flavour = ""
-    audios = {}
+    flavour: str
+    audios: {str, str}
+    sound: str
 
     def __init__(self, content, flavour="light"):
         self.content = content
+        self.content_length = len(content)
 
         self.flavour = flavour
         self.audios = {
-                "bad": listdir(f"res/{self.flavour}/error/s1"),
-                "serious": listdir(f"res/{self.flavour}/error/s2"),
-                "grave": listdir(f"res/{self.flavour}/error/s3"),
-                "appreciate": listdir(f"res/{self.flavour}/appreciation")
-                # "insult": listdir(f"res/{self.flavour}/insult")
+                -2: f"res/{self.flavour}/speed",
+                -1: f"res/{self.flavour}/appreciation",
+                 0: f"res/{self.flavour}/error/s1",
+                 1: f"res/{self.flavour}/error/s2",
+                 2: f"res/{self.flavour}/error/s3"
         }
 
+        mixer.init()
+
     def __next__(self) -> str:
-        s = self.content[self.index]
-        self.index += 1
+        if (self.index < self.content_length):
+            s = self.content[self.index]
+            self.index += 1
+        else: pass
         return s
 
     def __prev__(self) -> None:
@@ -64,24 +66,13 @@ class Checker:
             self.wpm = (total_entries / 5) / minutes
             self.accuracy = self.correct_entries / total_entries
 
-    def __comment_on_error__(self):
-        if self.incorrect_seq == 1:
-            # print(f"res/{self.flavour}/error/s1/{choice(self.audios['bad'])}")
-            self.sound_id = play(f"res/{self.flavour}/error/s1/{choice(self.audios['bad'])}",
-                 async_mode=True)
-        elif 1 < self.incorrect_seq < 3: 
-            # stop(self.sound_id)
-            self.sound_id = play(f"res/{self.flavour}/error/s2/{choice(self.audios['serious'])}",
-                 async_mode=True)
-        elif 3 < self.incorrect_seq < 5:
-            # stop(self.sound_id)
-            self.sound_id = play(f"res/{self.flavour}/error/s3/{choice(self.audios['grave'])}",
-                 async_mode=True)
-        else:
-            pass
+    def __comment_on_error__(self) -> None:
+        if self.incorrect_seq == 1: self.__play_sound__(0)
+        elif 1 < self.incorrect_seq < 3: self.__play_sound__(1)
+        elif 3 < self.incorrect_seq < 5: self.__play_sound__(2)
+        else: pass
 
-        if self.wpm > 100:
-            play(f"res/{self.flavour}/speed/{choice(listdir('res/light/speed'))}")
+        if self.wpm > 100: self.__play_sound__(-2)
 
     def check(self, c: str) -> (bool, str):
         '''Check the if input character is correct, else rubricate and mock.'''
@@ -107,6 +98,15 @@ class Checker:
         self.__update__()
         return (round(self.wpm), round(self.accuracy * 100))
 
+    def __play_sound__(self, gravity: int) -> str:
+        bucket: str = self.audios[gravity]
+        audio: str = bucket + '/' + choice(listdir(bucket))
+
+        mixer.stop()
+        self.sound = mixer.Sound(audio)
+        self.sound.play()
+
+
 
 # Press and release event actions.
 content_file = "res/content.yaml"
@@ -120,14 +120,14 @@ with open(content_file) as f:
     txt = "\n\t" + txt.replace("\n", "\n\t")
     print(txt)
 
-checker = Checker(content['content'])
+checker = Checker(content['content'].strip())
 
 def on_press(key):
     is_finished, key = checker.check(key)
     print(key, end='', flush=True)
 
     if is_finished:
-        print(Fore.BLUE + "\nTest Complete" + Fore.RESET)
+        print(Fore.BLUE + "\n\nTest Complete" + Fore.RESET)
         wpm, accuracy = checker.stats()
         print(f"WPM: {wpm}\nAccuracy: {accuracy}%")
 
@@ -150,7 +150,7 @@ def main() -> None:
                 delay_second_char=0.1)
     except KeyboardInterrupt:
         if checker.index > 10:
-            play("res/light/quit/ramankutty.mp3")
+            mixer.Sound("res/light/quit/ramankutty.mp3").play()
         exit(0);
 
 

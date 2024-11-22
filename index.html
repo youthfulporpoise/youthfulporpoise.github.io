@@ -1,18 +1,15 @@
 <!doctype html>
 <html>
+    <!-- Recommended meta tags -->
     <head>
-        <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <!-- PyScript CSS -->
-        <!-- This script tag bootstraps PyScript -->
-        <!--
-        <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
-        -->
-        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-    </script>
+        <script type="module" src="https://pyscript.net/releases/2024.10.2/core.js"></script>
+        <py-config>
+            packages = ["colorama", "pyyaml", "sshkeyboard", "pygame-ce"]
+        </py-config>
     </head>
     <body>
-        <script type="py" src="main_web.py" config="pyscript.toml" terminal></script>
+        <script type="py" src="main_web.py" terminal="true"></script>
     </body>
 </html>
