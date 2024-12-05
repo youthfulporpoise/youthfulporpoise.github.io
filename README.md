@@ -47,11 +47,16 @@ python3 -m pip install pygame sshkeyboard colorama
 python main.py
 ~~~
 
+# There’s One Thing
+Our program will reluctantly appreciate *you*, if you can achieve at least 50
+WPM with at least 90% accuracy.  If you want to take on the challenge, more
+power to you!
+
 # Project Documentation
 
 ## Screenshots
 *Screenshots will be coming soon.*
-
+you
 ## Team Contributions
 - Dalia Susan Thomas: transliteration of Malayalam into Manglish; editing of
   audio cuts;

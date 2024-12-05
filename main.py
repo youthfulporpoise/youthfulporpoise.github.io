@@ -1,11 +1,15 @@
 # from nava import play, stop, NavaBaseError
-from pygame import mixer
 from sshkeyboard import listen_keyboard, stop_listening
 from colorama import *
-from time import time
-from os import listdir
+from time import time, sleep
+from os import listdir, environ
 from random import choice
 from yaml import safe_load
+
+# We need hide the welcome from Pygame.  To that end, we need to set this
+# environment variable.
+environ["PYGAME_HIDE_SUPPORT_PROMPT"] = "hide"
+from pygame import mixer
 
 class Checker:
     '''This class loads the content to be transcribed and checks the inputs of
@@ -52,8 +56,8 @@ class Checker:
         if (self.index < self.content_length):
             s = self.content[self.index]
             self.index += 1
+            return s
         else: pass
-        return s
 
     def __prev__(self) -> None:
         self.index -= 1 if self.index > 0 else 0
@@ -133,8 +137,10 @@ def on_press(key):
         print(f"WPM: {wpm}\nAccuracy: {accuracy}%")
 
         if wpm >= 50 and accuracy > 90:
-            play(f"res/light/appreciation/{choice(listdir('res/light/appreciation'))}")
+            mixer.Sound(f"res/light/appreciation/{choice(listdir('res/light/appreciation'))}").play()
             print(Fore.GREEN + "Kollaam!" + Fore.RESET)
+            while mixer.get_busy() == 1:
+                sleep(1)
         
         stop_listening()
 
@@ -144,6 +150,13 @@ def on_release(key):
 
 # Here follows the start of execution.
 def main() -> None:
+    # Load and play a background music.  We are using `tanpura.mp3` for the time
+    # being.
+    mixer.music.load("res/bgm/tanpura.mp3")
+    mixer.music.play(-1)
+    # This will loop the music infinitely.
+
+    # Define the event functions and dispatch.
     try:
         listen_keyboard(
                 on_press=on_press,
@@ -152,6 +165,7 @@ def main() -> None:
     except KeyboardInterrupt:
         if checker.index > 10:
             mixer.Sound("res/light/quit/ramankutty.mp3").play()
+            mixer.music.stop()
         exit(0);
 
 
