@@ -56,7 +56,7 @@ power to you!
 
 ## Screenshots
 *Screenshots will be coming soon.*
-you
+
 ## Team Contributions
 - Dalia Susan Thomas: transliteration of Malayalam into Manglish; editing of
   audio cuts;
