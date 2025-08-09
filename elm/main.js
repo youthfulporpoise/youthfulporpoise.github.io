@@ -5167,19 +5167,174 @@ var $author$project$Main$World = F2(
 	function (map, time) {
 		return {map: map, time: time};
 	});
-var $author$project$Main$Place = F3(
-	function (name, current, objects) {
-		return {current: current, name: name, objects: objects};
+var $elm$html$Html$br = _VirtualDom_node('br');
+var $elm$html$Html$b = _VirtualDom_node('b');
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $elm$html$Html$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$string(string));
 	});
-var $author$project$Main$place00 = A3($author$project$Main$Place, 'South-East Corner', false, _List_Nil);
-var $author$project$Main$place01 = A3($author$project$Main$Place, 'Thekkini', false, _List_Nil);
-var $author$project$Main$place02 = A3($author$project$Main$Place, 'South-West Corner', false, _List_Nil);
-var $author$project$Main$place10 = A3($author$project$Main$Place, 'Kizhakkini', false, _List_Nil);
-var $author$project$Main$place11 = A3($author$project$Main$Place, 'Nadumuttam', false, _List_Nil);
-var $author$project$Main$place12 = A3($author$project$Main$Place, 'Padinjarini', false, _List_Nil);
-var $author$project$Main$place20 = A3($author$project$Main$Place, 'North-East Corner', false, _List_Nil);
-var $author$project$Main$place21 = A3($author$project$Main$Place, 'Vadakkini', false, _List_Nil);
-var $author$project$Main$place22 = A3($author$project$Main$Place, 'North-West Corner', false, _List_Nil);
+var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$core$List$append = F2(
+	function (xs, ys) {
+		if (!ys.b) {
+			return xs;
+		} else {
+			return A3($elm$core$List$foldr, $elm$core$List$cons, ys, xs);
+		}
+	});
+var $elm$core$List$concat = function (lists) {
+	return A3($elm$core$List$foldr, $elm$core$List$append, _List_Nil, lists);
+};
+var $elm$core$List$filter = F2(
+	function (isGood, list) {
+		return A3(
+			$elm$core$List$foldr,
+			F2(
+				function (x, xs) {
+					return isGood(x) ? A2($elm$core$List$cons, x, xs) : xs;
+				}),
+			_List_Nil,
+			list);
+	});
+var $author$project$Main$currentPlace = function (theMap) {
+	var getPlace = function (xs) {
+		return A2(
+			$elm$core$List$filter,
+			function (x) {
+				return x.current;
+			},
+			xs);
+	};
+	return $elm$core$List$concat(
+		A2($elm$core$List$map, getPlace, theMap));
+};
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $author$project$Main$Place = F5(
+	function (position, name, current, description, objects) {
+		return {current: current, description: description, name: name, objects: objects, position: position};
+	});
+var $author$project$Main$emptyPlace = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(0, 0),
+	'',
+	false,
+	'',
+	_List_Nil);
+var $elm$core$List$head = function (list) {
+	if (list.b) {
+		var x = list.a;
+		var xs = list.b;
+		return $elm$core$Maybe$Just(x);
+	} else {
+		return $elm$core$Maybe$Nothing;
+	}
+};
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $elm$core$Maybe$withDefault = F2(
+	function (_default, maybe) {
+		if (maybe.$ === 'Just') {
+			var value = maybe.a;
+			return value;
+		} else {
+			return _default;
+		}
+	});
+var $author$project$Main$describeCurrentPlace = function (theMap) {
+	var place = A2(
+		$elm$core$Maybe$withDefault,
+		$author$project$Main$emptyPlace,
+		$elm$core$List$head(
+			$author$project$Main$currentPlace(theMap)));
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('place-desc')
+			]),
+		_List_fromArray(
+			[
+				A2(
+				$elm$html$Html$b,
+				_List_Nil,
+				_List_fromArray(
+					[
+						$elm$html$Html$text(place.name)
+					])),
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
+				$elm$html$Html$text(place.description)
+			]));
+};
+var $elm$core$Basics$negate = function (n) {
+	return -n;
+};
+var $author$project$Main$place00 = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(-1, 1),
+	'South-East Corner',
+	false,
+	'',
+	_List_Nil);
+var $author$project$Main$place01 = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(0, 1),
+	'Thekkini',
+	false,
+	'\n    This is a mysterious chamber and retains an eerie distrubing ambience.  The\n    rumours are long of the histories.  It lies in dark, sleeping like a beast.\n    ',
+	_List_Nil);
+var $author$project$Main$place02 = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(1, 1),
+	'South-West Corner',
+	false,
+	'',
+	_List_Nil);
+var $author$project$Main$place10 = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(-1, 0),
+	'Kizhakkini',
+	false,
+	'',
+	_List_Nil);
+var $author$project$Main$place11 = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(0, 0),
+	'Nadumuttam',
+	true,
+	'\n    The nadumuttam is a place brimming in sunlight.  A pool congeals here during\n    the unabated rains of the monsoon.  A tulsi plant stands lonely in the\n    centre.\n    ',
+	_List_Nil);
+var $author$project$Main$place12 = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(0, 1),
+	'Padinjarini',
+	false,
+	'',
+	_List_Nil);
+var $author$project$Main$place20 = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(-1, -1),
+	'North-East Corner',
+	false,
+	'',
+	_List_Nil);
+var $author$project$Main$place21 = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(0, -1),
+	'Vadakkini',
+	false,
+	'',
+	_List_Nil);
+var $author$project$Main$place22 = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(1, -1),
+	'North-West Corner',
+	false,
+	'',
+	_List_Nil);
 var $author$project$Main$worldMap = _List_fromArray(
 	[
 		_List_fromArray(
@@ -5189,9 +5344,18 @@ var $author$project$Main$worldMap = _List_fromArray(
 		_List_fromArray(
 		[$author$project$Main$place20, $author$project$Main$place21, $author$project$Main$place22])
 	]);
+var $author$project$Main$initDisplay = A2(
+	$elm$html$Html$div,
+	_List_Nil,
+	_List_fromArray(
+		[
+			$elm$html$Html$text('\n                    You are in a nalukettu.  One that had been built perhaps\n                    300–400 years ago.  You have happened upon this ancient\n                    edifice in a fit of desperate escape.  Who might have\n                    built such grand a house for themselves you do not\n                    know; you are yet compelled to enter.\n                    '),
+			A2($elm$html$Html$br, _List_Nil, _List_Nil),
+			$author$project$Main$describeCurrentPlace($author$project$Main$worldMap)
+		]));
 var $author$project$Main$initialModel = A2(
 	$author$project$Main$Model,
-	'\n                   Welcome to Pappdam World.\n                   You are in a nalukettu.  One that had been built perhaps\n                   300-400 years ago.\n                   ',
+	$author$project$Main$initDisplay,
 	A2($author$project$Main$World, $author$project$Main$worldMap, 0));
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
@@ -5204,18 +5368,46 @@ var $author$project$Main$update = F2(
 	function (msg, model) {
 		return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
 	});
-var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$json$Json$Encode$string = _Json_wrap;
-var $elm$html$Html$Attributes$stringProperty = F2(
-	function (key, string) {
-		return A2(
-			_VirtualDom_property,
-			key,
-			$elm$json$Json$Encode$string(string));
-	});
+var $author$project$Main$Input = function (a) {
+	return {$: 'Input', a: a};
+};
 var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $elm$html$Html$input = _VirtualDom_node('input');
+var $elm$html$Html$label = _VirtualDom_node('label');
+var $elm$html$Html$Events$alwaysStop = function (x) {
+	return _Utils_Tuple2(x, true);
+};
+var $elm$virtual_dom$VirtualDom$MayStopPropagation = function (a) {
+	return {$: 'MayStopPropagation', a: a};
+};
+var $elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
+var $elm$html$Html$Events$stopPropagationOn = F2(
+	function (event, decoder) {
+		return A2(
+			$elm$virtual_dom$VirtualDom$on,
+			event,
+			$elm$virtual_dom$VirtualDom$MayStopPropagation(decoder));
+	});
+var $elm$json$Json$Decode$field = _Json_decodeField;
+var $elm$json$Json$Decode$at = F2(
+	function (fields, decoder) {
+		return A3($elm$core$List$foldr, $elm$json$Json$Decode$field, decoder, fields);
+	});
+var $elm$json$Json$Decode$string = _Json_decodeString;
+var $elm$html$Html$Events$targetValue = A2(
+	$elm$json$Json$Decode$at,
+	_List_fromArray(
+		['target', 'value']),
+	$elm$json$Json$Decode$string);
+var $elm$html$Html$Events$onInput = function (tagger) {
+	return A2(
+		$elm$html$Html$Events$stopPropagationOn,
+		'input',
+		A2(
+			$elm$json$Json$Decode$map,
+			$elm$html$Html$Events$alwaysStop,
+			A2($elm$json$Json$Decode$map, tagger, $elm$html$Html$Events$targetValue)));
+};
 var $author$project$Main$view = function (model) {
 	return A2(
 		$elm$html$Html$div,
@@ -5233,7 +5425,35 @@ var $author$project$Main$view = function (model) {
 					]),
 				_List_fromArray(
 					[
-						$elm$html$Html$text(model.display)
+						model.display,
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						A2(
+						$elm$html$Html$div,
+						_List_fromArray(
+							[
+								$elm$html$Html$Attributes$id('input-area')
+							]),
+						_List_fromArray(
+							[
+								A2(
+								$elm$html$Html$label,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$id('promp-text')
+									]),
+								_List_fromArray(
+									[
+										$elm$html$Html$text('>')
+									])),
+								A2(
+								$elm$html$Html$input,
+								_List_fromArray(
+									[
+										$elm$html$Html$Attributes$id('prompt'),
+										$elm$html$Html$Events$onInput($author$project$Main$Input)
+									]),
+								_List_Nil)
+							]))
 					]))
 			]));
 };
