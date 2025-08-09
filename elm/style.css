@@ -1,6 +1,6 @@
 html, body {
     marign:             auto;
-    background:         #282829;
+    background:         #181819;
 }
 
 #main {
@@ -15,7 +15,7 @@ html, body {
     padding:            1.5em;
     width:              50%;
     color:              #cccccc;
-    font-family:        "Times New Roman", serif;
+    font-family:        "Courier", serif;
     font-size:          14pt;
 }
 
