@@ -5168,16 +5168,10 @@ var $author$project$Main$World = F2(
 		return {map: map, time: time};
 	});
 var $elm$html$Html$br = _VirtualDom_node('br');
-var $elm$html$Html$b = _VirtualDom_node('b');
-var $elm$json$Json$Encode$string = _Json_wrap;
-var $elm$html$Html$Attributes$stringProperty = F2(
-	function (key, string) {
-		return A2(
-			_VirtualDom_property,
-			key,
-			$elm$json$Json$Encode$string(string));
+var $author$project$Main$Place = F5(
+	function (position, name, current, description, objects) {
+		return {current: current, description: description, name: name, objects: objects, position: position};
 	});
-var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
 var $elm$core$List$append = F2(
 	function (xs, ys) {
 		if (!ys.b) {
@@ -5189,6 +5183,13 @@ var $elm$core$List$append = F2(
 var $elm$core$List$concat = function (lists) {
 	return A3($elm$core$List$foldr, $elm$core$List$append, _List_Nil, lists);
 };
+var $author$project$Main$emptyPlace = A5(
+	$author$project$Main$Place,
+	_Utils_Tuple2(0, 0),
+	'',
+	false,
+	'',
+	_List_Nil);
 var $elm$core$List$filter = F2(
 	function (isGood, list) {
 		return A3(
@@ -5200,30 +5201,6 @@ var $elm$core$List$filter = F2(
 			_List_Nil,
 			list);
 	});
-var $author$project$Main$currentPlace = function (theMap) {
-	var getPlace = function (xs) {
-		return A2(
-			$elm$core$List$filter,
-			function (x) {
-				return x.current;
-			},
-			xs);
-	};
-	return $elm$core$List$concat(
-		A2($elm$core$List$map, getPlace, theMap));
-};
-var $elm$html$Html$div = _VirtualDom_node('div');
-var $author$project$Main$Place = F5(
-	function (position, name, current, description, objects) {
-		return {current: current, description: description, name: name, objects: objects, position: position};
-	});
-var $author$project$Main$emptyPlace = A5(
-	$author$project$Main$Place,
-	_Utils_Tuple2(0, 0),
-	'',
-	false,
-	'',
-	_List_Nil);
 var $elm$core$List$head = function (list) {
 	if (list.b) {
 		var x = list.a;
@@ -5233,8 +5210,6 @@ var $elm$core$List$head = function (list) {
 		return $elm$core$Maybe$Nothing;
 	}
 };
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
 var $elm$core$Maybe$withDefault = F2(
 	function (_default, maybe) {
 		if (maybe.$ === 'Just') {
@@ -5244,12 +5219,37 @@ var $elm$core$Maybe$withDefault = F2(
 			return _default;
 		}
 	});
-var $author$project$Main$describeCurrentPlace = function (theMap) {
+var $author$project$Main$currentPlace = function (theMap) {
+	var getPlace = function (xs) {
+		return A2(
+			$elm$core$List$filter,
+			function (x) {
+				return x.current;
+			},
+			xs);
+	};
 	var place = A2(
 		$elm$core$Maybe$withDefault,
 		$author$project$Main$emptyPlace,
 		$elm$core$List$head(
-			$author$project$Main$currentPlace(theMap)));
+			$elm$core$List$concat(
+				A2($elm$core$List$map, getPlace, theMap))));
+	return A5($author$project$Main$Place, place.position, place.name, place.current, place.description, place.objects);
+};
+var $elm$html$Html$b = _VirtualDom_node('b');
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $elm$html$Html$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$string(string));
+	});
+var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$Main$describePlace = function (place) {
 	return A2(
 		$elm$html$Html$div,
 		_List_fromArray(
@@ -5258,6 +5258,7 @@ var $author$project$Main$describeCurrentPlace = function (theMap) {
 			]),
 		_List_fromArray(
 			[
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
 				A2(
 				$elm$html$Html$b,
 				_List_Nil,
@@ -5277,63 +5278,81 @@ var $author$project$Main$place00 = A5(
 	_Utils_Tuple2(-1, 1),
 	'South-East Corner',
 	false,
-	'',
+	'Nothing interesting here.',
 	_List_Nil);
 var $author$project$Main$place01 = A5(
 	$author$project$Main$Place,
 	_Utils_Tuple2(0, 1),
 	'Thekkini',
 	false,
-	'\n    This is a mysterious chamber and retains an eerie distrubing ambience.  The\n    rumours are long of the histories.  It lies in dark, sleeping like a beast.\n    ',
+	'\n    You are in what seems to be the thekkini.  The rumours are long of an illam\n    right about where you are.  The insidious ambience of the hall draws you\n    into its madness, yet you stand there not entering.\n    ',
 	_List_Nil);
 var $author$project$Main$place02 = A5(
 	$author$project$Main$Place,
 	_Utils_Tuple2(1, 1),
 	'South-West Corner',
 	false,
-	'',
+	'Nothing interesting here.',
 	_List_Nil);
 var $author$project$Main$place10 = A5(
 	$author$project$Main$Place,
 	_Utils_Tuple2(-1, 0),
 	'Kizhakkini',
 	false,
-	'',
+	'Nothing interesting here.',
 	_List_Nil);
+var $author$project$Main$Look = {$: 'Look'};
+var $author$project$Main$Object = F3(
+	function (name, usage, properties) {
+		return {name: name, properties: properties, usage: usage};
+	});
+var $author$project$Main$Read = {$: 'Read'};
 var $author$project$Main$place11 = A5(
 	$author$project$Main$Place,
 	_Utils_Tuple2(0, 0),
 	'Nadumuttam',
 	true,
-	'\n    The nadumuttam is a place brimming in sunlight.  A pool congeals here during\n    the unabated rains of the monsoon.  A tulsi plant stands lonely in the\n    centre.\n    ',
-	_List_Nil);
+	'\n    The nadumuttam is a place brimming in sunlight.  A pool congeals here during\n    the unabated rains of the monsoon.  A tulsi plant (holy basil) stands lonely\n    in the centre.  There is something etched on the structure.\n    ',
+	_List_fromArray(
+		[
+			A3(
+			$author$project$Main$Object,
+			'inscription',
+			_List_fromArray(
+				[$author$project$Main$Look, $author$project$Main$Read]),
+			_List_fromArray(
+				[
+					_Utils_Tuple2($author$project$Main$Look, 'There is an inscription here in swash round flowing letters.'),
+					_Utils_Tuple2($author$project$Main$Read, 'It reads: Enter Night / Exit God.')
+				]))
+		]));
 var $author$project$Main$place12 = A5(
 	$author$project$Main$Place,
 	_Utils_Tuple2(0, 1),
 	'Padinjarini',
 	false,
-	'',
+	'Nothing interesting here.',
 	_List_Nil);
 var $author$project$Main$place20 = A5(
 	$author$project$Main$Place,
 	_Utils_Tuple2(-1, -1),
 	'North-East Corner',
 	false,
-	'',
+	'Nothing interesting here.',
 	_List_Nil);
 var $author$project$Main$place21 = A5(
 	$author$project$Main$Place,
 	_Utils_Tuple2(0, -1),
 	'Vadakkini',
 	false,
-	'',
+	'Nothing interesting here.',
 	_List_Nil);
 var $author$project$Main$place22 = A5(
 	$author$project$Main$Place,
 	_Utils_Tuple2(1, -1),
 	'North-West Corner',
 	false,
-	'',
+	'Nothing interesting here.',
 	_List_Nil);
 var $author$project$Main$worldMap = _List_fromArray(
 	[
@@ -5351,7 +5370,8 @@ var $author$project$Main$initDisplay = A2(
 		[
 			$elm$html$Html$text('\n                    You are in a nalukettu.  One that had been built perhaps\n                    300–400 years ago.  You have happened upon this ancient\n                    edifice in a fit of desperate escape.  Who might have\n                    built such grand a house for themselves you do not\n                    know; you are yet compelled to enter.\n                    '),
 			A2($elm$html$Html$br, _List_Nil, _List_Nil),
-			$author$project$Main$describeCurrentPlace($author$project$Main$worldMap)
+			$author$project$Main$describePlace(
+			$author$project$Main$currentPlace($author$project$Main$worldMap))
 		]));
 var $author$project$Main$initialModel = A2(
 	$author$project$Main$Model,
@@ -5364,9 +5384,84 @@ var $author$project$Main$init = function (_v0) {
 };
 var $elm$core$Platform$Sub$batch = _Platform_batch;
 var $elm$core$Platform$Sub$none = $elm$core$Platform$Sub$batch(_List_Nil);
+var $author$project$Main$MoveEast = {$: 'MoveEast'};
+var $author$project$Main$MoveNorth = {$: 'MoveNorth'};
+var $author$project$Main$MoveSouth = {$: 'MoveSouth'};
+var $author$project$Main$MoveWest = {$: 'MoveWest'};
+var $author$project$Main$NoAction = {$: 'NoAction'};
+var $elm$core$String$toLower = _String_toLower;
+var $author$project$Main$parseOne = function (v1) {
+	var _v0 = $elm$core$String$toLower(v1);
+	switch (_v0) {
+		case 'look':
+			return $author$project$Main$Look;
+		case 'north':
+			return $author$project$Main$MoveNorth;
+		case 'south':
+			return $author$project$Main$MoveSouth;
+		case 'west':
+			return $author$project$Main$MoveWest;
+		case 'east':
+			return $author$project$Main$MoveEast;
+		default:
+			return $author$project$Main$NoAction;
+	}
+};
+var $author$project$Main$addPrint = F2(
+	function (message, model) {
+		return A2(
+			$author$project$Main$Model,
+			A2(
+				$elm$html$Html$div,
+				_List_Nil,
+				_List_fromArray(
+					[
+						model.display,
+						A2($elm$html$Html$br, _List_Nil, _List_Nil),
+						message
+					])),
+			model.world);
+	});
+var $author$project$Main$verbOne = F2(
+	function (v, model) {
+		if (v.$ === 'Look') {
+			return A2(
+				$author$project$Main$addPrint,
+				$author$project$Main$describePlace(
+					$author$project$Main$currentPlace(model.world.map)),
+				model);
+		} else {
+			return A2(
+				$author$project$Main$addPrint,
+				$elm$html$Html$text('I do not understand that verb.'),
+				model);
+		}
+	});
+var $elm$core$String$words = _String_words;
+var $author$project$Main$parseCmd = F2(
+	function (cmd, model) {
+		var cmdList = $elm$core$String$words(cmd);
+		if (cmdList.b) {
+			var v1 = cmdList.a;
+			return A2(
+				$author$project$Main$verbOne,
+				$author$project$Main$parseOne(v1),
+				model);
+		} else {
+			return model;
+		}
+	});
 var $author$project$Main$update = F2(
 	function (msg, model) {
-		return _Utils_Tuple2(model, $elm$core$Platform$Cmd$none);
+		var model_ = function () {
+			if (msg.$ === 'Input') {
+				var cmd = msg.a;
+				return A2($author$project$Main$parseCmd, cmd, model);
+			} else {
+				return model;
+			}
+		}();
+		return _Utils_Tuple2(model_, $elm$core$Platform$Cmd$none);
 	});
 var $author$project$Main$Input = function (a) {
 	return {$: 'Input', a: a};
@@ -5374,21 +5469,22 @@ var $author$project$Main$Input = function (a) {
 var $elm$html$Html$Attributes$id = $elm$html$Html$Attributes$stringProperty('id');
 var $elm$html$Html$input = _VirtualDom_node('input');
 var $elm$html$Html$label = _VirtualDom_node('label');
-var $elm$html$Html$Events$alwaysStop = function (x) {
-	return _Utils_Tuple2(x, true);
-};
-var $elm$virtual_dom$VirtualDom$MayStopPropagation = function (a) {
-	return {$: 'MayStopPropagation', a: a};
+var $elm$json$Json$Decode$andThen = _Json_andThen;
+var $elm$json$Json$Decode$fail = _Json_fail;
+var $elm$json$Json$Decode$field = _Json_decodeField;
+var $elm$json$Json$Decode$int = _Json_decodeInt;
+var $elm$html$Html$Events$keyCode = A2($elm$json$Json$Decode$field, 'keyCode', $elm$json$Json$Decode$int);
+var $elm$virtual_dom$VirtualDom$Normal = function (a) {
+	return {$: 'Normal', a: a};
 };
 var $elm$virtual_dom$VirtualDom$on = _VirtualDom_on;
-var $elm$html$Html$Events$stopPropagationOn = F2(
+var $elm$html$Html$Events$on = F2(
 	function (event, decoder) {
 		return A2(
 			$elm$virtual_dom$VirtualDom$on,
 			event,
-			$elm$virtual_dom$VirtualDom$MayStopPropagation(decoder));
+			$elm$virtual_dom$VirtualDom$Normal(decoder));
 	});
-var $elm$json$Json$Decode$field = _Json_decodeField;
 var $elm$json$Json$Decode$at = F2(
 	function (fields, decoder) {
 		return A3($elm$core$List$foldr, $elm$json$Json$Decode$field, decoder, fields);
@@ -5399,14 +5495,14 @@ var $elm$html$Html$Events$targetValue = A2(
 	_List_fromArray(
 		['target', 'value']),
 	$elm$json$Json$Decode$string);
-var $elm$html$Html$Events$onInput = function (tagger) {
+var $kmbn$elm_hotkeys$Hotkeys$onEnterSend = function (msg) {
+	var isEnter = function (code) {
+		return (code === 13) ? A2($elm$json$Json$Decode$map, msg, $elm$html$Html$Events$targetValue) : $elm$json$Json$Decode$fail('not ENTER');
+	};
 	return A2(
-		$elm$html$Html$Events$stopPropagationOn,
-		'input',
-		A2(
-			$elm$json$Json$Decode$map,
-			$elm$html$Html$Events$alwaysStop,
-			A2($elm$json$Json$Decode$map, tagger, $elm$html$Html$Events$targetValue)));
+		$elm$html$Html$Events$on,
+		'keydown',
+		A2($elm$json$Json$Decode$andThen, isEnter, $elm$html$Html$Events$keyCode));
 };
 var $author$project$Main$view = function (model) {
 	return A2(
@@ -5450,7 +5546,7 @@ var $author$project$Main$view = function (model) {
 								_List_fromArray(
 									[
 										$elm$html$Html$Attributes$id('prompt'),
-										$elm$html$Html$Events$onInput($author$project$Main$Input)
+										$kmbn$elm_hotkeys$Hotkeys$onEnterSend($author$project$Main$Input)
 									]),
 								_List_Nil)
 							]))

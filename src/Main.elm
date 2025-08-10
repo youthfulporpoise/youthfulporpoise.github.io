@@ -5,9 +5,20 @@ import Html             exposing (..)
 import Html.Attributes  exposing (..)
 import Html.Events      exposing (..)
 import List             exposing (..)
+import String           exposing (..)
 import Maybe            exposing (..)
+import Hotkeys          exposing (onEnterSend)
 
 type Action = Look
+            | Go
+            | MoveNorth
+            | MoveNorthWest
+            | MoveWest
+            | MoveSouthWest
+            | MoveSouth
+            | MoveSouthEast
+            | MoveEast
+            | MoveNorthEast
             | Take
             | Drop
             | Open
@@ -17,6 +28,7 @@ type Action = Look
             | Break
             | Lock
             | Unlock
+            | NoAction
 
 type alias Usage = List Action
 type alias Property = (Action, String)
@@ -63,7 +75,7 @@ place00 : Place
 place00 = Place (-1,1)
     "South-East Corner"
     False
-    ""
+    "Nothing interesting here."
     []
 
 --  01   Thekkini
@@ -72,8 +84,9 @@ place01 = Place (0,1)
     "Thekkini"
     False
     """
-    This is a mysterious chamber and retains an eerie distrubing ambience.  The
-    rumours are long of the histories.  It lies in dark, sleeping like a beast.
+    You are in what seems to be the thekkini.  The rumours are long of an illam
+    right about where you are.  The insidious ambience of the hall draws you
+    into its madness, yet you stand there not entering.
     """
     []
 
@@ -82,7 +95,7 @@ place02 : Place
 place02 = Place (1,1)
     "South-West Corner"
     False
-    ""
+    "Nothing interesting here."
     []
 
 --  10  Kizhakkini
@@ -90,7 +103,7 @@ place10 : Place
 place10 = Place (-1,0)
     "Kizhakkini"
     False
-    ""
+    "Nothing interesting here."
     []
 
 --  11  Nadumuttam
@@ -100,17 +113,22 @@ place11 = Place (0,0)
     True
     """
     The nadumuttam is a place brimming in sunlight.  A pool congeals here during
-    the unabated rains of the monsoon.  A tulsi plant stands lonely in the
-    centre.
+    the unabated rains of the monsoon.  A tulsi plant (holy basil) stands lonely
+    in the centre.  There is something etched on the structure.
     """
-    []
+    [ Object "inscription"
+        [ Look, Read ]
+        [ (Look, "There is an inscription here in swash round flowing letters.")
+        , (Read, "It reads: Enter Night / Exit God.")
+        ]
+    ]
 
 --  12  Padinjarini
 place12 : Place
 place12 = Place (0,1)
     "Padinjarini"
     False
-    ""
+    "Nothing interesting here."
     []
 
 --  20  North-East Corner
@@ -118,7 +136,7 @@ place20 : Place
 place20 = Place (-1,-1)
     "North-East Corner"
     False
-    ""
+    "Nothing interesting here."
     []
 
 --  21  Vadakkini
@@ -126,7 +144,7 @@ place21 : Place
 place21 = Place (0,-1)
     "Vadakkini"
     False
-    ""
+    "Nothing interesting here."
     []
 
 --  22  North-West Corner
@@ -134,7 +152,7 @@ place22 : Place
 place22 = Place (1,-1)
     "North-West Corner"
     False
-    ""
+    "Nothing interesting here."
     []
 
 --  The World Map.
@@ -145,24 +163,69 @@ worldMap =
     , [ place20, place21, place22 ]
     ]
 
+-- Add text to the model display.
+addPrint : Html Msg -> Model -> Model
+addPrint message model =
+    Model
+        (div []
+            [ model.display
+            , br [] []
+            , message
+            ]
+        )
+        model.world
+
 --  The current position in the map.
--- describeCurrentPlace : Map -> String
+currentPlace : Map -> Place
 currentPlace theMap =
     let
-        getPlace xs = filter (\x -> x.current) xs
-    in  concat <| List.map getPlace theMap
+        getPlace xs = List.filter (\x -> x.current) xs
+        place = withDefault emptyPlace <| head (List.concat <| List.map getPlace theMap)
+    in Place
+        place.position
+        place.name
+        place.current
+        place.description
+        place.objects
 
 --  Describe a place.
-describeCurrentPlace : Map -> Html Msg
-describeCurrentPlace theMap =
+describePlace : Place -> Html Msg
+describePlace place =
+    div [ class "place-desc" ]
+        [ br [] []
+        , b [] [ text place.name ]
+        , br [] []
+        , text place.description
+        ]
+
+--  Parse command.
+parseOne : String -> Action
+parseOne v1 =
+    case (toLower v1) of
+        "look"      ->  Look
+        "north"     ->  MoveNorth
+        "south"     ->  MoveSouth
+        "west"      ->  MoveWest
+        "east"      ->  MoveEast
+        _           ->  NoAction
+
+verbOne : Action -> Model -> Model
+verbOne v model =
+    case v of
+        Look -> addPrint (describePlace <| currentPlace model.world.map) model
+        _    -> addPrint (text "I do not understand that verb.") model
+
+
+parseCmd : String -> Model -> Model
+parseCmd cmd model =
     let
-        place = withDefault emptyPlace (head <| currentPlace theMap)
+        cmdList = String.words cmd
     in
-        div [ class "place-desc" ]
-            [ b [] [ text place.name ]
-            , br [] []
-            , text place.description
-            ]
+        case cmdList of
+            v1::_          ->  verbOne (parseOne v1) model
+            _              ->  model
+            --  v1::v2::[]      ->  parseTwo v1 v2
+            --  v1::v2::v3::[]  ->  parseThree v1 v2 v3
     
 
 
@@ -179,14 +242,21 @@ view model =
             , br [] []
             , div [ id "input-area" ]
                 [ label [ id "promp-text" ] [ text ">" ]
-                , input [ id "prompt", onInput Input ] []
+                , input [ id "prompt", Hotkeys.onEnterSend Input ] []
                 ]
             ]
         ]
     
 --  UPDATE.
 update : Msg -> Model -> (Model, Cmd Msg)
-update msg model = (model, Cmd.none)
+update msg model =
+    let
+       model_ =
+           case msg of
+               Input cmd -> parseCmd cmd model
+               _         -> model
+    in
+        (model_, Cmd.none)
 
 --  INITAL MODEL AND INIT.
 initDisplay : Html Msg
@@ -200,7 +270,7 @@ initDisplay = div []
                     know; you are yet compelled to enter.
                     """
                 , br [] []
-                , describeCurrentPlace worldMap
+                , describePlace (currentPlace worldMap)
                 ]
 
 initialModel : Model
