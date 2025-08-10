@@ -156,18 +156,34 @@ worldMap =
     , Array.fromList [ place20, place21, place22 ]
     ]
 
+-- Movement functions
+move : World -> (Int, Int) -> World
+move world (x,y) =
+    let
+        (x_, y_) = .position world
+    in
+        World
+            world.map
+            (x + x_, y + y_)
+            (world.time + 1)
+
 
 -- Add text to the model display.
-addPrint : Html Msg -> Model -> Model
-addPrint message model =
+addPrint : Model -> Html Msg -> Model
+addPrint model message =
     Model
-        (div []
-            [ model.display
-            , br [] []
-            , message
-            ]
-        )
+        (appendDisplay model.display message)
         model.world
+
+-- Add text to the display, except that it takes the display
+-- as argument
+appendDisplay : Html Msg -> Html Msg -> Html Msg
+appendDisplay display message =
+    div []
+        [ display
+        , br [] []
+        , message
+        ]
 
 --  The current position in the map.
 currentPlace : World -> Place
@@ -179,19 +195,9 @@ currentPlace world =
                 Just v  -> v
                 Nothing -> Array.fromList [emptyPlace]
     in
-            case (Array.get x places) of
-                Just v  -> v
-                Nothing -> emptyPlace
---  currentPlace world =
---      let
---          getPlace xs = List.filter (\x -> x.current) xs
---          place = withDefault emptyPlace <| (Array.concat <| Array.map getPlace theMap)
---      in Place
---          place.position
---          place.name
---          place.current
---          place.description
---          place.objects
+        case (Array.get x places) of
+            Just v  -> v
+            Nothing -> emptyPlace
 
 --  Describe a place.
 describePlace : Place -> Html Msg
@@ -217,8 +223,16 @@ parseOne v1 =
 verbOne : Action -> Model -> Model
 verbOne v model =
     case v of
-        Look        -> addPrint (describePlace <| currentPlace model.world) model
-        _           -> addPrint (text "I do not understand that verb.") model
+        Look        -> addPrint model (describePlace <| currentPlace model.world)
+        MoveNorth   ->
+            Model
+                (appendDisplay model.display <| text "You move north.")
+                (move model.world (0,1))
+        MoveSouth   ->
+            Model
+                (appendDisplay model.display <| text "You move south.")
+                (move model.world (0,-1))
+        _           -> addPrint model (text "I do not understand that verb.")
 
 
 parseCmd : String -> Model -> Model
@@ -274,7 +288,7 @@ initialWorld =
 initDisplay : World -> Html Msg
 initDisplay world =
     div [] 
-        [   text <|
+        [ text <|
             """
             You are in a nalukettu.  One that had been built perhaps
             300–400 years ago.  You have happened upon this ancient
@@ -283,7 +297,6 @@ initDisplay world =
             know; you are yet compelled to enter.
             """
         , br [] []
-        , describePlace (currentPlace world)
         ]
 
 initialModel : Model

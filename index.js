@@ -5201,16 +5201,23 @@ var $author$project$Main$Model = F2(
 		return {display: display, world: world};
 	});
 var $elm$html$Html$br = _VirtualDom_node('br');
-var $author$project$Main$Place = F4(
-	function (position, name, description, objects) {
-		return {description: description, name: name, objects: objects, position: position};
+var $elm$html$Html$div = _VirtualDom_node('div');
+var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
+var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
+var $author$project$Main$initDisplay = function (world) {
+	return A2(
+		$elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray(
+			[
+				$elm$html$Html$text('\n            You are in a nalukettu.  One that had been built perhaps\n            300–400 years ago.  You have happened upon this ancient\n            edifice in a fit of desperate escape.  Who might have\n            built such grand a house for themselves you do not\n            know; you are yet compelled to enter.\n            '),
+				A2($elm$html$Html$br, _List_Nil, _List_Nil)
+			]));
+};
+var $author$project$Main$World = F3(
+	function (map, position, time) {
+		return {map: map, position: position, time: time};
 	});
-var $author$project$Main$emptyPlace = A4(
-	$author$project$Main$Place,
-	_Utils_Tuple2(0, 0),
-	'Void',
-	'The world wraps itself here.',
-	_List_Nil);
 var $elm$core$Array$fromListHelp = F3(
 	function (list, nodeList, nodeListSize) {
 		fromListHelp:
@@ -5246,122 +5253,9 @@ var $elm$core$Array$fromList = function (list) {
 		return A3($elm$core$Array$fromListHelp, list, _List_Nil, 0);
 	}
 };
-var $elm$core$Bitwise$and = _Bitwise_and;
-var $elm$core$Bitwise$shiftRightZfBy = _Bitwise_shiftRightZfBy;
-var $elm$core$Array$bitMask = 4294967295 >>> (32 - $elm$core$Array$shiftStep);
-var $elm$core$Basics$ge = _Utils_ge;
-var $elm$core$Elm$JsArray$unsafeGet = _JsArray_unsafeGet;
-var $elm$core$Array$getHelp = F3(
-	function (shift, index, tree) {
-		getHelp:
-		while (true) {
-			var pos = $elm$core$Array$bitMask & (index >>> shift);
-			var _v0 = A2($elm$core$Elm$JsArray$unsafeGet, pos, tree);
-			if (_v0.$ === 'SubTree') {
-				var subTree = _v0.a;
-				var $temp$shift = shift - $elm$core$Array$shiftStep,
-					$temp$index = index,
-					$temp$tree = subTree;
-				shift = $temp$shift;
-				index = $temp$index;
-				tree = $temp$tree;
-				continue getHelp;
-			} else {
-				var values = _v0.a;
-				return A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, values);
-			}
-		}
-	});
-var $elm$core$Bitwise$shiftLeftBy = _Bitwise_shiftLeftBy;
-var $elm$core$Array$tailIndex = function (len) {
-	return (len >>> 5) << 5;
-};
-var $elm$core$Array$get = F2(
-	function (index, _v0) {
-		var len = _v0.a;
-		var startShift = _v0.b;
-		var tree = _v0.c;
-		var tail = _v0.d;
-		return ((index < 0) || (_Utils_cmp(index, len) > -1)) ? $elm$core$Maybe$Nothing : ((_Utils_cmp(
-			index,
-			$elm$core$Array$tailIndex(len)) > -1) ? $elm$core$Maybe$Just(
-			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
-			A3($elm$core$Array$getHelp, startShift, index, tree)));
-	});
-var $author$project$Main$currentPlace = function (world) {
-	var _v0 = function ($) {
-		return $.position;
-	}(world);
-	var x = _v0.a;
-	var y = _v0.b;
-	var places = function () {
-		var _v2 = A2($elm$core$Array$get, y, world.map);
-		if (_v2.$ === 'Just') {
-			var v = _v2.a;
-			return v;
-		} else {
-			return $elm$core$Array$fromList(
-				_List_fromArray(
-					[$author$project$Main$emptyPlace]));
-		}
-	}();
-	var _v1 = A2($elm$core$Array$get, x, places);
-	if (_v1.$ === 'Just') {
-		var v = _v1.a;
-		return v;
-	} else {
-		return $author$project$Main$emptyPlace;
-	}
-};
-var $elm$html$Html$b = _VirtualDom_node('b');
-var $elm$json$Json$Encode$string = _Json_wrap;
-var $elm$html$Html$Attributes$stringProperty = F2(
-	function (key, string) {
-		return A2(
-			_VirtualDom_property,
-			key,
-			$elm$json$Json$Encode$string(string));
-	});
-var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
-var $elm$html$Html$div = _VirtualDom_node('div');
-var $elm$virtual_dom$VirtualDom$text = _VirtualDom_text;
-var $elm$html$Html$text = $elm$virtual_dom$VirtualDom$text;
-var $author$project$Main$describePlace = function (place) {
-	return A2(
-		$elm$html$Html$div,
-		_List_fromArray(
-			[
-				$elm$html$Html$Attributes$class('place-desc')
-			]),
-		_List_fromArray(
-			[
-				A2($elm$html$Html$br, _List_Nil, _List_Nil),
-				A2(
-				$elm$html$Html$b,
-				_List_Nil,
-				_List_fromArray(
-					[
-						$elm$html$Html$text(place.name)
-					])),
-				A2($elm$html$Html$br, _List_Nil, _List_Nil),
-				$elm$html$Html$text(place.description)
-			]));
-};
-var $author$project$Main$initDisplay = function (world) {
-	return A2(
-		$elm$html$Html$div,
-		_List_Nil,
-		_List_fromArray(
-			[
-				$elm$html$Html$text('\n            You are in a nalukettu.  One that had been built perhaps\n            300–400 years ago.  You have happened upon this ancient\n            edifice in a fit of desperate escape.  Who might have\n            built such grand a house for themselves you do not\n            know; you are yet compelled to enter.\n            '),
-				A2($elm$html$Html$br, _List_Nil, _List_Nil),
-				$author$project$Main$describePlace(
-				$author$project$Main$currentPlace(world))
-			]));
-};
-var $author$project$Main$World = F3(
-	function (map, position, time) {
-		return {map: map, position: position, time: time};
+var $author$project$Main$Place = F4(
+	function (position, name, description, objects) {
+		return {description: description, name: name, objects: objects, position: position};
 	});
 var $elm$core$Basics$negate = function (n) {
 	return -n;
@@ -5490,34 +5384,180 @@ var $author$project$Main$parseOne = function (v1) {
 			return $author$project$Main$NoAction;
 	}
 };
+var $author$project$Main$appendDisplay = F2(
+	function (display, message) {
+		return A2(
+			$elm$html$Html$div,
+			_List_Nil,
+			_List_fromArray(
+				[
+					display,
+					A2($elm$html$Html$br, _List_Nil, _List_Nil),
+					message
+				]));
+	});
 var $author$project$Main$addPrint = F2(
-	function (message, model) {
+	function (model, message) {
 		return A2(
 			$author$project$Main$Model,
-			A2(
-				$elm$html$Html$div,
+			A2($author$project$Main$appendDisplay, model.display, message),
+			model.world);
+	});
+var $author$project$Main$emptyPlace = A4(
+	$author$project$Main$Place,
+	_Utils_Tuple2(0, 0),
+	'Void',
+	'The world wraps itself here.',
+	_List_Nil);
+var $elm$core$Bitwise$and = _Bitwise_and;
+var $elm$core$Bitwise$shiftRightZfBy = _Bitwise_shiftRightZfBy;
+var $elm$core$Array$bitMask = 4294967295 >>> (32 - $elm$core$Array$shiftStep);
+var $elm$core$Basics$ge = _Utils_ge;
+var $elm$core$Elm$JsArray$unsafeGet = _JsArray_unsafeGet;
+var $elm$core$Array$getHelp = F3(
+	function (shift, index, tree) {
+		getHelp:
+		while (true) {
+			var pos = $elm$core$Array$bitMask & (index >>> shift);
+			var _v0 = A2($elm$core$Elm$JsArray$unsafeGet, pos, tree);
+			if (_v0.$ === 'SubTree') {
+				var subTree = _v0.a;
+				var $temp$shift = shift - $elm$core$Array$shiftStep,
+					$temp$index = index,
+					$temp$tree = subTree;
+				shift = $temp$shift;
+				index = $temp$index;
+				tree = $temp$tree;
+				continue getHelp;
+			} else {
+				var values = _v0.a;
+				return A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, values);
+			}
+		}
+	});
+var $elm$core$Bitwise$shiftLeftBy = _Bitwise_shiftLeftBy;
+var $elm$core$Array$tailIndex = function (len) {
+	return (len >>> 5) << 5;
+};
+var $elm$core$Array$get = F2(
+	function (index, _v0) {
+		var len = _v0.a;
+		var startShift = _v0.b;
+		var tree = _v0.c;
+		var tail = _v0.d;
+		return ((index < 0) || (_Utils_cmp(index, len) > -1)) ? $elm$core$Maybe$Nothing : ((_Utils_cmp(
+			index,
+			$elm$core$Array$tailIndex(len)) > -1) ? $elm$core$Maybe$Just(
+			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
+			A3($elm$core$Array$getHelp, startShift, index, tree)));
+	});
+var $author$project$Main$currentPlace = function (world) {
+	var _v0 = function ($) {
+		return $.position;
+	}(world);
+	var x = _v0.a;
+	var y = _v0.b;
+	var places = function () {
+		var _v2 = A2($elm$core$Array$get, y, world.map);
+		if (_v2.$ === 'Just') {
+			var v = _v2.a;
+			return v;
+		} else {
+			return $elm$core$Array$fromList(
+				_List_fromArray(
+					[$author$project$Main$emptyPlace]));
+		}
+	}();
+	var _v1 = A2($elm$core$Array$get, x, places);
+	if (_v1.$ === 'Just') {
+		var v = _v1.a;
+		return v;
+	} else {
+		return $author$project$Main$emptyPlace;
+	}
+};
+var $elm$html$Html$b = _VirtualDom_node('b');
+var $elm$json$Json$Encode$string = _Json_wrap;
+var $elm$html$Html$Attributes$stringProperty = F2(
+	function (key, string) {
+		return A2(
+			_VirtualDom_property,
+			key,
+			$elm$json$Json$Encode$string(string));
+	});
+var $elm$html$Html$Attributes$class = $elm$html$Html$Attributes$stringProperty('className');
+var $author$project$Main$describePlace = function (place) {
+	return A2(
+		$elm$html$Html$div,
+		_List_fromArray(
+			[
+				$elm$html$Html$Attributes$class('place-desc')
+			]),
+		_List_fromArray(
+			[
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
+				A2(
+				$elm$html$Html$b,
 				_List_Nil,
 				_List_fromArray(
 					[
-						model.display,
-						A2($elm$html$Html$br, _List_Nil, _List_Nil),
-						message
+						$elm$html$Html$text(place.name)
 					])),
-			model.world);
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
+				$elm$html$Html$text(place.description)
+			]));
+};
+var $author$project$Main$move = F2(
+	function (world, _v0) {
+		var x = _v0.a;
+		var y = _v0.b;
+		var _v1 = function ($) {
+			return $.position;
+		}(world);
+		var x_ = _v1.a;
+		var y_ = _v1.b;
+		return A3(
+			$author$project$Main$World,
+			world.map,
+			_Utils_Tuple2(x + x_, y + y_),
+			world.time + 1);
 	});
 var $author$project$Main$verbOne = F2(
 	function (v, model) {
-		if (v.$ === 'Look') {
-			return A2(
-				$author$project$Main$addPrint,
-				$author$project$Main$describePlace(
-					$author$project$Main$currentPlace(model.world)),
-				model);
-		} else {
-			return A2(
-				$author$project$Main$addPrint,
-				$elm$html$Html$text('I do not understand that verb.'),
-				model);
+		switch (v.$) {
+			case 'Look':
+				return A2(
+					$author$project$Main$addPrint,
+					model,
+					$author$project$Main$describePlace(
+						$author$project$Main$currentPlace(model.world)));
+			case 'MoveNorth':
+				return A2(
+					$author$project$Main$Model,
+					A2(
+						$author$project$Main$appendDisplay,
+						model.display,
+						$elm$html$Html$text('You move north.')),
+					A2(
+						$author$project$Main$move,
+						model.world,
+						_Utils_Tuple2(0, 1)));
+			case 'MoveSouth':
+				return A2(
+					$author$project$Main$Model,
+					A2(
+						$author$project$Main$appendDisplay,
+						model.display,
+						$elm$html$Html$text('You move south.')),
+					A2(
+						$author$project$Main$move,
+						model.world,
+						_Utils_Tuple2(0, -1)));
+			default:
+				return A2(
+					$author$project$Main$addPrint,
+					model,
+					$elm$html$Html$text('I do not understand that verb.'));
 		}
 	});
 var $elm$core$String$words = _String_words;
