@@ -7,6 +7,7 @@ import Html.Events      exposing (..)
 import List             exposing (..)
 import String           exposing (..)
 import Maybe            exposing (..)
+import Array            exposing (..)
 import Hotkeys          exposing (onEnterSend)
 
 type Action = Look
@@ -42,19 +43,19 @@ type alias Object =
 type alias Place =
     { position      :   (Int, Int)
     , name          :   String
-    , current       :   Bool
     , description   :   String
     , objects       :   List Object
     }
 
 emptyPlace : Place
-emptyPlace = Place (0,0) "" False "" []
+emptyPlace = Place (0,0) "Void" "The world wraps itself here." []
 
-type alias Map = List (List Place)
+type alias Map = Array (Array Place)
 
 type alias World =
-    { map   :   Map
-    , time  :   Int
+    { map       :   Map
+    , position  :   (Int, Int)
+    , time      :   Int
     }
 
 type alias Model =
@@ -74,7 +75,6 @@ type Msg = Input String
 place00 : Place
 place00 = Place (-1,1)
     "South-East Corner"
-    False
     "Nothing interesting here."
     []
 
@@ -82,7 +82,6 @@ place00 = Place (-1,1)
 place01 : Place
 place01 = Place (0,1)
     "Thekkini"
-    False
     """
     You are in what seems to be the thekkini.  The rumours are long of an illam
     right about where you are.  The insidious ambience of the hall draws you
@@ -94,7 +93,6 @@ place01 = Place (0,1)
 place02 : Place
 place02 = Place (1,1)
     "South-West Corner"
-    False
     "Nothing interesting here."
     []
 
@@ -102,7 +100,6 @@ place02 = Place (1,1)
 place10 : Place
 place10 = Place (-1,0)
     "Kizhakkini"
-    False
     "Nothing interesting here."
     []
 
@@ -110,7 +107,6 @@ place10 = Place (-1,0)
 place11 : Place
 place11 = Place (0,0)
     "Nadumuttam"
-    True
     """
     The nadumuttam is a place brimming in sunlight.  A pool congeals here during
     the unabated rains of the monsoon.  A tulsi plant (holy basil) stands lonely
@@ -127,7 +123,6 @@ place11 = Place (0,0)
 place12 : Place
 place12 = Place (0,1)
     "Padinjarini"
-    False
     "Nothing interesting here."
     []
 
@@ -135,7 +130,6 @@ place12 = Place (0,1)
 place20 : Place
 place20 = Place (-1,-1)
     "North-East Corner"
-    False
     "Nothing interesting here."
     []
 
@@ -143,7 +137,6 @@ place20 = Place (-1,-1)
 place21 : Place
 place21 = Place (0,-1)
     "Vadakkini"
-    False
     "Nothing interesting here."
     []
 
@@ -151,17 +144,18 @@ place21 = Place (0,-1)
 place22 : Place
 place22 = Place (1,-1)
     "North-West Corner"
-    False
     "Nothing interesting here."
     []
 
 --  The World Map.
 worldMap : Map
 worldMap =
-    [ [ place00, place01, place02 ]
-    , [ place10, place11, place12 ]
-    , [ place20, place21, place22 ]
+    Array.fromList
+    [ Array.fromList [ place00, place01, place02 ]
+    , Array.fromList [ place10, place11, place12 ]
+    , Array.fromList [ place20, place21, place22 ]
     ]
+
 
 -- Add text to the model display.
 addPrint : Html Msg -> Model -> Model
@@ -176,17 +170,28 @@ addPrint message model =
         model.world
 
 --  The current position in the map.
-currentPlace : Map -> Place
-currentPlace theMap =
+currentPlace : World -> Place
+currentPlace world =
     let
-        getPlace xs = List.filter (\x -> x.current) xs
-        place = withDefault emptyPlace <| head (List.concat <| List.map getPlace theMap)
-    in Place
-        place.position
-        place.name
-        place.current
-        place.description
-        place.objects
+        (x,y) = .position world
+        places =
+            case (Array.get y world.map) of
+                Just v  -> v
+                Nothing -> Array.fromList [emptyPlace]
+    in
+            case (Array.get x places) of
+                Just v  -> v
+                Nothing -> emptyPlace
+--  currentPlace world =
+--      let
+--          getPlace xs = List.filter (\x -> x.current) xs
+--          place = withDefault emptyPlace <| (Array.concat <| Array.map getPlace theMap)
+--      in Place
+--          place.position
+--          place.name
+--          place.current
+--          place.description
+--          place.objects
 
 --  Describe a place.
 describePlace : Place -> Html Msg
@@ -212,8 +217,8 @@ parseOne v1 =
 verbOne : Action -> Model -> Model
 verbOne v model =
     case v of
-        Look -> addPrint (describePlace <| currentPlace model.world.map) model
-        _    -> addPrint (text "I do not understand that verb.") model
+        Look        -> addPrint (describePlace <| currentPlace model.world) model
+        _           -> addPrint (text "I do not understand that verb.") model
 
 
 parseCmd : String -> Model -> Model
@@ -258,23 +263,31 @@ update msg model =
     in
         (model_, Cmd.none)
 
---  INITAL MODEL AND INIT.
-initDisplay : Html Msg
-initDisplay = div [] 
-                [   text <|
-                    """
-                    You are in a nalukettu.  One that had been built perhaps
-                    300–400 years ago.  You have happened upon this ancient
-                    edifice in a fit of desperate escape.  Who might have
-                    built such grand a house for themselves you do not
-                    know; you are yet compelled to enter.
-                    """
-                , br [] []
-                , describePlace (currentPlace worldMap)
-                ]
+--  INITIAL MODEL AND INIT.
+initialWorld : World
+initialWorld =
+    World
+        worldMap
+        (1,1)
+        0
+
+initDisplay : World -> Html Msg
+initDisplay world =
+    div [] 
+        [   text <|
+            """
+            You are in a nalukettu.  One that had been built perhaps
+            300–400 years ago.  You have happened upon this ancient
+            edifice in a fit of desperate escape.  Who might have
+            built such grand a house for themselves you do not
+            know; you are yet compelled to enter.
+            """
+        , br [] []
+        , describePlace (currentPlace world)
+        ]
 
 initialModel : Model
-initialModel = Model initDisplay (World worldMap 0)
+initialModel = Model (initDisplay initialWorld) initialWorld
 
 init : () -> (Model, Cmd Msg)
 init _ = (initialModel, Cmd.none)

@@ -4370,6 +4370,43 @@ function _Browser_load(url)
 		}
 	}));
 }
+
+
+
+var _Bitwise_and = F2(function(a, b)
+{
+	return a & b;
+});
+
+var _Bitwise_or = F2(function(a, b)
+{
+	return a | b;
+});
+
+var _Bitwise_xor = F2(function(a, b)
+{
+	return a ^ b;
+});
+
+function _Bitwise_complement(a)
+{
+	return ~a;
+};
+
+var _Bitwise_shiftLeftBy = F2(function(offset, a)
+{
+	return a << offset;
+});
+
+var _Bitwise_shiftRightBy = F2(function(offset, a)
+{
+	return a >> offset;
+});
+
+var _Bitwise_shiftRightZfBy = F2(function(offset, a)
+{
+	return a >>> offset;
+});
 var $elm$core$Basics$EQ = {$: 'EQ'};
 var $elm$core$Basics$GT = {$: 'GT'};
 var $elm$core$Basics$LT = {$: 'LT'};
@@ -5163,78 +5200,118 @@ var $author$project$Main$Model = F2(
 	function (display, world) {
 		return {display: display, world: world};
 	});
-var $author$project$Main$World = F2(
-	function (map, time) {
-		return {map: map, time: time};
-	});
 var $elm$html$Html$br = _VirtualDom_node('br');
-var $author$project$Main$Place = F5(
-	function (position, name, current, description, objects) {
-		return {current: current, description: description, name: name, objects: objects, position: position};
+var $author$project$Main$Place = F4(
+	function (position, name, description, objects) {
+		return {description: description, name: name, objects: objects, position: position};
 	});
-var $elm$core$List$append = F2(
-	function (xs, ys) {
-		if (!ys.b) {
-			return xs;
-		} else {
-			return A3($elm$core$List$foldr, $elm$core$List$cons, ys, xs);
-		}
-	});
-var $elm$core$List$concat = function (lists) {
-	return A3($elm$core$List$foldr, $elm$core$List$append, _List_Nil, lists);
-};
-var $author$project$Main$emptyPlace = A5(
+var $author$project$Main$emptyPlace = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(0, 0),
-	'',
-	false,
-	'',
+	'Void',
+	'The world wraps itself here.',
 	_List_Nil);
-var $elm$core$List$filter = F2(
-	function (isGood, list) {
-		return A3(
-			$elm$core$List$foldr,
-			F2(
-				function (x, xs) {
-					return isGood(x) ? A2($elm$core$List$cons, x, xs) : xs;
-				}),
-			_List_Nil,
-			list);
-	});
-var $elm$core$List$head = function (list) {
-	if (list.b) {
-		var x = list.a;
-		var xs = list.b;
-		return $elm$core$Maybe$Just(x);
-	} else {
-		return $elm$core$Maybe$Nothing;
-	}
-};
-var $elm$core$Maybe$withDefault = F2(
-	function (_default, maybe) {
-		if (maybe.$ === 'Just') {
-			var value = maybe.a;
-			return value;
-		} else {
-			return _default;
+var $elm$core$Array$fromListHelp = F3(
+	function (list, nodeList, nodeListSize) {
+		fromListHelp:
+		while (true) {
+			var _v0 = A2($elm$core$Elm$JsArray$initializeFromList, $elm$core$Array$branchFactor, list);
+			var jsArray = _v0.a;
+			var remainingItems = _v0.b;
+			if (_Utils_cmp(
+				$elm$core$Elm$JsArray$length(jsArray),
+				$elm$core$Array$branchFactor) < 0) {
+				return A2(
+					$elm$core$Array$builderToArray,
+					true,
+					{nodeList: nodeList, nodeListSize: nodeListSize, tail: jsArray});
+			} else {
+				var $temp$list = remainingItems,
+					$temp$nodeList = A2(
+					$elm$core$List$cons,
+					$elm$core$Array$Leaf(jsArray),
+					nodeList),
+					$temp$nodeListSize = nodeListSize + 1;
+				list = $temp$list;
+				nodeList = $temp$nodeList;
+				nodeListSize = $temp$nodeListSize;
+				continue fromListHelp;
+			}
 		}
 	});
-var $author$project$Main$currentPlace = function (theMap) {
-	var getPlace = function (xs) {
-		return A2(
-			$elm$core$List$filter,
-			function (x) {
-				return x.current;
-			},
-			xs);
-	};
-	var place = A2(
-		$elm$core$Maybe$withDefault,
-		$author$project$Main$emptyPlace,
-		$elm$core$List$head(
-			$elm$core$List$concat(
-				A2($elm$core$List$map, getPlace, theMap))));
-	return A5($author$project$Main$Place, place.position, place.name, place.current, place.description, place.objects);
+var $elm$core$Array$fromList = function (list) {
+	if (!list.b) {
+		return $elm$core$Array$empty;
+	} else {
+		return A3($elm$core$Array$fromListHelp, list, _List_Nil, 0);
+	}
+};
+var $elm$core$Bitwise$and = _Bitwise_and;
+var $elm$core$Bitwise$shiftRightZfBy = _Bitwise_shiftRightZfBy;
+var $elm$core$Array$bitMask = 4294967295 >>> (32 - $elm$core$Array$shiftStep);
+var $elm$core$Basics$ge = _Utils_ge;
+var $elm$core$Elm$JsArray$unsafeGet = _JsArray_unsafeGet;
+var $elm$core$Array$getHelp = F3(
+	function (shift, index, tree) {
+		getHelp:
+		while (true) {
+			var pos = $elm$core$Array$bitMask & (index >>> shift);
+			var _v0 = A2($elm$core$Elm$JsArray$unsafeGet, pos, tree);
+			if (_v0.$ === 'SubTree') {
+				var subTree = _v0.a;
+				var $temp$shift = shift - $elm$core$Array$shiftStep,
+					$temp$index = index,
+					$temp$tree = subTree;
+				shift = $temp$shift;
+				index = $temp$index;
+				tree = $temp$tree;
+				continue getHelp;
+			} else {
+				var values = _v0.a;
+				return A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, values);
+			}
+		}
+	});
+var $elm$core$Bitwise$shiftLeftBy = _Bitwise_shiftLeftBy;
+var $elm$core$Array$tailIndex = function (len) {
+	return (len >>> 5) << 5;
+};
+var $elm$core$Array$get = F2(
+	function (index, _v0) {
+		var len = _v0.a;
+		var startShift = _v0.b;
+		var tree = _v0.c;
+		var tail = _v0.d;
+		return ((index < 0) || (_Utils_cmp(index, len) > -1)) ? $elm$core$Maybe$Nothing : ((_Utils_cmp(
+			index,
+			$elm$core$Array$tailIndex(len)) > -1) ? $elm$core$Maybe$Just(
+			A2($elm$core$Elm$JsArray$unsafeGet, $elm$core$Array$bitMask & index, tail)) : $elm$core$Maybe$Just(
+			A3($elm$core$Array$getHelp, startShift, index, tree)));
+	});
+var $author$project$Main$currentPlace = function (world) {
+	var _v0 = function ($) {
+		return $.position;
+	}(world);
+	var x = _v0.a;
+	var y = _v0.b;
+	var places = function () {
+		var _v2 = A2($elm$core$Array$get, y, world.map);
+		if (_v2.$ === 'Just') {
+			var v = _v2.a;
+			return v;
+		} else {
+			return $elm$core$Array$fromList(
+				_List_fromArray(
+					[$author$project$Main$emptyPlace]));
+		}
+	}();
+	var _v1 = A2($elm$core$Array$get, x, places);
+	if (_v1.$ === 'Just') {
+		var v = _v1.a;
+		return v;
+	} else {
+		return $author$project$Main$emptyPlace;
+	}
 };
 var $elm$html$Html$b = _VirtualDom_node('b');
 var $elm$json$Json$Encode$string = _Json_wrap;
@@ -5270,35 +5347,47 @@ var $author$project$Main$describePlace = function (place) {
 				$elm$html$Html$text(place.description)
 			]));
 };
+var $author$project$Main$initDisplay = function (world) {
+	return A2(
+		$elm$html$Html$div,
+		_List_Nil,
+		_List_fromArray(
+			[
+				$elm$html$Html$text('\n            You are in a nalukettu.  One that had been built perhaps\n            300–400 years ago.  You have happened upon this ancient\n            edifice in a fit of desperate escape.  Who might have\n            built such grand a house for themselves you do not\n            know; you are yet compelled to enter.\n            '),
+				A2($elm$html$Html$br, _List_Nil, _List_Nil),
+				$author$project$Main$describePlace(
+				$author$project$Main$currentPlace(world))
+			]));
+};
+var $author$project$Main$World = F3(
+	function (map, position, time) {
+		return {map: map, position: position, time: time};
+	});
 var $elm$core$Basics$negate = function (n) {
 	return -n;
 };
-var $author$project$Main$place00 = A5(
+var $author$project$Main$place00 = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(-1, 1),
 	'South-East Corner',
-	false,
 	'Nothing interesting here.',
 	_List_Nil);
-var $author$project$Main$place01 = A5(
+var $author$project$Main$place01 = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(0, 1),
 	'Thekkini',
-	false,
 	'\n    You are in what seems to be the thekkini.  The rumours are long of an illam\n    right about where you are.  The insidious ambience of the hall draws you\n    into its madness, yet you stand there not entering.\n    ',
 	_List_Nil);
-var $author$project$Main$place02 = A5(
+var $author$project$Main$place02 = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(1, 1),
 	'South-West Corner',
-	false,
 	'Nothing interesting here.',
 	_List_Nil);
-var $author$project$Main$place10 = A5(
+var $author$project$Main$place10 = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(-1, 0),
 	'Kizhakkini',
-	false,
 	'Nothing interesting here.',
 	_List_Nil);
 var $author$project$Main$Look = {$: 'Look'};
@@ -5307,11 +5396,10 @@ var $author$project$Main$Object = F3(
 		return {name: name, properties: properties, usage: usage};
 	});
 var $author$project$Main$Read = {$: 'Read'};
-var $author$project$Main$place11 = A5(
+var $author$project$Main$place11 = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(0, 0),
 	'Nadumuttam',
-	true,
 	'\n    The nadumuttam is a place brimming in sunlight.  A pool congeals here during\n    the unabated rains of the monsoon.  A tulsi plant (holy basil) stands lonely\n    in the centre.  There is something etched on the structure.\n    ',
 	_List_fromArray(
 		[
@@ -5326,57 +5414,52 @@ var $author$project$Main$place11 = A5(
 					_Utils_Tuple2($author$project$Main$Read, 'It reads: Enter Night / Exit God.')
 				]))
 		]));
-var $author$project$Main$place12 = A5(
+var $author$project$Main$place12 = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(0, 1),
 	'Padinjarini',
-	false,
 	'Nothing interesting here.',
 	_List_Nil);
-var $author$project$Main$place20 = A5(
+var $author$project$Main$place20 = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(-1, -1),
 	'North-East Corner',
-	false,
 	'Nothing interesting here.',
 	_List_Nil);
-var $author$project$Main$place21 = A5(
+var $author$project$Main$place21 = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(0, -1),
 	'Vadakkini',
-	false,
 	'Nothing interesting here.',
 	_List_Nil);
-var $author$project$Main$place22 = A5(
+var $author$project$Main$place22 = A4(
 	$author$project$Main$Place,
 	_Utils_Tuple2(1, -1),
 	'North-West Corner',
-	false,
 	'Nothing interesting here.',
 	_List_Nil);
-var $author$project$Main$worldMap = _List_fromArray(
-	[
-		_List_fromArray(
-		[$author$project$Main$place00, $author$project$Main$place01, $author$project$Main$place02]),
-		_List_fromArray(
-		[$author$project$Main$place10, $author$project$Main$place11, $author$project$Main$place12]),
-		_List_fromArray(
-		[$author$project$Main$place20, $author$project$Main$place21, $author$project$Main$place22])
-	]);
-var $author$project$Main$initDisplay = A2(
-	$elm$html$Html$div,
-	_List_Nil,
+var $author$project$Main$worldMap = $elm$core$Array$fromList(
 	_List_fromArray(
 		[
-			$elm$html$Html$text('\n                    You are in a nalukettu.  One that had been built perhaps\n                    300–400 years ago.  You have happened upon this ancient\n                    edifice in a fit of desperate escape.  Who might have\n                    built such grand a house for themselves you do not\n                    know; you are yet compelled to enter.\n                    '),
-			A2($elm$html$Html$br, _List_Nil, _List_Nil),
-			$author$project$Main$describePlace(
-			$author$project$Main$currentPlace($author$project$Main$worldMap))
+			$elm$core$Array$fromList(
+			_List_fromArray(
+				[$author$project$Main$place00, $author$project$Main$place01, $author$project$Main$place02])),
+			$elm$core$Array$fromList(
+			_List_fromArray(
+				[$author$project$Main$place10, $author$project$Main$place11, $author$project$Main$place12])),
+			$elm$core$Array$fromList(
+			_List_fromArray(
+				[$author$project$Main$place20, $author$project$Main$place21, $author$project$Main$place22]))
 		]));
+var $author$project$Main$initialWorld = A3(
+	$author$project$Main$World,
+	$author$project$Main$worldMap,
+	_Utils_Tuple2(1, 1),
+	0);
 var $author$project$Main$initialModel = A2(
 	$author$project$Main$Model,
-	$author$project$Main$initDisplay,
-	A2($author$project$Main$World, $author$project$Main$worldMap, 0));
+	$author$project$Main$initDisplay($author$project$Main$initialWorld),
+	$author$project$Main$initialWorld);
 var $elm$core$Platform$Cmd$batch = _Platform_batch;
 var $elm$core$Platform$Cmd$none = $elm$core$Platform$Cmd$batch(_List_Nil);
 var $author$project$Main$init = function (_v0) {
@@ -5428,7 +5511,7 @@ var $author$project$Main$verbOne = F2(
 			return A2(
 				$author$project$Main$addPrint,
 				$author$project$Main$describePlace(
-					$author$project$Main$currentPlace(model.world.map)),
+					$author$project$Main$currentPlace(model.world)),
 				model);
 		} else {
 			return A2(
