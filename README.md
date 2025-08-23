@@ -12,19 +12,20 @@
 - Member 1: Hathim Ali K. H., GEC Idukki
 - Member 2: Aiswarya R., GEC Idukki
 
-### Project Description
-[2-3 lines about what your project does]
+### What’s this?
+A simple text adventure.  You explore and complete missions in a world, that is
+interfaced through commands.
 
-### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+### The Problem
+A text adventure to kill time, where you are free to hang around and do nothing.
 
-### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+### The Solution
+Well, you are looking at it.
 
 ## Technical Details
 ### Technologies/Components Used
 - Elm
-- python `http.server`
+- Python `http.server`
 
 # Installation
 The Elm source is already transpiled to Javascript.  Transpiling again requires
@@ -59,9 +60,8 @@ Run `python3 -m http.server` at directory root.
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- Aiswarya: brainstorming; UI drafting, templating, and design.
+- Hathim Ali: programming and implementation.
 
 ![Static Badge](https://img.shields.io/badge/TinkerHub-24?color=%23000000&link=https%3A%2F%2Fwww.tinkerhub.org%2F)
 ![Static Badge](https://img.shields.io/badge/UselessProjects--25-25?link=https%3A%2F%2Fwww.tinkerhub.org%2Fevents%2FQ2Q1TQKX6Q%2FUseless%2520Projects)
