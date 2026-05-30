@@ -49,6 +49,7 @@ refLinksErrorLevel = 'WARNING'
   # Posts date format, for example: 2006-01-02
   dateFormat = ':date_long'
   dateFormatToc = '2006.01.02'
+  showDate = false
 
   # Show "Read more" button in list if true
   readmore = true
@@ -259,11 +260,17 @@ refLinksErrorLevel = 'WARNING'
     baseName = 'rss'
     mediaType = 'application/rss+xml'
 
+  [outputFormats.json]
+    mediaType = "application/json"
+    baseName = "index"
+
 [mediaTypes]
   [mediaTypes.'text/xml']
     suffixes = ['xml']
   [mediaTypes.'application/feed+json']
     suffixes = ['json']
+  [mediaTypes."application/json"]
+    suffixes = ["json"]
 
 # Sitemap config
 [sitemap]

@@ -8,8 +8,8 @@
 {{- $.Scratch.Add "urlsAdded" slice -}}
 
 {{- range $index, $page := $pages -}}
-  {{- /* Do not index drafts or private pages. */ -}}
-  {{- if and (not .Draft) (not .Params.private) | and (ne .Params.searchable false) -}}
+  {{- /* Do not index drafts. */ -}}
+  {{- if and (not .Draft) | and (ne .Params.searchable false) -}}
 
     {{- /* Do not index pages w/o content. */ -}}
     {{- if gt (len $page.Content) 0 -}}
