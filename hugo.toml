@@ -148,6 +148,11 @@ refLinksErrorLevel = 'WARNING'
     [params.services.googleTagManager]
       id = 'GTM-W8D5W642'
 
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+
 [languages]
   [languages.en]
     languageCode = 'en'
