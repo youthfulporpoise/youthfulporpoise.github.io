@@ -3,36 +3,36 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>Ed./about/</loc>
+    <loc>//localhost:1313/about/</loc>
     <lastmod>2026-05-31T00:10:47+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>Ed./</loc>
+    <loc>//localhost:1313/</loc>
     <lastmod>2026-05-31T00:10:47+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>Ed./poems/</loc>
+    <loc>//localhost:1313/poems/</loc>
     <lastmod>2026-05-30T23:29:32+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>Ed./poems/tell-me-god/</loc>
+    <loc>//localhost:1313/poems/tell-me-god/</loc>
     <lastmod>2026-05-30T23:29:32+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>Ed./poems/the-men-we-see/</loc>
+    <loc>//localhost:1313/poems/the-men-we-see/</loc>
     <lastmod>2026-05-30T19:16:23+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>Ed./categories/</loc>
+    <loc>//localhost:1313/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>Ed./tags/</loc>
+    <loc>//localhost:1313/tags/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

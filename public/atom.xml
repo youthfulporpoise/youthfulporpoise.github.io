@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="Ed./">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="//localhost:1313/">
     <title>Shifting Hues of Being</title>
     <subtitle type="html"><![CDATA[Mens infantis, semper viridis. The infant mind, forever green.]]></subtitle>
-    <link href="Ed./" rel="alternate" type="text/html" title="html" />
-    <link href="Ed./rss.xml" rel="alternate" type="application/rss+xml" title="rss" />
-    <link href="Ed./manifest.webmanifest" rel="alternate" type="application/manifest+json" title="manifest" />
-    <link href="Ed./atom.xml" rel="self" type="text/xml" title="atom" />
-    <link href="Ed./feed.json" rel="alternate" type="application/feed+json" title="jsonfeed" />
-    <link href="Ed./index.json" rel="alternate" type="application/json" title="json" />
-    <link href="Ed./humans.txt" rel="alternate" type="text/plain" title="humanstxt" />
-    <icon>Ed./Ed./img/open-graph-logo_hu_cfda06ea0adc9739.png</icon>
-    <logo>Ed./Ed./img/open-graph-logo_hu_cfda06ea0adc9739.png</logo>
+    <link href="/" rel="alternate" type="text/html" title="html" />
+    <link href="/rss.xml" rel="alternate" type="application/rss+xml" title="rss" />
+    <link href="/manifest.webmanifest" rel="alternate" type="application/manifest+json" title="manifest" />
+    <link href="/atom.xml" rel="self" type="text/xml" title="atom" />
+    <link href="/feed.json" rel="alternate" type="application/feed+json" title="jsonfeed" />
+    <link href="/index.json" rel="alternate" type="application/json" title="json" />
+    <link href="/humans.txt" rel="alternate" type="text/plain" title="humanstxt" />
+    <icon>//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png</icon>
+    <logo>//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png</logo>
     <author>
         <name>Hathim Ali</name>
         <email>h.ali@tuta.io</email>
     </author>
     <generator uri="https://gohugo.io" version="0.162.1">Hugo</generator>
     <updated>2026-05-31T00:10:47+05:30</updated>
-    <id>urn:uuid:3b28a44d-0ee1-5fbf-6901-6c4b9bebf73d</id>
+    <id>urn:uuid:f5423b9f-eadf-5baa-e92a-eaa3683f5fb9</id>
     <entry>
         
         <category term="poems" />
         
-        <link rel="alternate" type="type/html" href="Ed./Ed./poems/tell-me-god/?utm_source=atom_feed" />
+        <link rel="alternate" type="type/html" href="//localhost:1313/poems/tell-me-god/?utm_source=atom_feed" />
         <title type="html"><![CDATA[Tell Me God]]></title>
         
         
         
         <published>2026-05-30T23:29:32+05:30</published>
         <updated>2026-05-30T23:29:32+05:30</updated>
-        <id>urn:uuid:b6d8df28-d486-5437-390a-38badbb5f092</id>
+        <id>urn:uuid:f901d703-18b3-5ae0-297f-5788e798d31f</id>
         
         <summary type="html"><![CDATA[<p>So tell me my dear so-called God, <br>
 Why do you create sin and punish me for it?</p>
@@ -46,14 +46,14 @@ Never anything more peaceful than never being born at all.</p>]]></summary>
         
         <category term="poems" />
         
-        <link rel="alternate" type="type/html" href="Ed./Ed./poems/the-men-we-see/?utm_source=atom_feed" />
+        <link rel="alternate" type="type/html" href="//localhost:1313/poems/the-men-we-see/?utm_source=atom_feed" />
         <title type="html"><![CDATA[The Men We See]]></title>
         
         
         
         <published>2026-05-30T19:16:23+05:30</published>
         <updated>2026-05-30T19:16:23+05:30</updated>
-        <id>urn:uuid:7ec519ad-5163-5efd-f92c-ae2293b70910</id>
+        <id>urn:uuid:eda55d67-4d08-541c-b9af-4c15955de1f8</id>
         
         <summary type="html"><![CDATA[<ul>
 <li><span class="indent-0"></span>

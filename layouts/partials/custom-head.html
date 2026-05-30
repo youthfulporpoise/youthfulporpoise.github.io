@@ -11,6 +11,7 @@
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: "Garamond", "EB Garamond", serif;
+    font-size: 17pt;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -63,9 +64,22 @@
     margin: 0em 0em 0em 1em;
   }
 
+  .sidebar {
+    font-size: 0.9rem;
+    width: 30%;
+    left: -25rem;
+    transition: all 0.6s ease-in;
+  }
+
   .sidebar-toggle {
+    top: 2.5rem;
+    left: 30%;
     background-color: var(--bg-color);
     color: var(--theme-color);
+  }
+  #sidebar-checkbox:checked~.sidebar, #sidebar-checkbox:checked~.wrap,
+  #sidebar-checkbox:checked~.sidebar-toggle {
+    transform: translateX(25rem);
   }
 
   .motif {

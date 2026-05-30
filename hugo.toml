@@ -285,7 +285,7 @@ refLinksErrorLevel = 'WARNING'
   [[menus.main]]
     identifier = 'github'
     name = 'GitHub Project'
-    url = 'https://github.com/sergeyklay/gohugo-theme-ed/'
+    url = 'https://github.com/youthfulporpoise/youthfulporpoise.github.io/'
     weight = 20
     params = {external = true}
 
