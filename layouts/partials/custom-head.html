@@ -8,6 +8,7 @@
     -webkit-overflow-scrolling: touch !important;
     /* Forces fluid iOS momentum scrolling */
     scroll-behavior: smooth;
+    touch-action: manipulation !important;
   }
 
   body.sidebar-open {
@@ -47,7 +48,6 @@
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: "Garamond", "EB Garamond", serif;
-    font-size: 17pt;
   }
 
   html, body {
@@ -89,7 +89,7 @@
     font-style: italic;
     font-weight: 900;
     line-height: 0.8em;
-    letter-spacing: -4.5pt;
+    letter-spacing: -3.5pt;
   }
 
   .masthead-title a {
@@ -112,9 +112,14 @@
 
   .sidebar {
     font-size: 0.9rem;
-    width: 30%;
-    left: -30%;
+    width: 40%;
+    left: -40%;
     transition: all 0.8s ease-in-out;
+  }
+
+  #sidebar-checkbox:checked~.sidebar, #sidebar-checkbox:checked~.wrap,
+  #sidebar-checkbox:checked~.sidebar-toggle {
+    transform: translateX(40vw);
   }
 
   .wrap, .sidebar-toggle {
@@ -125,11 +130,6 @@
     top: 2.5rem;
     background-color: var(--bg-color);
     color: var(--theme-color);
-  }
-
-  #sidebar-checkbox:checked~.sidebar, #sidebar-checkbox:checked~.wrap,
-  #sidebar-checkbox:checked~.sidebar-toggle {
-    transform: translateX(30vw);
   }
 
 
