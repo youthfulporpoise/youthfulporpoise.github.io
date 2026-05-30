@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest",
+  "id": "c610c95a-59eb-57cc-69e9-b4b341a49050",
+  "name": "Shifting Hues of Being",
+  "short_name": "An atonement to my essence.",
+  "description": "Mens infantis, semper viridis. The infant mind, forever green.",
+  "lang": "en",
+  "dir": "ltr",
+  "start_url": "/index.html?source=pwa",
+  "display": "fullscreen",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "orientation": "natural",
+  "shortcuts": [  
+    {
+      "name": "Home",
+      "short_name" : "home",
+      "url": "/"
+    } ,
+    {
+      "name": "About",
+      "short_name" : "about",
+      "url": ""
+    } ,
+    {
+      "name": "Search",
+      "short_name" : "search",
+      "url": ""
+    } ,
+    {
+      "name": "Contact",
+      "short_name" : "contact",
+      "url": ""
+    } ,
+    {
+      "name": "GitHub Project",
+      "short_name" : "github",
+      "url": "https://github.com/sergeyklay/gohugo-theme-ed/"
+    }
+  ],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ]
+}

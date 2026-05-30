@@ -1,0 +1,26 @@
+
+
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Posts - Shifting Hues of Being",
+  "home_page_url": "//localhost:1313/?utm_source=json_feed",
+  
+  "description": "Mens infantis, semper viridis. The infant mind, forever green.",
+  "icon": "//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png",
+  "favicon": "//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png",
+  "authors": [
+    {
+      "name": "H. Ali"
+    }
+  ],
+  "language" : "en",
+  "items": [
+    {
+      "id": "f90d68ab-5f5e-5698-b9a5-59892d279314",
+      "url": "//localhost:1313/posts/initial/?utm_source=json_feed",
+      "title": "The Men We See",
+      "summary": " The men we see, what are they? Twisted than vines, Deeper than seas. Yet our captious eyes, Eager to conclude, Always blind. ",
+      "date_published": "2026-05-30T19:16:23+05:30"
+    }
+  ]
+}

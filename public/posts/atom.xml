@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="//localhost:1313/">
+    <title>Posts - Shifting Hues of Being</title>
+    <subtitle type="html"><![CDATA[Mens infantis, semper viridis. The infant mind, forever green.]]></subtitle>
+    <link href="/posts/" rel="alternate" type="text/html" title="html" />
+    <link href="/posts/rss.xml" rel="alternate" type="application/rss+xml" title="rss" />
+    <link href="/posts/atom.xml" rel="self" type="text/xml" title="atom" />
+    <link href="/posts/feed.json" rel="alternate" type="application/feed+json" title="jsonfeed" />
+    <icon>//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png</icon>
+    <logo>//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png</logo>
+    <author>
+        <name>H. Ali</name>
+        <email>h.ali@tuta.io</email>
+    </author>
+    <generator uri="https://gohugo.io" version="0.162.1">Hugo</generator>
+    <updated>2026-05-30T19:16:23+05:30</updated>
+    <id>urn:uuid:f5423b9f-eadf-5baa-e92a-eaa3683f5fb9</id>
+    <entry>
+        
+        <category term="posts" />
+        
+        <link rel="alternate" type="type/html" href="//localhost:1313/posts/initial/?utm_source=atom_feed" />
+        <title type="html"><![CDATA[The Men We See]]></title>
+        
+        
+        
+        <published>2026-05-30T19:16:23+05:30</published>
+        <updated>2026-05-30T19:16:23+05:30</updated>
+        <id>urn:uuid:f90d68ab-5f5e-5698-b9a5-59892d279314</id>
+        
+        <summary type="html"><![CDATA[<ul>
+<li><span class="indent-0"></span>
+ The men we see, what are they?</li>
+<li><span class="indent-1"></span>
+   Twisted than vines,</li>
+<li><span class="indent-2"></span>
+     Deeper than seas.</li>
+<li><span class="indent-0"></span>
+</li>
+<li><span class="indent-0"></span>
+ Yet our captious eyes,</li>
+<li><span class="indent-1"></span>
+   Eager to conclude,</li>
+<li><span class="indent-2"></span>
+     Always blind.</li>
+</ul>]]></summary>
+    </entry>
+</feed>

@@ -1,0 +1,16 @@
+
+    /* TEAM */
+
+    Author: H. Ali
+    Contact: h.ali@tuta.io
+    GitHub: @youthfulporpoise
+    From: ER, Keralam
+
+    /* SITE */
+
+    Last update: 2026/05/30
+    Language: English
+    Doctype: HTML5
+    Standards: HTML5, CSS3, Open Graph protocol, Schema.org
+    Components: Hugo, Ed Theme, Lunr.js
+    Hugo version: 0.162.1
