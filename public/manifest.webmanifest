@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/web-manifest",
-  "id": "c610c95a-59eb-57cc-69e9-b4b341a49050",
+  "id": "9a1c77bb-43ff-58da-c909-160252f79a83",
   "name": "Shifting Hues of Being",
   "short_name": "AN ATONEMENT.",
   "description": "Mens infantis, semper viridis. The infant mind, forever green.",
@@ -25,7 +25,7 @@
     {
       "name": "Search",
       "short_name" : "search",
-      "url": ""
+      "url": "/search/"
     } ,
     {
       "name": "Contact",

@@ -3,11 +3,11 @@
 {
   "version": "https://jsonfeed.org/version/1.1",
   "title": "Shifting Hues of Being",
-  "home_page_url": "//localhost:1313/?utm_source=json_feed",
-  "feed_url": "//localhost:1313/index.json",
+  "home_page_url": "http://localhost:1313/?utm_source=json_feed",
+  "feed_url": "http://localhost:1313/index.json",
   "description": "Mens infantis, semper viridis. The infant mind, forever green.",
-  "icon": "//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png",
-  "favicon": "//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png",
+  "icon": "http://localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png",
+  "favicon": "http://localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png",
   "authors": [
     {
       "name": "Hathim Ali"
@@ -16,15 +16,15 @@
   "language" : "en",
   "items": [
     {
-      "id": "f901d703-18b3-5ae0-297f-5788e798d31f",
-      "url": "//localhost:1313/poems/tell-me-god/?utm_source=json_feed",
+      "id": "f6752fbf-1f47-5901-99e9-5804ee67638e",
+      "url": "http://localhost:1313/poems/tell-me-god/?utm_source=json_feed",
       "title": "Tell Me God",
       "summary": "So tell me my dear so-called God, Why do you create sin and punish me for it?\nTell me why do you create so beautiful These things that sting me when I touch it?\nYou give me this voice that you never hear And a depth of heart that drowns me.\nWhy do you throw me into this abrupt existence, With no foreboding, no warning, nor admonition?\nThey speak that in you I find peace, and there seems Never anything more peaceful than never being born at all.",
       "date_published": "2026-05-30T23:29:32+05:30"
     },
     {
-      "id": "eda55d67-4d08-541c-b9af-4c15955de1f8",
-      "url": "//localhost:1313/poems/the-men-we-see/?utm_source=json_feed",
+      "id": "5687d98f-da36-54ab-89f5-990d660d91d9",
+      "url": "http://localhost:1313/poems/the-men-we-see/?utm_source=json_feed",
       "title": "The Men We See",
       "summary": " The men we see, what are they? Twisted than vines, Deeper than seas. Yet our captious eyes, Eager to conclude, Always blind. ",
       "date_published": "2026-05-30T19:16:23+05:30"

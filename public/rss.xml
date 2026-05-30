@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Shifting Hues of Being</title>
-		<link>//localhost:1313/</link>
+		<link>http://localhost:1313/</link>
 		<description>Recent content on Shifting Hues of Being</description>
 		<generator>Hugo</generator>
 		<language>en</language>
@@ -18,27 +18,34 @@
 		
 			<lastBuildDate>Sun, 31 May 2026 00:10:47 +0530</lastBuildDate>
 		
-			<atom:link href="//localhost:1313/rss.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/rss.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>About</title>
-				<link>//localhost:1313/about/</link>
+				<link>http://localhost:1313/about/</link>
 				<pubDate>Sun, 31 May 2026 00:10:47 +0530</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
-				<guid>//localhost:1313/about/</guid>
+				<guid>http://localhost:1313/about/</guid>
 				<description>&lt;p&gt;This is my personal blog-like website, except more than a blog it is more of an appendix&#xA;of what I do. These are my thoughts, ramblings, opinions, and other things that occupy,&#xA;or cross, my mind. I’ve decided call it to strangely &lt;em&gt;Shifting Hues of Being&lt;/em&gt; as an ode&#xA;to the ever-firm observation that perception matures, or more generally changes, with&#xA;time.&lt;/p&gt;&#xA;&lt;p&gt;I’m &lt;em&gt;Hathim Ali&lt;/em&gt;, treading the mires of a bachelor in technology. To speak of what I tend&#xA;to do, I do many things, and mostly, more strenuously, I avoid never having lived, but&#xA;ends up tangled by questions of the likes as: when can a life be said to have been fully&#xA;&lt;em&gt;lived&lt;/em&gt;? Trying to get a glimpse of the answers fucks you up more than it englightens you&#xA;I’ve happened to learn. These days, I tend to be more at Idukki than home. Idukki is a&#xA;wonderful place. It is awing, ethralling, as much as it is dark and deep. And often you&#xA;can hear the ancient hills mumbling among themselves. Perhaps overhearing those might&#xA;reveal answers to a question or two, who knows?&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Tell Me God</title>
-				<link>//localhost:1313/poems/tell-me-god/</link>
+				<link>http://localhost:1313/poems/tell-me-god/</link>
 				<pubDate>Sat, 30 May 2026 23:29:32 +0530</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
-				<guid>//localhost:1313/poems/tell-me-god/</guid>
+				<guid>http://localhost:1313/poems/tell-me-god/</guid>
 				<description>&lt;p&gt;So tell me my dear so-called God, &lt;br&gt;&#xA;Why do you create sin and punish me for it?&lt;/p&gt;&#xA;&lt;p&gt;Tell me why do you create so beautiful &lt;br&gt;&#xA;These things that sting me when I touch it?&lt;/p&gt;&#xA;&lt;p&gt;You give me this voice that you never hear &lt;br&gt;&#xA;And a depth of heart that drowns me.&lt;/p&gt;&#xA;&lt;p&gt;Why do you throw me into this abrupt existence, &lt;br&gt;&#xA;With no foreboding, no warning, nor admonition?&lt;/p&gt;&#xA;&lt;p&gt;They speak that in you I find peace, and there seems &lt;br&gt;&#xA;Never anything more peaceful than never being born at all.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>The Men We See</title>
-				<link>//localhost:1313/poems/the-men-we-see/</link>
+				<link>http://localhost:1313/poems/the-men-we-see/</link>
 				<pubDate>Sat, 30 May 2026 19:16:23 +0530</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
-				<guid>//localhost:1313/poems/the-men-we-see/</guid>
+				<guid>http://localhost:1313/poems/the-men-we-see/</guid>
 				<description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-0&#34;&gt;&lt;/span&gt;&#xA; The men we see, what are they?&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-1&#34;&gt;&lt;/span&gt;&#xA;   Twisted than vines,&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-2&#34;&gt;&lt;/span&gt;&#xA;     Deeper than seas.&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-0&#34;&gt;&lt;/span&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-0&#34;&gt;&lt;/span&gt;&#xA; Yet our captious eyes,&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-1&#34;&gt;&lt;/span&gt;&#xA;   Eager to conclude,&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-2&#34;&gt;&lt;/span&gt;&#xA;     Always blind.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+			</item>
+			<item>
+				<title>Search</title>
+				<link>http://localhost:1313/search/</link>
+				<pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
+				<guid>http://localhost:1313/search/</guid>
+				<description>&lt;div id=&#34;site-search&#34; class=&#34;search-form&#34;&gt;&#xA;    &lt;p&gt;To search the site, enter a search term.&lt;/p&gt;&#xA;    &lt;form role=&#34;search&#34; id=&#34;search-form&#34;&gt;&#xA;        &lt;div class=&#34;search-wrapper&#34;&gt;&#xA;            &lt;div class=&#34;search-container form-item&#34;&gt;&#xA;                &lt;input&#xA;                    autofocus&#xA;                    autocomplete=&#34;off&#34;&#xA;                    spellcheck=&#34;false&#34;&#xA;                    placeholder=&#34;&#34;&#xA;                    class=&#34;search-form-input form-input&#34;&#xA;                    aria-label=&#34;Search site&#34;&#xA;                    type=&#34;search&#34;&#xA;                    id=&#34;search&#34;&#xA;                    name=&#34;search&#34;&#xA;                    maxlength=&#34;128&#34;&gt;&#xA;            &lt;/div&gt;&#xA;            &lt;div class=&#34;search-error hide-element&#34;&gt;&#xA;                &lt;p class=&#34;search-error-message&#34;&gt;&lt;/p&gt;&#xA;            &lt;/div&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/form&gt;&#xA;&lt;/div&gt;&#xA;&#xA;&lt;section id=&#34;search-results&#34; class=&#34;hide-element&#34;&gt;&#xA;    &lt;div id=&#34;search-results-header&#34;&gt;&#xA;        &lt;div class=&#34;search-query search-query-right&#34;&gt;&#xA;            &lt;span id=&#34;results-count-text&#34;&gt;Found results:&lt;/span&gt;&#xA;            &lt;span id=&#34;results-count&#34;&gt;&lt;/span&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/div&gt;&#xA;    &lt;div id=&#34;search-results-body&#34; class=&#34;post-list&#34;&gt;&lt;/div&gt;&#xA;&lt;/section&gt;&#xA;&#xA;&lt;template&gt;&#xA;    &lt;article class=&#34;post&#34; data-score=&#34;&#34;&gt;&#xA;        &lt;header&gt;&#xA;            &lt;h2 class=&#34;post-title&#34;&gt;&#xA;                &lt;a href=&#34;#&#34; class=&#34;search-result-page-title&#34;&gt;&lt;/a&gt;&#xA;            &lt;/h2&gt;&#xA;        &lt;/header&gt;&#xA;        &lt;p class=&#34;post-content&#34;&gt;&lt;/p&gt;&#xA;    &lt;/article&gt;&#xA;&lt;/template&gt;&#xA;    &lt;script src=&#34;http://localhost:1313/js/lunr-bundle.js&#34;&gt;&lt;/script&gt;&#xA;    &lt;script src=&#34;http://localhost:1313/js/search-bundle.js&#34;&gt;&lt;/script&gt;</description>
 			</item>
 	</channel>
 </rss>

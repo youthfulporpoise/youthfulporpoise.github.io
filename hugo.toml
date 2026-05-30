@@ -1,5 +1,5 @@
 # You may need to change this line for your real project.
-baseURL = 'Ed.'
+baseURL = 'https://youthfulporpoise.github.io/'
 
 # A "copyright"-line to be added to RSS/Atom files and the footer.
 copyright = '© 2026 H. Ali'
@@ -114,7 +114,7 @@ refLinksErrorLevel = 'WARNING'
     # required languages below.
     #
     # For more see: https://lunrjs.com/guides/language_support.html
-    languages = ['en', 'es']
+    languages = ['en']
 
   [params.comments]
     enable = false

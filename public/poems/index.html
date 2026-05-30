@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
 
-    <link rel="canonical" href="//localhost:1313/poems/">
+    <link rel="canonical" href="http://localhost:1313/poems/">
 
     <title>Poems - Shifting Hues of Being</title>
     <meta name="description" content="Mens infantis, semper viridis. The infant mind, forever green.">
@@ -26,15 +26,52 @@
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="alternate" type="application/rss&#43;xml" href="//localhost:1313/poems/rss.xml" title="rss">
-    <link rel="alternate" type="text/xml" href="//localhost:1313/poems/atom.xml" title="atom">
-    <link rel="alternate" type="application/feed&#43;json" href="//localhost:1313/poems/feed.json" title="jsonfeed">
+    <link rel="alternate" type="application/rss&#43;xml" href="http://localhost:1313/poems/rss.xml" title="rss">
+    <link rel="alternate" type="text/xml" href="http://localhost:1313/poems/atom.xml" title="atom">
+    <link rel="alternate" type="application/feed&#43;json" href="http://localhost:1313/poems/feed.json" title="jsonfeed">
 
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" title="Sitemap">
-    <link rel="author" type="text/plain" href="/humans.txt" title="Humans"><link rel="alternate" hreflang="en" href="//localhost:1313/poems/">
+    <link rel="author" type="text/plain" href="/humans.txt" title="Humans"><link rel="alternate" hreflang="en" href="http://localhost:1313/poems/">
 
-    <meta name="theme-color" content="#ffffff"><style>
+    <meta name="theme-color" content="#ffffff"><meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
   @import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+Symbols+2&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rye&display=swap');
+
+
+
+  html, body, .wrap, main {
+    -webkit-overflow-scrolling: touch !important;
+     
+    scroll-behavior: smooth;
+    touch-action: manipulation !important;
+  }
+
+  body.sidebar-open {
+    position: fixed;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    html, body {
+      height: auto !important;
+      overflow-y: auto !important;
+      overflow-x: hidden !important;
+      position: relative !important;
+    }
+
+    .wrap {
+      height: auto !important;
+      min-height: 100vh !important;
+      overflow: visible !important;
+      position: relative !important;
+    }
+    
+    main {
+      overflow: visible !important;
+    }
+  }
+
+
 
   html {
     --fg-color: #2b2b2b;
@@ -46,7 +83,13 @@
     background-color: var(--bg-color);
     color: var(--fg-color);
     font-family: "Garamond", "EB Garamond", serif;
-    font-size: 17pt;
+    font-size: 16pt;
+  }
+
+  html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -69,6 +112,8 @@
     border-bottom: 0px solid var(--fg-color);
   }
 
+
+
   .masthead {
     padding: 2em 0em 2em 0em;
     border-bottom: 1px solid var(--theme-color);
@@ -76,11 +121,11 @@
 
   .masthead-title {
     font-family: "Playfair", "Garamond", "EB Garamond", serif !important;
-    font-size: 2.5em;
+    font-size: 2em;
     font-style: italic;
     font-weight: 900;
-    line-height: 0.6em;
-    letter-spacing: -4.5pt;
+    line-height: 0.8em;
+    letter-spacing: -3.5pt;
   }
 
   .masthead-title a {
@@ -99,15 +144,31 @@
     margin: 0em 0em 0em 1em;
   }
 
+
+
   .sidebar {
     font-size: 0.9rem;
-    width: 30%;
+    width: 40%;
+    left: -40%;
+    transition: all 0.8s ease-in-out;
+  }
+
+  #sidebar-checkbox:checked~.sidebar, #sidebar-checkbox:checked~.wrap,
+  #sidebar-checkbox:checked~.sidebar-toggle {
+    transform: translateX(40vw);
+  }
+
+  .wrap, .sidebar-toggle {
+    transition: all 0.8s ease-in-out;
   }
 
   .sidebar-toggle {
+    top: 2.5rem;
     background-color: var(--bg-color);
     color: var(--theme-color);
   }
+
+
 
   .motif {
     text-align: center;
@@ -121,15 +182,15 @@
     <meta property="og:title" content="Poems - Shifting Hues of Being">
     <meta property="og:description" content="Mens infantis, semper viridis. The infant mind, forever green.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="//localhost:1313/poems/">
-    <meta property="og:image" content="//localhost:1313/img/open-graph-logo.png">
+    <meta property="og:url" content="http://localhost:1313/poems/">
+    <meta property="og:image" content="http://localhost:1313/img/open-graph-logo.png">
     <meta property="og:image:width" content="200">
     <meta property="og:image:height" content="200">
     
     <meta name="twitter:title" content="Poems - Shifting Hues of Being">
     <meta name="twitter:description" content="Mens infantis, semper viridis. The infant mind, forever green.">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="//localhost:1313/img/open-graph-logo.png">
+    <meta name="twitter:image" content="http://localhost:1313/img/open-graph-logo.png">
 
     <script src="/js/common.js"></script>
 
@@ -155,7 +216,7 @@
                 href="/about/"
                 id="menu-main-about">About</a>
             <a class="sidebar-nav-item"
-                href=""
+                href="/search/"
                 id="menu-main-search">Search</a>
             <a class="sidebar-nav-item"
                 href=""
@@ -204,7 +265,7 @@
             <article class="post">
     <header>
         <h2 class="post-title">
-            <a href="//localhost:1313/poems/tell-me-god/" rel="bookmark">Tell Me God</a>
+            <a href="http://localhost:1313/poems/tell-me-god/" rel="bookmark">Tell Me God</a>
         </h2>
         <p class="post-meta">
 
@@ -239,7 +300,7 @@ Never anything more peaceful than never being born at all.</p>
             <article class="post">
     <header>
         <h2 class="post-title">
-            <a href="//localhost:1313/poems/the-men-we-see/" rel="bookmark">The Men We See</a>
+            <a href="http://localhost:1313/poems/the-men-we-see/" rel="bookmark">The Men We See</a>
         </h2>
         <p class="post-meta">
 
