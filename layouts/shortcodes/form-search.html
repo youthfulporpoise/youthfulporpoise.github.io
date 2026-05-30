@@ -1,0 +1,97 @@
+<div id="site-search" class="search-form">
+    <p>{{ i18n "search_help" }}</p>
+    <form role="search" id="search-form">
+        <div class="search-wrapper">
+            <div class="search-container form-item">
+                <input
+                    autofocus
+                    autocomplete="off"
+                    spellcheck="false"
+                    placeholder=""
+                    class="search-form-input form-input"
+                    aria-label="{{ i18n "search_site" }}"
+                    type="search"
+                    id="search"
+                    name="search"
+                    maxlength="128">
+            </div>
+            <div class="search-error hide-element">
+                <p class="search-error-message"></p>
+            </div>
+        </div>
+    </form>
+</div>
+
+<section id="search-results" class="hide-element">
+    <div id="search-results-header">
+        <div class="search-query search-query-right">
+            <span id="results-count-text">{{ i18n "search_results" }}</span>
+            <span id="results-count"></span>
+        </div>
+    </div>
+    <div id="search-results-body" class="post-list"></div>
+</section>
+
+<template>
+    <article class="post" data-score="">
+        <header>
+            <h2 class="post-title">
+                <a href="#" class="search-result-page-title"></a>
+            </h2>
+        </header>
+        <p class="post-content"></p>
+    </article>
+</template>
+
+{{- $isProduction := (or (eq (getenv "HUGO_ENV") "production") (eq site.Params.env "production")) -}}
+
+{{- /* Add lunr.js. */ -}}
+{{- $lunrSearch := slice (resources.Get "js/vendor/lunr.js") -}}
+
+{{- /* Add lunr multilanguage support. */ -}}
+{{- $lunrLanguages := site.Params.search.languages | default slice -}}
+{{- if gt (len $lunrLanguages) 0 -}}
+    {{- $lunrSearch = $lunrSearch | append (resources.Get "js/vendor/lunr.multi.js") -}}
+    {{- $lunrSearch = $lunrSearch | append (resources.Get "js/vendor/lunr.stemmer.support.js") -}}
+
+    {{- range $lunrLanguages -}}
+        {{- $lang := . -}}
+        {{- $lang = $lang | lower -}}
+        {{- if and $lang (ne $lang "en") -}}
+            {{- $lunrSearch = $lunrSearch | append (resources.Get (printf "js/vendor/lunr.%s.js" $lang)) -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- /* Build lunr. */ -}}
+{{- $lunrSearch = $lunrSearch | resources.Concat "js/lunr-bundle.js" -}}
+
+{{- if $isProduction -}}
+    {{- $lunrSearch = $lunrSearch | minify -}}
+{{- end -}}
+
+{{- if or (site.Params.assets.disable_fingerprinting) (not $isProduction) }}
+    <script src="{{ $lunrSearch.RelPermalink }}"></script>
+{{- else -}}
+    {{- $lunrSearch = $lunrSearch | fingerprint }}
+    <script src="{{ $lunrSearch.RelPermalink }}" integrity="{{ $lunrSearch.Data.Integrity }}"></script>
+{{- end -}}
+
+{{- /* Configure search engine. */ -}}
+{{- $maxSummaryLength := site.Params.search.maxSummaryLength | default 100 -}}
+{{- $searchConfig := dict "indexURI" ("/index.json" | relLangURL) "maxSummaryLength" $maxSummaryLength "lunrLanguages" $lunrLanguages -}}
+{{- $searchI18n := dict "noResults" (i18n "search_no_results") -}}
+{{- $searchParams := dict "searchConfig" $searchConfig "i18n" $searchI18n -}}
+
+{{- $siteSearch := slice -}}
+{{- $siteSearch = $siteSearch | append (resources.Get "js/search.js") -}}
+{{- $siteSearch = $siteSearch | resources.Concat "js/search-bundle.js" -}}
+
+{{- $siteSearch = $siteSearch | js.Build (dict "format" "iife" "minify" $isProduction "target" "es2015" "params" $searchParams) -}}
+
+{{- if or (site.Params.assets.disable_fingerprinting) (not $isProduction) }}
+    <script src="{{ $siteSearch.RelPermalink }}"></script>
+{{- else -}}
+    {{- $siteSearch = $siteSearch | fingerprint }}
+    <script src="{{ $siteSearch.RelPermalink }}" integrity="{{ $siteSearch.Data.Integrity }}"></script>
+{{- end -}}

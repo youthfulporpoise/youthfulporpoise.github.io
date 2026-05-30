@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+{{/* This template is for list of all publications in a Term (for example a Tag) */}}
+<div class="articles">
+    <h1 class="page-title">
+        {{ with .Title }}{{ i18n "publications_tagged" . }}{{ end }}
+    </h1>
+
+    {{/* Render category content if any */}}
+    {{ with .Content }}
+        <div class="section-content">
+            {{ .Content }}
+        </div>
+    {{ end }}
+
+    {{/* Render posts list */}}
+    <div class="post-list">
+        {{ range .Paginator.Pages }}
+            {{ .Render "teaser" }}
+        {{ end }}
+
+        {{ partial "pagination.html" . }}
+    </div>
+</div>
+
+{{ end }}

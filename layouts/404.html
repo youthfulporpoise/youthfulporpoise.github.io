@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<section class="introduction">
+    <div class="container">
+        <h1 class="accent">404</h1>
+        <p><strong>{{ i18n "404_title" }}</strong></p>
+    </div>
+
+    <p>
+      There is nothing here other than the company of still air.
+      <br>
+      <a href="{{ "/" | relURL }}">Perhaps you should go home</a>.
+    </p>
+</section>
+
+<hr>
+
+<!-- {{- partial "mini-toc" . -}} -->
+
+{{ end }}

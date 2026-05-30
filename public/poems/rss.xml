@@ -2,28 +2,35 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Poems on Shifting Hues of Being</title>
-		<link>//localhost:1313/poems/</link>
+		<link>Ed./poems/</link>
 		<description>Recent content in Poems on Shifting Hues of Being</description>
 		<generator>Hugo</generator>
 		<language>en</language>
 		
-			<managingEditor>h.ali@tuta.io (H. Ali)</managingEditor>
+			<managingEditor>h.ali@tuta.io (Hathim Ali)</managingEditor>
 		
 		
-			<webMaster>h.ali@tuta.io (H. Ali)</webMaster>
+			<webMaster>h.ali@tuta.io (Hathim Ali)</webMaster>
 		
 		
 			<copyright>© 2026 H. Ali</copyright>
 		
 		
-			<lastBuildDate>Sat, 30 May 2026 19:16:23 +0530</lastBuildDate>
+			<lastBuildDate>Sat, 30 May 2026 23:29:32 +0530</lastBuildDate>
 		
-			<atom:link href="//localhost:1313/poems/rss.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="Ed./poems/rss.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Tell Me God</title>
+				<link>Ed./poems/tell-me-god/</link>
+				<pubDate>Sat, 30 May 2026 23:29:32 +0530</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
+				<guid>Ed./poems/tell-me-god/</guid>
+				<description>&lt;p&gt;So tell me my dear so-called God, &lt;br&gt;&#xA;Why do you create sin and punish me for it?&lt;/p&gt;&#xA;&lt;p&gt;Tell me why do you create so beautiful &lt;br&gt;&#xA;These things that sting me when I touch it?&lt;/p&gt;&#xA;&lt;p&gt;You give me this voice that you never hear &lt;br&gt;&#xA;And a depth of heart that drowns me.&lt;/p&gt;&#xA;&lt;p&gt;Why do you throw me into this abrupt existence, &lt;br&gt;&#xA;With no foreboding, no warning, nor admonition?&lt;/p&gt;&#xA;&lt;p&gt;They speak that in you I find peace, and there seems &lt;br&gt;&#xA;Never anything more peaceful than never being born at all.&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>The Men We See</title>
-				<link>//localhost:1313/poems/initial/</link>
-				<pubDate>Sat, 30 May 2026 19:16:23 +0530</pubDate><author>h.ali@tuta.io (H. Ali)</author>
-				<guid>//localhost:1313/poems/initial/</guid>
+				<link>Ed./poems/the-men-we-see/</link>
+				<pubDate>Sat, 30 May 2026 19:16:23 +0530</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
+				<guid>Ed./poems/the-men-we-see/</guid>
 				<description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-0&#34;&gt;&lt;/span&gt;&#xA; The men we see, what are they?&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-1&#34;&gt;&lt;/span&gt;&#xA;   Twisted than vines,&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-2&#34;&gt;&lt;/span&gt;&#xA;     Deeper than seas.&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-0&#34;&gt;&lt;/span&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-0&#34;&gt;&lt;/span&gt;&#xA; Yet our captious eyes,&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-1&#34;&gt;&lt;/span&gt;&#xA;   Eager to conclude,&lt;/li&gt;&#xA;&lt;li&gt;&lt;span class=&#34;indent-2&#34;&gt;&lt;/span&gt;&#xA;     Always blind.&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
 			</item>
 	</channel>

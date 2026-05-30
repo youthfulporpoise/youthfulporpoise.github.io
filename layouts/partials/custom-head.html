@@ -1,5 +1,5 @@
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+Symbols+2&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Diplomata+SC&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Noto+Sans+Symbols+2&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rye&display=swap');
 
   html {
     --fg-color: #2b2b2b;
@@ -10,23 +10,27 @@
   body {
     background-color: var(--bg-color);
     color: var(--fg-color);
-    font-family: "Hoefler Text", "Garamond", "EB Garamond", serif;
+    font-family: "Garamond", "EB Garamond", serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
     color: #111111;
-    font-family: "Bodoni 72 Smallcaps", "Bodoni Moda SC", serif;
-    font-weight: 600;
+    font-family: "Playfair Display SC", "Bodoni 72 Smallcaps", serif;
+    font-weight: 800;
+    font-size: 1.2em;
     text-align: center;
   }
 
-  hr {
-    border-top: 1px solid var(--fg-color);
-    border-bottom: 0px solid var(--fg-color);
+  h1.text-title {
+    font-family: "Playfair Display", "Garamond", "EB Garamond", serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.5em;
   }
 
-  a {
-    color: #05472a;
+  hr {
+    border-top: 0px solid var(--fg-color);
+    border-bottom: 0px solid var(--fg-color);
   }
 
   .masthead {
@@ -35,20 +39,28 @@
   }
 
   .masthead-title {
-    font-family: "Bodoni 72", serif !important;
-    font-size: 2.8em;
-    line-height: 0.3em;
+    font-family: "Playfair", "Garamond", "EB Garamond", serif !important;
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: 900;
+    line-height: 0.6em;
+    letter-spacing: -4.5pt;
+  }
+
+  .masthead-title a {
+    transition: 1s;
   }
 
   .masthead-title a:hover {
+    transition: 0.5s;
+    color: var(--fg-color);
     text-decoration: none;
   }
 
   .masthead-title small {
-    font-family: "Hoefler Text", "Garamond", "EB Garamond", serif;
-    font-size: 14pt;
-    font-style: italic;
-    margin: 0em 0em 0em 8em;
+    font-family: "Garamond", "EB Garamond", serif;
+    font-style: normal;
+    margin: 0em 0em 0em 1em;
   }
 
   .sidebar-toggle {
@@ -57,7 +69,10 @@
   }
 
   .motif {
-    font-family: "Noto Sans Symbol 2", serif;
+    text-align: center;
+    font-family: "Noto Sans Symbols 2", serif;
+    font-weight: 400;
+    font-size: 2em;
     color: var(--theme-color);
   }
 </style>

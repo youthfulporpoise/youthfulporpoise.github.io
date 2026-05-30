@@ -30,7 +30,7 @@ refLinksErrorLevel = 'WARNING'
     'blog', 'literature', 'personal', 'art']
 
   # Used in site header
-  tagline = 'An atonement to my essence.'
+  tagline = 'AN ATONEMENT.'
 
   # Custom footer text on left sidebar. Use HTMl if needed.
   # "&copy;" and "{year}" will be replaced by © and the current year.
@@ -56,7 +56,7 @@ refLinksErrorLevel = 'WARNING'
   # RSS/Atom feed size
   feedSize = 25
 
-  recentPostsSize = 5
+  recentPostsSize = 10
 
   [params.contact]
     # Forms Backend URL, used in contacts form
@@ -90,7 +90,7 @@ refLinksErrorLevel = 'WARNING'
 
   showAuthor = true
   [params.author]
-    name = 'H. Ali'
+    name = 'Hathim Ali'
     email = 'h.ali@tuta.io'
     github = 'youthfulporpoise'
     twitter = ''
@@ -155,9 +155,9 @@ refLinksErrorLevel = 'WARNING'
 
 [languages]
   [languages.en]
-    languageCode = 'en'
-    languageDirection = 'ltr'
-    languageName = 'English'
+    locale = 'en'
+    direction = 'ltr'
+    label = 'English'
     weight = 1
 
 # For more see https://gohugo.io/content-management/menus/

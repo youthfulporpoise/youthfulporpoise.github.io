@@ -1,0 +1,45 @@
+{{- $authorName := "" }}
+{{- $authorEmail := "" }}
+{{- $authorGithub := "" }}
+{{- $authorTwitter := "" }}
+{{- $authorLocation := "" }}
+{{- with site.Params.author }}
+    {{- if reflect.IsMap . }}
+        {{- with .email }}
+            {{- $authorEmail = . }}
+        {{- end -}}
+        {{- with .name }}
+            {{- $authorName = . }}
+        {{- end }}
+        {{- with .github }}
+            {{- $authorGithub = . }}
+        {{- end }}
+        {{- with .twitter }}
+            {{- $authorTwitter = . }}
+        {{- end }}
+        {{- with .location }}
+            {{- $authorLocation = . }}
+        {{- end }}
+    {{- else }}
+        {{- $authorName  = . }}
+    {{- end }}
+{{- end }}
+
+{{- with $authorName }}
+    /* TEAM */
+
+    Author: {{ . }}
+{{- with $authorEmail }}{{ printf "\n    Contact: %s" . }}{{ end }}
+{{- with $authorGithub }}{{ printf "\n    GitHub: @%s" . }}{{ end }}
+{{- with $authorTwitter }}{{ printf "\n    Twitter: @%s" . }}{{ end }}
+{{- with $authorLocation }}{{ printf "\n    From: %s" . }}{{ end }}
+{{- end }}
+
+    /* SITE */
+
+    Last update: {{ now.Format "2006/01/02" }}
+    Language: {{ range $i, $l := site.Languages }}{{ if $i }}, {{ end }}{{ .LanguageName }}{{ end }}
+    Doctype: HTML5
+    Standards: HTML5, CSS3, Open Graph protocol, Schema.org
+    Components: Hugo, Ed Theme, Lunr.js
+    Hugo version: {{ site.Hugo.Version }}

@@ -1,32 +1,56 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="//localhost:1313/">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="Ed./">
     <title>Poems - Shifting Hues of Being</title>
     <subtitle type="html"><![CDATA[Mens infantis, semper viridis. The infant mind, forever green.]]></subtitle>
-    <link href="/poems/" rel="alternate" type="text/html" title="html" />
-    <link href="/poems/rss.xml" rel="alternate" type="application/rss+xml" title="rss" />
-    <link href="/poems/atom.xml" rel="self" type="text/xml" title="atom" />
-    <link href="/poems/feed.json" rel="alternate" type="application/feed+json" title="jsonfeed" />
-    <icon>//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png</icon>
-    <logo>//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png</logo>
+    <link href="Ed./poems/" rel="alternate" type="text/html" title="html" />
+    <link href="Ed./poems/rss.xml" rel="alternate" type="application/rss+xml" title="rss" />
+    <link href="Ed./poems/atom.xml" rel="self" type="text/xml" title="atom" />
+    <link href="Ed./poems/feed.json" rel="alternate" type="application/feed+json" title="jsonfeed" />
+    <icon>Ed./Ed./img/open-graph-logo_hu_cfda06ea0adc9739.png</icon>
+    <logo>Ed./Ed./img/open-graph-logo_hu_cfda06ea0adc9739.png</logo>
     <author>
-        <name>H. Ali</name>
+        <name>Hathim Ali</name>
         <email>h.ali@tuta.io</email>
     </author>
     <generator uri="https://gohugo.io" version="0.162.1">Hugo</generator>
-    <updated>2026-05-30T19:16:23+05:30</updated>
-    <id>urn:uuid:f5423b9f-eadf-5baa-e92a-eaa3683f5fb9</id>
+    <updated>2026-05-31T00:10:47+05:30</updated>
+    <id>urn:uuid:3b28a44d-0ee1-5fbf-6901-6c4b9bebf73d</id>
     <entry>
         
         <category term="poems" />
         
-        <link rel="alternate" type="type/html" href="//localhost:1313/poems/initial/?utm_source=atom_feed" />
+        <link rel="alternate" type="type/html" href="Ed./Ed./poems/tell-me-god/?utm_source=atom_feed" />
+        <title type="html"><![CDATA[Tell Me God]]></title>
+        
+        
+        
+        <published>2026-05-30T23:29:32+05:30</published>
+        <updated>2026-05-30T23:29:32+05:30</updated>
+        <id>urn:uuid:b6d8df28-d486-5437-390a-38badbb5f092</id>
+        
+        <summary type="html"><![CDATA[<p>So tell me my dear so-called God, <br>
+Why do you create sin and punish me for it?</p>
+<p>Tell me why do you create so beautiful <br>
+These things that sting me when I touch it?</p>
+<p>You give me this voice that you never hear <br>
+And a depth of heart that drowns me.</p>
+<p>Why do you throw me into this abrupt existence, <br>
+With no foreboding, no warning, nor admonition?</p>
+<p>They speak that in you I find peace, and there seems <br>
+Never anything more peaceful than never being born at all.</p>]]></summary>
+    </entry>
+    <entry>
+        
+        <category term="poems" />
+        
+        <link rel="alternate" type="type/html" href="Ed./Ed./poems/the-men-we-see/?utm_source=atom_feed" />
         <title type="html"><![CDATA[The Men We See]]></title>
         
         
         
         <published>2026-05-30T19:16:23+05:30</published>
         <updated>2026-05-30T19:16:23+05:30</updated>
-        <id>urn:uuid:7a64148e-eefd-5aa7-a965-20344f3d9ff9</id>
+        <id>urn:uuid:7ec519ad-5163-5efd-f92c-ae2293b70910</id>
         
         <summary type="html"><![CDATA[<ul>
 <li><span class="indent-0"></span>

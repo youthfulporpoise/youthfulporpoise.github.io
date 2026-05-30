@@ -1,14 +1,14 @@
 
     /* TEAM */
 
-    Author: H. Ali
+    Author: Hathim Ali
     Contact: h.ali@tuta.io
     GitHub: @youthfulporpoise
     From: ER, Keralam
 
     /* SITE */
 
-    Last update: 2026/05/30
+    Last update: 2026/05/31
     Language: English
     Doctype: HTML5
     Standards: HTML5, CSS3, Open Graph protocol, Schema.org
