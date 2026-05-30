@@ -22,7 +22,7 @@
 
   // ns-hugo-params:<stdin>
   var i18n = { noResults: "No results found." };
-  var searchConfig = { indexURI: "/index.json", lunrLanguages: ["en"], maxSummaryLength: 100 };
+  var searchConfig = { indexURI: "/index.json", lunrLanguages: ["en"], maxSummaryLength: 200 };
 
   // <stdin>
   var pagesIndex;

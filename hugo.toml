@@ -109,7 +109,7 @@ refLinksErrorLevel = 'WARNING'
   [params.search]
     # Maximum length (in words) of each text blurb. You can change this
     # value if you find that 100 is too short or too long for your taste.
-    maxSummaryLength = 100
+    maxSummaryLength = 200
     # Lunr has full support for the indexing and searching of documents
     # in English. If your documents are in another language, uncomment
     # required languages below.

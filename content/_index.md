@@ -13,5 +13,4 @@ the fetters of a madly imagined unfounded ignominy. The *Shifting Hues of Being*
 a cemetery and a nave for spawns that may bear my hand. *What is blood unlike all things
 red, if it does not congeal nor smells of iron?*
 
-TLDR: this is where I leave my shit.\
-*H. Ali*
+TLDR: this is where I leave my shit.
