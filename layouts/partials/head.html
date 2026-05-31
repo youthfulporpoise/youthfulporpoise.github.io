@@ -1,0 +1,48 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,shrink-to-fit=no">
+
+    <link rel="canonical" href="{{ .Permalink }}">
+
+    <title>{{ block "title" . }}{{- partial "title.html" . -}}{{ end }}</title>
+    <meta name="description" content="{{ partial "description.html" . }}">
+    <meta name="keywords" content="{{ delimit (partial "keywords.html" .) ", " }}">
+
+    {{ with partial "head/author.html" . }}
+        <meta name="author" content="{{ . }}">
+    {{- end }}
+
+    {{ hugo.Generator }}
+
+    {{ partial "styles.html" . }}
+
+    {{- /* Favicons */}}
+    <link rel="icon" href="/favicon.png" sizes="any"> <!-- 32×32 -->
+    <link rel="icon" href="/favicon.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png"><!-- 180×180 -->
+
+    {{- range .AlternativeOutputFormats }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}" title="{{ .Name }}">
+    {{- end }}
+
+    <link rel="sitemap" type="application/xml" href="{{ "sitemap.xml" | relURL }}" title="Sitemap">
+    <link rel="author" type="text/plain" href="{{ "humans.txt" | relURL }}" title="Humans">
+
+    {{- range .AllTranslations -}}
+    <link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+    {{- end }}
+
+    <meta name="theme-color" content="#ffffff">
+
+    {{- block "custom-head" . }}{{ partial "custom-head.html" . }}{{ end }}
+    {{- block "custom-scripts" . }}{{ partial "custom-scripts.html" . }}{{ end }}
+
+    {{- /* Misc */}}
+    {{- template "partials/templates/opengraph.html" . }}
+    {{- template "partials/templates/twitter_cards.html" . }}
+    {{- template "partials/templates/schema_json.html" . }}
+
+    {{- /* Scripts */}}
+    {{- partial "scripts.html" . }}
+    {{- partial "head/analytics.html" . }}
+</head>

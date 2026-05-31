@@ -1,6 +1,6 @@
 ---
 date: '2026-05-30T23:29:32+05:30'
-title: 'Tell Me God'
+title: 'Somewhere’s My God'
 private: true
 ---
 

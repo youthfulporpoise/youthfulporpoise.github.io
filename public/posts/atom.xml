@@ -1,48 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="//localhost:1313/">
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" xml:lang="en" xml:base="http://localhost:1313/">
     <title>Posts - Shifting Hues of Being</title>
     <subtitle type="html"><![CDATA[Mens infantis, semper viridis. The infant mind, forever green.]]></subtitle>
     <link href="/posts/" rel="alternate" type="text/html" title="html" />
     <link href="/posts/rss.xml" rel="alternate" type="application/rss+xml" title="rss" />
     <link href="/posts/atom.xml" rel="self" type="text/xml" title="atom" />
     <link href="/posts/feed.json" rel="alternate" type="application/feed+json" title="jsonfeed" />
-    <icon>//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png</icon>
-    <logo>//localhost:1313/img/open-graph-logo_hu_cfda06ea0adc9739.png</logo>
+    <icon>http://localhost:1313/img/open-graph-logo_hu_4ef1615081bee29d.png</icon>
+    <logo>http://localhost:1313/img/open-graph-logo_hu_4ef1615081bee29d.png</logo>
     <author>
-        <name>H. Ali</name>
+        <name>Hathim Ali</name>
         <email>h.ali@tuta.io</email>
     </author>
     <generator uri="https://gohugo.io" version="0.162.1">Hugo</generator>
-    <updated>2026-05-30T19:16:23+05:30</updated>
-    <id>urn:uuid:f5423b9f-eadf-5baa-e92a-eaa3683f5fb9</id>
+    <updated>2026-05-31T20:06:44+05:30</updated>
+    <id>urn:uuid:6d116a4d-807d-53e3-09c2-1fde53eae16b</id>
     <entry>
         
         <category term="posts" />
         
-        <link rel="alternate" type="type/html" href="//localhost:1313/posts/initial/?utm_source=atom_feed" />
-        <title type="html"><![CDATA[The Men We See]]></title>
+        <link rel="alternate" type="type/html" href="http://localhost:1313/posts/qiyam-bi-nafsihi/?utm_source=atom_feed" />
+        <title type="html"><![CDATA[Qiyām bi-Nafsihi]]></title>
         
         
         
-        <published>2026-05-30T19:16:23+05:30</published>
-        <updated>2026-05-30T19:16:23+05:30</updated>
-        <id>urn:uuid:f90d68ab-5f5e-5698-b9a5-59892d279314</id>
+        <published>2026-05-31T20:06:44+05:30</published>
+        <updated>2026-05-31T20:06:44+05:30</updated>
+        <id>urn:uuid:604d22a9-9fa5-51f4-a9b3-93870a492573</id>
         
-        <summary type="html"><![CDATA[<ul>
-<li><span class="indent-0"></span>
- The men we see, what are they?</li>
-<li><span class="indent-1"></span>
-   Twisted than vines,</li>
-<li><span class="indent-2"></span>
-     Deeper than seas.</li>
-<li><span class="indent-0"></span>
-</li>
-<li><span class="indent-0"></span>
- Yet our captious eyes,</li>
-<li><span class="indent-1"></span>
-   Eager to conclude,</li>
-<li><span class="indent-2"></span>
-     Always blind.</li>
-</ul>]]></summary>
+        <summary type="html"><![CDATA[<p>It is an attribute of the Islamic God <em>Allah</em>. It roughly means “self-subsistence” or
+“self-existence.” It is a fundamental attribute that makes God <em>Al-Qayyūm</em>. The
+implications of this attribute can be surmised as so.</p>
+<ol>
+<li>God is entirely independent of everything.</li>
+<li>Everything entirely is dependent on God.</li>
+</ol>
+<p>That is, God sustains himself, and the Creations. These statements imply a favourable
+conclusion. Let us look at the following arguments.</p>
+<ol start="3">
+<li>Everything is created by God.</li>
+<li>By (1), (2), and (3), God and the Creations cannot share any similarities at all.</li>
+<li>By (4), God is transcendent, and therefore, not immanent.</li>
+<li>By (5), the essence of God cannot be ever conceived with worldly logics.</li>
+</ol>
+<p>For (4): the argument arises from the consequence that if is God is self-subsistent, then
+<em>everything about God</em> is self-subsistent. Therefore, the Creations cannot have <em>a part
+of God</em>, which, if not held, will mean that the Creations is <em>not entirely</em> dependent on
+God, that some of the Creations are self-subsistent. However the following arguments pose
+a contradiction.</p>]]></summary>
+    </entry>
+    <entry>
+        
+        <category term="posts" />
+        
+        <link rel="alternate" type="type/html" href="http://localhost:1313/posts/tell-me-god/?utm_source=atom_feed" />
+        <title type="html"><![CDATA[Somewhere’s My God]]></title>
+        
+        
+        
+        <published>2026-05-30T23:29:32+05:30</published>
+        <updated>2026-05-30T23:29:32+05:30</updated>
+        <id>urn:uuid:fba48b87-6581-5301-896a-12ca938045df</id>
+        
+        <summary type="html"><![CDATA[<p>So tell me my dear so-called God, <br>
+Why do you create sin and punish me for it?</p>
+<p>Tell me why do you create so beautiful <br>
+These things that sting me when I touch it?</p>
+<p>You give me this voice that you never hear <br>
+And a depth of heart that drowns me.</p>
+<p>Why do you throw me into this abrupt existence, <br>
+With no foreboding, no warning, nor admonition?</p>
+<p>They speak that in you I find peace, and there seems <br>
+Never anything more peaceful than never being born at all.</p>]]></summary>
     </entry>
 </feed>

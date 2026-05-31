@@ -1,0 +1,26 @@
+
+
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "Pages - Shifting Hues of Being",
+  "home_page_url": "http://localhost:1313/?utm_source=json_feed",
+  
+  "description": "Mens infantis, semper viridis. The infant mind, forever green.",
+  "icon": "http://localhost:1313/img/open-graph-logo_hu_4ef1615081bee29d.png",
+  "favicon": "http://localhost:1313/img/open-graph-logo_hu_4ef1615081bee29d.png",
+  "authors": [
+    {
+      "name": "Hathim Ali"
+    }
+  ],
+  "language" : "en",
+  "items": [
+    {
+      "id": "3ecac12a-8d53-5ff7-f9e3-f9a210e32766",
+      "url": "http://localhost:1313/pages/qiyam-bi-nafsihi/?utm_source=json_feed",
+      "title": "Qiyām bi-Nafsihi",
+      "summary": "It is an attribute of the Islamic God Allah. It roughly means “self-subsistence” or “self-existence.” It is a fundamental attribute that makes God Al-Qayyūm. The implications of this attribute can be surmised as so.\nGod is entirely independent of everything. Everything entirely is dependent on God. That is, God sustains himself, and the Creations. These statements imply a favourable conclusion. Let us look at the following arguments.\nEverything is created by God. By (1), (2), and (3), God and the Creations cannot share any similarities at all. By (4), God is transcendent, and therefore, not immanent. By (5), the essence of God cannot be ever conceived with worldly logics. For (4): the argument arises from the consequence that if is God is self-subsistent, then everything about God is self-subsistent. Therefore, the Creations cannot have a part of God, which, if not held, will mean that the Creations is not entirely dependent on God, that some of the Creations are self-subsistent. However the following arguments pose a contradiction.",
+      "date_published": "2026-05-31T20:06:44+05:30"
+    }
+  ]
+}

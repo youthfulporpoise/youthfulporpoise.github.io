@@ -59,6 +59,10 @@ refLinksErrorLevel = 'WARNING'
 
   recentPostsSize = 10
 
+  # Enable rendering of mathematics
+  # We leave this disabled to enable as needed in the front matter
+  math = false
+
   [params.contact]
     # Forms Backend URL, used in contacts form
     formAction = 'https://submit-form.com/example'
@@ -72,13 +76,13 @@ refLinksErrorLevel = 'WARNING'
   # Site icons, relative to ./static
   [params.assets]
     # favicon.ico for legacy browsers
-    favicon = ''
+    favicon = '/img/open-graph-logo.png'
 
     # A single SVG icon with a light/dark version for modern browsers
     svgicon = ''
 
     # 180×180 PNG image for Apple devices
-    apple_touch_icon = ''
+    apple_touch_icon = '/img/apple-touch-icon'
 
     # Logo image, relative to ./assets
     logo = '/img/open-graph-logo.png'
@@ -289,6 +293,13 @@ refLinksErrorLevel = 'WARNING'
       [markup.goldmark.parser.attribute]
         # Enable custom attribute support for blocks
         block = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [["\\[", "\\]"], ["$$", "$$"]]
+          inline = [["\\(", "\\)"]]
+
   [[menus.main]]
     identifier = 'github'
     name = 'GitHub Project'
