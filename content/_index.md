@@ -2,9 +2,12 @@
 title: "Shifting Hues of Being"
 description: "An atonement to my essence."
 layout: "index"
+annotations: false
 ---
 
 # A Cemetery, A Nave.
+
+<img src="/img/sun-face.png" alt="Face" style="width: 40%">
 
 A sink for all innocent, aberrant, vivid, and abstruse thoughts of mine that have had
 their escape from their confined dwelling in a revolt of principle. This is the very

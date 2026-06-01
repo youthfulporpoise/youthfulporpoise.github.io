@@ -10,14 +10,16 @@ or cross, my mind. I’ve decided call it to strangely *Shifting Hues of Being* 
 to the ever-firm observation that perception matures, or more generally changes, with
 time.
 
-I’m *Hathim Ali*, treading the mires of a bachelor in technology. To speak of what I tend
-to do, I do many things, and mostly, more strenuously, I avoid never having lived, but
-ends up tangled by questions of the likes as: when can a life be said to have been fully
-*lived*? Trying to get a glimpse of the answers fucks you up more than it englightens you
-I’ve happened to learn. These days, I tend to be more at Idukki than home. Idukki is a
-wonderful place. It is awing, ethralling, as much as it is dark and deep. And often you
-can hear the ancient hills mumbling among themselves. Perhaps overhearing those might
-reveal answers to a question or two, who knows?
+I’m *Hathim Ali*, and I write as I tread the mires of a bachelor in technology. Start
+with what I do? I do many things, but mostly, more strenuously, I avoid never having
+lived, more exactly I end up tangled in a net of questions like: when can a life be said
+to have been *fully lived*? Trying to get a glimpse of the answers fucks you up more than
+it does englightening you I’ve happened to learn. Wow, let’s digress.
+
+These days, I tend to be more at Idukki than home, and it is a wonderful place — awing,
+ethralling, as much as it is dark and deep. And often you can hear the ancient hills
+mumbling among themselves. Perhaps overhearing those might reveal answers to a question
+or two, who knows?
 
 [Instagram.](https://www.instagram.com/alihathimm/) \
 [Github.](https://github.com/youthfulporpoise)
