@@ -187,6 +187,8 @@ function createSearchResultBlurb(query, pageContent) {
   let searchResultText = '';
   let lastEndOfSentence = 0;
   for (const hitLocation of searchQueryHits) {
+    let sentenceFound = false;
+
     if (hitLocation > lastEndOfSentence) {
       for (let i = 0; i < sentenceBoundaries.length; i++) {
         if (sentenceBoundaries[i] > hitLocation) {
@@ -194,10 +196,19 @@ function createSearchResultBlurb(query, pageContent) {
           const endOfSentence = sentenceBoundaries[i];
           lastEndOfSentence = endOfSentence;
           searchResultText += `${pageContent.slice(startOfSentence, endOfSentence).trim()} ... `;
+          sentenceFound = true;
           break;
         }
       }
     }
+
+    if (!sentenceFound && hitLocation > lastEndOfSentence) {
+      const startFallback = Math.max(0, hitLocation - 60);
+      const endFallback = Math.min(pageContent.length, hitLocation + 100);
+      searchResultText += `... ${pageContent.slice(startFallback, endFallback).trim()} ... `;
+      lastEndOfSentence = endFallback; // Advance past this window fragment
+    }
+
     const searchResultWords = tokenize(searchResultText);
     const pageBreakers = searchResultWords.filter((word) => word.length > 50);
     if (pageBreakers.length > 0) {
