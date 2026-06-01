@@ -12,7 +12,7 @@ time.
 
 ![Portrait](/img/profile.png)
 
-I’m *Hathim Ali*, and I write as I tread the mires of a bachelor in technology. Start
+I’m *Hathim Ali*, and as I write I tread the mires of a bachelor in technology. Start
 with what I do? I do many things, but mostly, more strenuously, I avoid never having
 lived. More exactly I lose my way amongst questions like: when can a life be said
 to have been *fully lived*? Trying to get a glimpse of the answers fucks you up more than
