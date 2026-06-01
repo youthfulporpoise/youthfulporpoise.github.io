@@ -21,6 +21,9 @@ enableRobotsTXT = true
 refLinksErrorLevel = 'WARNING'
 
 [params]
+  # Google Tag Manager ID
+  gtm_id = "GTM-NRJSGLQX"
+
   # Site description. Used in meta description
   description = "Mens infantis, semper viridis. The infant mind, forever green."
 
@@ -289,16 +292,18 @@ refLinksErrorLevel = 'WARNING'
     # false due to generated Syntax Highlighter CSS
     noClasses = false
   [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
     [markup.goldmark.parser]
       [markup.goldmark.parser.attribute]
-        # Enable custom attribute support for blocks
         block = true
+        title = true
     [markup.goldmark.extensions]
       [markup.goldmark.extensions.passthrough]
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
-          block = [["\\[", "\\]"], ["$$", "$$"]]
-          inline = [["\\(", "\\)"]]
+          block = [["$$", "$$"]]
+          inline = [["$", "$"]]
 
   [[menus.main]]
     identifier = 'github'

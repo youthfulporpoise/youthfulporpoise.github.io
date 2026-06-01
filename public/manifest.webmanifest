@@ -30,7 +30,7 @@
     {
       "name": "Contact",
       "short_name" : "contact",
-      "url": ""
+      "url": "/contact/"
     } ,
     {
       "name": "GitHub Project",

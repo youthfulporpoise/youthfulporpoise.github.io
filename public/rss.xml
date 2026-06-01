@@ -16,9 +16,23 @@
 			<copyright>© 2026 H. Ali</copyright>
 		
 		
-			<lastBuildDate>Sun, 31 May 2026 20:06:44 +0530</lastBuildDate>
+			<lastBuildDate>Mon, 01 Jun 2026 15:06:08 +0530</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/rss.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Thanks for Reaching Out.</title>
+				<link>http://localhost:1313/thanks/</link>
+				<pubDate>Mon, 01 Jun 2026 15:06:08 +0530</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
+				<guid>http://localhost:1313/thanks/</guid>
+				<description>&lt;p&gt;You’ve reached me, and I’ll get back to you as soon as possible. There’s nothing here&#xA;much more than that. &lt;a href=&#34;http://localhost:1313/&#34;&gt;Home?&lt;/a&gt;&lt;/p&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/gratitude.png&#34; alt=&#34;Thanks&#34; style=&#34;width: 25%;&#34;&gt;</description>
+			</item>
+			<item>
+				<title>Contact</title>
+				<link>http://localhost:1313/contact/</link>
+				<pubDate>Mon, 01 Jun 2026 14:04:55 +0530</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
+				<guid>http://localhost:1313/contact/</guid>
+				<description>&lt;div id=&#34;site-contact&#34; class=&#34;contact-form&#34;&gt;&#xA;    &lt;form accept-charset=&#34;UTF-8&#34; action=&#34;https://api.web3forms.com/submit&#34; method=&#34;POST&#34; id=&#34;contact-form&#34;&gt;&#xA;&#xA;        &lt;div class=&#34;form-item&#34;&gt;&#xA;            &lt;label for=&#34;name&#34; class=&#34;form-label&#34;&gt;Your name&lt;/label&gt;&#xA;            &lt;input type=&#34;text&#34; id=&#34;name&#34; name=&#34;name&#34; class=&#34;contact-form-input form-input&#34; placeholder=&#34;&#34; required aria-labelledby=&#34;name&#34;&gt;&#xA;        &lt;/div&gt;&#xA;&#xA;        &lt;div class=&#34;form-item&#34;&gt;&#xA;            &lt;label for=&#34;email&#34; class=&#34;form-label&#34;&gt;Email address&lt;/label&gt;&#xA;            &lt;input type=&#34;email&#34; id=&#34;email&#34; name=&#34;email&#34; class=&#34;contact-form-input form-input&#34; placeholder=&#34;&#34; required aria-labelledby=&#34;email&#34;&gt;&#xA;        &lt;/div&gt;&#xA;&#xA;        &lt;div class=&#34;form-item&#34;&gt;&#xA;            &lt;label for=&#34;message&#34; class=&#34;form-label&#34;&gt;Message&lt;/label&gt;&#xA;            &lt;textarea id=&#34;message&#34; name=&#34;message&#34; class=&#34;contact-form-textarea form-input&#34; placeholder=&#34;&#34; required aria-labelledby=&#34;message&#34;&gt;&lt;/textarea&gt;&#xA;        &lt;/div&gt;&#xA;&#xA;        &lt;input type=&#34;hidden&#34; name=&#34;_feedback.language&#34; value=&#34;en&#34; &gt;&#xA;        &lt;input type=&#34;hidden&#34; name=&#34;_email.subject&#34; value=&#34;Contact form submission&#34;&gt;&#xA;        &lt;input type=&#34;hidden&#34; name=&#34;_redirect&#34; value=&#34;http://localhost:1313/thanks&#34;&gt;&#xA;&#xA;        &lt;input type=&#34;checkbox&#34; name=&#34;_honeypot&#34; style=&#34;display:none&#34; tabindex=&#34;-1&#34; autocomplete=&#34;off&#34; class=&#34;contact-form-gotcha&#34; value=&#34;&#34;&gt;&#xA;&#xA;        &lt;input type=&#34;hidden&#34; name=&#34;access_key&#34; value=&#34;0a6d1c51-b022-4bb5-9ef3-3f7e37edbc47&#34;&gt;&#xA;        &lt;input type=&#34;hidden&#34; name=&#34;subject&#34; value=&#34;Mail from “Shifting Hues of Being”&#34;&gt;&#xA;        &lt;input type=&#34;hidden&#34; name=&#34;redirect&#34; value=&#34;http://localhost:1313/thanks&#34;&gt;&#xA;&#xA;&#xA;        &lt;div class=&#34;form-item&#34;&gt;&#xA;            &lt;input type=&#34;submit&#34; value=&#34;Send&#34; class=&#34;button button-large&#34;&gt;&#xA;        &lt;/div&gt;&#xA;    &lt;/form&gt;&#xA;&lt;/div&gt;</description>
+			</item>
 			<item>
 				<title>Qiyām bi-Nafsihi</title>
 				<link>http://localhost:1313/posts/qiyam-bi-nafsihi/</link>
