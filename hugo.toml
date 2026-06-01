@@ -195,6 +195,11 @@ refLinksErrorLevel = 'WARNING'
     name = 'Contact'
     pageRef = '/contact'
     weight = 6
+  [[menus.main]]
+    identifier = "meta"
+    name = "Meta"
+    pageRef = "/meta"
+    weight = 7
 
 [pagination]
   pagerSize = 10

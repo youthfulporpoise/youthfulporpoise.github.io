@@ -10,6 +10,8 @@ or cross, my mind. I’ve decided call it to strangely *Shifting Hues of Being* 
 to the ever-firm observation that perception matures, or more generally changes, with
 time.
 
+![Portrait](/img/profile.png)
+
 I’m *Hathim Ali*, and I write as I tread the mires of a bachelor in technology. Start
 with what I do? I do many things, but mostly, more strenuously, I avoid never having
 lived. More exactly I lose my way amongst questions like: when can a life be said
