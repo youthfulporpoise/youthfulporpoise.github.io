@@ -1,3 +1,0 @@
-# robots.txt file for "Shifting Hues of Being" website, localhost:1313
-User-agent: *
-Disallow: /
