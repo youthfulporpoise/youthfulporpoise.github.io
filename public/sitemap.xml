@@ -3,8 +3,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-06-01T15:06:08+05:30</lastmod>
+    <loc>http://localhost:1313/publications/</loc>
+    <lastmod>2026-06-01T18:05:34+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -15,11 +15,6 @@
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
     <lastmod>2026-06-01T14:04:55+05:30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-05-31T20:06:44+05:30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
@@ -42,7 +37,15 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>http://localhost:1313/search/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>

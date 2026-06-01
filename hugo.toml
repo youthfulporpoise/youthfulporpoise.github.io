@@ -176,10 +176,15 @@ refLinksErrorLevel = 'WARNING'
     pageRef = '/'       # path to the page
     weight = 1          # order of the menu item
   [[menus.main]]
+    identifier = "posts"
+    name = "All Posts"
+    pageRef = "/publications.md"
+    weight = 2
+  [[menus.main]]
     identifier = 'about'
     name = 'About'
     pageRef = '/about'
-    weight = 2
+    weight = 3
   [[menus.main]]
     identifier = 'search'
     name = 'Search'

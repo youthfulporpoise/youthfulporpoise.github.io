@@ -16,9 +16,14 @@
 			<copyright>© 2026 H. Ali</copyright>
 		
 		
-			<lastBuildDate>Mon, 01 Jun 2026 15:06:08 +0530</lastBuildDate>
-		
 			<atom:link href="http://localhost:1313/rss.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>All Posts</title>
+				<link>http://localhost:1313/publications/</link>
+				<pubDate>Mon, 01 Jun 2026 18:05:34 +0530</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
+				<guid>http://localhost:1313/publications/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Thanks for Reaching Out.</title>
 				<link>http://localhost:1313/thanks/</link>
@@ -45,7 +50,7 @@
 				<link>http://localhost:1313/about/</link>
 				<pubDate>Sun, 31 May 2026 00:10:47 +0530</pubDate><author>h.ali@tuta.io (Hathim Ali)</author>
 				<guid>http://localhost:1313/about/</guid>
-				<description>&lt;p&gt;This is my personal blog-like website, except more than a blog it is more of an appendix&#xA;of what I do. These are my thoughts, ramblings, opinions, and other things that occupy,&#xA;or cross, my mind. I’ve decided call it to strangely &lt;em&gt;Shifting Hues of Being&lt;/em&gt; as an ode&#xA;to the ever-firm observation that perception matures, or more generally changes, with&#xA;time.&lt;/p&gt;&#xA;&lt;p&gt;I’m &lt;em&gt;Hathim Ali&lt;/em&gt;, and I write as I tread the mires of a bachelor in technology. Start&#xA;with what I do? I do many things, but mostly, more strenuously, I avoid never having&#xA;lived, more exactly I end up tangled in a net of questions like: when can a life be said&#xA;to have been &lt;em&gt;fully lived&lt;/em&gt;? Trying to get a glimpse of the answers fucks you up more than&#xA;it does englightening you I’ve happened to learn. Wow, let’s digress.&lt;/p&gt;</description>
+				<description>&lt;p&gt;This is my personal blog-like website, except more than a blog it is more of an appendix&#xA;of what I do. These are my thoughts, ramblings, opinions, and other things that occupy,&#xA;or cross, my mind. I’ve decided call it to strangely &lt;em&gt;Shifting Hues of Being&lt;/em&gt; as an ode&#xA;to the ever-firm observation that perception matures, or more generally changes, with&#xA;time.&lt;/p&gt;&#xA;&lt;p&gt;I’m &lt;em&gt;Hathim Ali&lt;/em&gt;, and I write as I tread the mires of a bachelor in technology. Start&#xA;with what I do? I do many things, but mostly, more strenuously, I avoid never having&#xA;lived. More exactly I lose my way amongst questions like: when can a life be said&#xA;to have been &lt;em&gt;fully lived&lt;/em&gt;? Trying to get a glimpse of the answers fucks you up more than&#xA;it does englightening you I’ve happened to learn. Wow, let’s digress.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Somewhere’s My God</title>
