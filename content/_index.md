@@ -9,11 +9,11 @@ annotations: false
 
 <img src="/img/sun-face.png" alt="Face" style="width: 40%">
 
-A sink for all innocent, aberrant, vivid, and abstruse thoughts of mine that have had
-their escape from their confined dwelling in a revolt of principle. This is the very
-tangible manifestation of their *Magna Carta*, and their declaration of existence from
-the fetters of a madly imagined unfounded ignominy. The *Shifting Hues of Being* is both
-a cemetery and a nave for spawns that may bear my hand. *What is blood unlike all things
-red, if it does not congeal nor smells of iron?*
+A sink for all innocent, aberrant, vivid, and abstruse thoughts of mine that have escaped
+in a revolt of principle from their confined dwelling. This is the very tangible
+manifestation of their *Magna Carta*, and their declaration of existence from the fetters
+of a madly imagined unfounded ignominy. The *Shifting Hues of Being* is both a cemetery
+and a nave for spawns that may bear my hand. *What is blood unlike all things red, if it
+does not congeal nor smells of iron?*
 
 TLDR: this is where I leave my shit.
