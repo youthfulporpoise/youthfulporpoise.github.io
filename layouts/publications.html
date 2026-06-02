@@ -11,7 +11,7 @@
 
         <ol class="publications-list" style="list-style: decimal; padding-left: 0; margin-top: 30px;">
           {{ range .Site.RegularPages }}
-            {{ if or (eq .Section "poems") (eq .Section "posts") }}
+            {{ if (eq .Section "posts") }}
               <li class="publication-item" style="margin-bottom: 10px; border-bottom: 1px solid #eee; padding-bottom: 10px;">
                 <div>
                   <a href="{{ .Permalink }}">{{ .Title }}</a>
