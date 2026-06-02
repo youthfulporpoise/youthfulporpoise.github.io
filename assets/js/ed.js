@@ -33,7 +33,21 @@ function setupHypothes() {
   }
 }
 
+
+function setupSideBarAutoClose() {
+  const sidebarLinks = document.querySelectorAll(".sidebar-nav-item");
+  const sidebarToggle = document.querySelector(".sidebar-toggle");
+
+  sidebarLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      if (sidebarToggle)
+        sidebarToggle.click();
+    });
+  });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   setupBackToTop();
   setupHypothes();
+  setupSideBarAutoClose();
 });
