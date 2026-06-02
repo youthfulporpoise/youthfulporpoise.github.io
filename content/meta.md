@@ -2,6 +2,7 @@
 date: '2026-06-01T20:09:57+05:30'
 title: 'Meta Information'
 private: true
+showdate: false
 ---
 
 The image featured in the home page is the *Sun of May* (*Sol de Mayo*). It is the symbol

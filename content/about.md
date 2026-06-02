@@ -2,6 +2,7 @@
 date: '2026-05-31T00:10:47+05:30'
 title: 'About'
 private: true
+showdate: false
 ---
 
 This is my personal blog-like website, except more than a blog it is more of an appendix

@@ -1,6 +1,6 @@
 ---
 title: 'Search'
-hidedate: true
+showdate: false
 ---
 
 {{< form-search >}}
