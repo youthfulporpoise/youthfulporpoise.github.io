@@ -1,8 +1,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Gelasio:ital,wght@0,400..700;1,400..700&family=Marcellus+SC&family=Noto+Sans+Symbols+2&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
   @import url('https://smc.org.in/fonts/malini.css');
   @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC:wght@400..700&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Marcellus+SC&family=Noto+Sans+Symbols+2&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
 
   :lang(ml) {
     font-family: "Malini";
@@ -99,6 +100,22 @@
 
   img {
     margin: 3em auto 3em auto;
+  }
+
+
+
+  .post-body {
+    counter-reset: h2-counter;
+  }
+
+  .post-body h2 {
+    counter-increment: h2-counter;
+    position: relative;
+  }
+
+  .post-body h2::before {
+    content: counter(h2-counter, upper-roman) ". ";
+    margin-right: 5pt;
   }
 
 
