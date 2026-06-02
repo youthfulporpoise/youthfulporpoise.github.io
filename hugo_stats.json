@@ -37,10 +37,16 @@
       "strong",
       "style",
       "svg",
+      "table",
+      "tbody",
+      "td",
       "template",
       "textarea",
+      "th",
+      "thead",
       "time",
       "title",
+      "tr",
       "ul"
     ],
     "classes": [
