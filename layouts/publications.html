@@ -12,11 +12,11 @@
         <ol class="publications-list" style="list-style: decimal; padding-left: 0; margin-top: 30px;">
           {{ range .Site.RegularPages }}
             {{ if (eq .Section "posts") }}
-              <li class="publication-item" style="margin-bottom: 10px; border-bottom: 1px solid var(--theme-color); padding-bottom: 10px;">
+              <li class="publication-item">
                 <div>
                   <a href="{{ .Permalink }}">{{ .Title }}</a>
                 </div>
-                <div class="publication-date" style="font-size: 0.9em; color: #888; font-variant-numeric: tabular-nums;">
+                <div class="publication-date">
                     {{ if .Date }}
                       {{ .Date.Format site.Params.dateFormat }}
                     {{ else }}

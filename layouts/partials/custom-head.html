@@ -1,8 +1,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
   @import url('https://smc.org.in/fonts/malini.css');
-  @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC:wght@400..700&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Marcellus+SC&family=Noto+Sans+Symbols+2&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+  @import url('https://fonts.googleapis.com/css2?family=Baskervville+SC:wght@400..700&family=Gelasio:ital,wght@0,400..700;1,400..700&family=Libertinus+Mono&family=Marcellus+SC&family=Noto+Sans+Symbols+2&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 
   :lang(ml) {
@@ -54,6 +53,7 @@
     --theme-color: #87583c;
     --comp-color: #f5e6cc;
     --masthead-color: #f9f1cb;
+    --demure-color: #908070;
   }
 
   body {
@@ -85,12 +85,18 @@
 
   .pub-datetime, .byline {
     text-align: center;
-    color: #888888;
     padding-bottom: 1.5em;
   }
 
   span.post-meta {
     padding-right: 5pt;
+  }
+
+  .pub-datetime, .byline, span.post-meta, .publication-date {
+    font-family: "Libertinus Mono", "Courier", monospace;
+    font-size: 12pt !important;
+    font-style: normal;
+    color: var(--demure-color);
   }
 
   hr {
@@ -214,8 +220,15 @@
     column-gap: 4em;
   }
 
+  .publication-item {
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--demure-color);
+    padding-bottom: 10px;
+  }
 
 
+
+  /* for search results */
   .post-title {
     font-family: "Marcellus SC", serif;
   }
@@ -263,6 +276,15 @@
 
   tbody tr:nth-child(odd) td, tbody tr:nth-child(odd) th {
     background-color: var(--bg-color);
+  }
+
+
+  ul {
+    list-style: square;
+  }
+
+  li::marker {
+    color: var(--demure-color);
   }
 
 

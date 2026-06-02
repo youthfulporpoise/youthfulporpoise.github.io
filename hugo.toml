@@ -50,8 +50,8 @@ refLinksErrorLevel = 'WARNING'
   mainSections = ['posts', 'dramas', 'narratives', 'poems']
 
   # Posts date format, for example: 2006-01-02
-  dateFormat = 'Jan 02, 2006 · 15:04'
-  dateFormatToc = 'Jan 02, 2006 · 15:04'
+  dateFormat = '2006 Jan 02 15:04'
+  dateFormatToc = '2006 Jan 02 15:04'
 
   # Show "Read more" button in list if true
   readmore = true
