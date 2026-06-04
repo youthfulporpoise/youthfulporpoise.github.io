@@ -1,19 +1,20 @@
 ---
 title: "Shifting Hues of Being"
-description: "An atonement to my essence."
+description: "An atonement."
 layout: "index"
 annotations: false
 ---
 
-# A Cemetery, A Nave.
+<img src="/img/ophan.png" alt="Face" style="width: 80%">
 
-<img src="/img/sun-face.png" alt="Face" style="width: 40%">
+A sink for all innocent, aberrant, vivid, and abstruse thoughts, emancipated in a revolt
+of principle. This is their declaration of existence against the fetters of a madly
+imagined unfounded ignominy. The *Shifting Hues of Being* is a throne and a chariot for
+spawns that may bear my hand. *What is blood unlike all things red, if it does not
+congeal nor smells of iron?*
 
-A sink for all innocent, aberrant, vivid, and abstruse thoughts of mine that have escaped
-in a revolt of principle from their confined dwelling. This is the very tangible
-manifestation of their *Magna Carta*, and their declaration of existence from the fetters
-of a madly imagined unfounded ignominy. The *Shifting Hues of Being* is both a cemetery
-and a nave for spawns that may bear my hand. *What is blood unlike all things red, if it
-does not congeal nor smells of iron?*
-
-TLDR: this is where I leave my shit.
+<div class="img-container">
+  <img src="/img/bifrons.png" alt="Sigil of Bifrons">
+  <img src="/img/paimon.png" alt="Sigil of Paimon">
+  <img src="/img/gaap.png" alt="Sigil of Gäap">
+</div>
