@@ -19,7 +19,7 @@ For instance, in Theravāda tradition, the Buddha is neither a supreme god, a de
 man, whereas in Mahāyāna Buddhism, the Buddha is transcendent, omniscient, spiritually
 omnipotent, and much more.[^LotusSutta] There are also views of the Buddha being simply
 nothing more than an insightful wise person. This is the view I prefer. There are many
-things I find myself comtemplating that are strewn all over the Buddhist corpus, like how
+things I find myself contemplating that are strewn all over the Buddhist corpus, like how
 the fruits of a tree lie. I find it the most significant of them the term *tathatā*,
 which is Pali, roughly translated as thusness or suchness.
 
@@ -82,13 +82,13 @@ this want is due to a blindness to tathatā.
 ## Thereby Meeting the Absurd
 
 Anicca and anattā, collate them together with Absurdism, you find they are a constituent
-of the Absurd (due leeway for such a phrasing) escapecially anattā.  Camus introduces
-*the Absurd* as the conflict between a person’s want for purpose and the world’s stark
-lack of it. This is the central point of Absurdism. The world is unbound by human
-rationality.  Have you ever committed an act of noble intention that bore disastrous,
-sometimes diametric, outcomes? Were you amused by that turn of events? Ever thought why
-your intention appeared to have no practical value?  If you have ever trodden that trail,
-you have passed by the Absurd, and perhaps you could not then quite make out what you had
+of the Absurd (due leeway for such a phrasing) especially anattā. Camus introduces *the
+Absurd* as the conflict between a person’s want for purpose and the world’s stark lack of
+it. This is the central point of Absurdism. The world is unbound by human rationality.
+Have you ever committed an act of noble intention that bore disastrous, sometimes
+diametric, outcomes? Were you amused by that turn of events? Ever thought why your
+intention appeared to have no practical value?  If you have ever trodden that trail, you
+have passed by the Absurd, and perhaps you could not then quite make out what you had
 come across. But when look at samsāra through the lens of tathatā, you meet it, you
 confront it, you come to terms with the Absurd. You never resolve it, you only come to
 terms with it. Therefore I argue that tathatā is a good response to the Absurd.  And that
