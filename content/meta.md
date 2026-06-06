@@ -15,6 +15,8 @@ for spawns that may bear my hand. <i>What is blood unlike all things red, if it 
 congeal nor smells of iron?</i>
 </p>
 
+# Symbolisms in the Homepage
+
 The image featured in the home page is of an *ophan*, an inexact illustration of its
 description from Ezekiel’s vision of [God’s
 Merkabah](https://en.wikipedia.org/wiki/Merkabah_mysticism) in the
