@@ -51,15 +51,16 @@
     --bg-color: #f8f5db;
     --theme-color: #87583c;
     --comp-color: #f5e6cc;
-    --masthead-color: #f8f5db;
+    --masthead-color: var(--bg-color);
     --demure-color: #807050;
+		--bg-faint: #f0ecd3;
   }
 
 	/* arabesque pattern */
 	body {
 		--s: 36px; /* control the size*/
-		--c1: #f0ecd3;
-		--c2: #f9f5db;
+		--c1: var(--bg-faint);
+		--c2: var(--bg-color);
 		
 		--t: calc(var(--s)/18);  /* control the thickness */
 		--_c: #0000 calc(98% - var(--t)),var(--c1) calc(100% - var(--t)) 98%,#0000;
@@ -249,6 +250,7 @@
   .sidebar {
     font-family: "Helvetica Neue", "Inter", sans-serif;
     font-size: 0.9rem;
+		background-color: var(--theme-color) !important;
     width: 40%;
     left: -40%;
     transition: all 0.8s ease-in-out;
