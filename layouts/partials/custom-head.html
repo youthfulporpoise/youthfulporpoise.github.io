@@ -57,12 +57,12 @@
   }
 
 	/* arabesque pattern */
-	body {
+	.wrap {
 		--s: 36px; /* control the size*/
 		--c1: var(--bg-faint);
 		--c2: var(--bg-color);
 		
-		--t: calc(var(--s)/18);  /* control the thickness */
+		--t: 2px; /* calc(var(--s)/18);  /* control the thickness */
 		--_c: #0000 calc(98% - var(--t)),var(--c1) calc(100% - var(--t)) 98%,#0000;
 		--_s: calc(2*var(--s)) calc(5*var(--s)/2);
 		--_r0: /var(--_s) radial-gradient(calc(var(--s)/2) at 0    20%,var(--_c));
@@ -77,6 +77,9 @@
 			var(--s) calc(var(--s)/-8)/var(--_s),
 			conic-gradient(from 90deg at var(--t) var(--t),var(--c2) 25%,var(--c1) 0) 
 			calc((var(--s) - var(--t))/2) calc((var(--s) - var(--t))/2)/var(--s) calc(5*var(--s)/4);
+
+		transform: translateZ(0);
+		backface-visibility: hidden;
 	}
 
   body {
