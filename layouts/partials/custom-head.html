@@ -57,8 +57,8 @@
   }
 
 	/* arabesque pattern */
-	.wrap {
-		--s: 36px; /* control the size*/
+	body {
+		--s: 40px; /* control the size*/
 		--c1: var(--bg-faint);
 		--c2: var(--bg-color);
 		
@@ -78,8 +78,8 @@
 			conic-gradient(from 90deg at var(--t) var(--t),var(--c2) 25%,var(--c1) 0) 
 			calc((var(--s) - var(--t))/2) calc((var(--s) - var(--t))/2)/var(--s) calc(5*var(--s)/4);
 
-		transform: translateZ(0);
-		backface-visibility: hidden;
+		image-rendering: -webkit-optimize-contrast;
+		image-rendering: crisp-edges;
 	}
 
   body {
