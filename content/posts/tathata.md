@@ -52,18 +52,18 @@ still very renitent to intuition. Let us look at it like this.
 Think about these four statements together. Sit on it. Does an idea form, or an outline,
 a silhouette? Tatathā can be surmised as that, but it is still a simplification. It is
 one of those ideas that the more you entertain it, fight it, the more and more clearer it
-becomes. I know I have been brandishing too many terms, but it is a core idea of what
-I am trying to demonstrate. We go on the next one.
+becomes. I know I have been brandishing too many terms here, but it is a core idea of
+what I am trying to demonstrate. We go on to the next one.
 
 
 ## Distilling Samsāra
 
 The term *samsāra* has a unanimous clear meaning in Buddhism. It is the cyclicity of
 life, death, rebirth, and redeath, without beginning (*anamatagga*) and without end
-(*ananta*), laden with suffering (*dukkha*), and the salvation from dukkha is
-*nibbāna*. This is very far from what I mean by samsāra, which is more grounded
-in the existentialist and absurdist sense, unlike the original sense which is, honestly,
-too much. Look at this, for reference.
+(*ananta*), laden with suffering (*dukkha*), and the salvation from dukkha is *nibbāna*.
+This is very far from what I mean by samsāra, which is more grounded in the
+existentialist and absurdist sense, unlike the original sense which is, honestly, too
+much. Take a look at this, for reference.
 
 ![The Cycle of
 Samsāra](https://upload.wikimedia.org/wikipedia/commons/7/74/The_wheel_of_life%2C_Buddhism_Bhavachakra.jpg)
@@ -89,9 +89,9 @@ Have you ever committed an act of noble intention that bore disastrous, sometime
 diametric, outcomes? Were you amused by that turn of events? Ever thought why your
 intention appeared to have no practical value?  If you have ever trodden that trail, you
 have passed by the Absurd, and perhaps you could not then quite make out what you had
-come across. But when look at samsāra through the lens of tathatā, you meet it, you
+come across. But when you look at samsāra through the lens of tathatā, you meet it, you
 confront it, you come to terms with the Absurd. You never resolve it, you only come to
-terms with it. Therefore I argue that tathatā is a good response to the Absurd.  And that
+terms with it. Therefore I argue that tathatā is a good response to the Absurd. And that
 is why, I think, like I made clear, it is rather evasive to simple definitions.
 
 
