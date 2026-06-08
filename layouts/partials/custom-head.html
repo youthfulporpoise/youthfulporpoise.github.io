@@ -19,6 +19,14 @@
     touch-action: manipulation !important;
   }
 
+  body, .wrap {
+    min-height: 100dvh;
+  }
+
+  #main, main {
+    flex: 1 0 auto;
+  }
+
   body.sidebar-open {
     position: fixed;
     overflow: hidden;
@@ -93,10 +101,6 @@
   }
 
   .content {
-    margin-bottom: 0;
-  }
-
-  .post {
     margin-bottom: auto;
   }
 
@@ -111,7 +115,7 @@
   }
 
   .corinthian-columns img {
-    max-height: 24vh;
+    max-height: 14rem;
   }
 
   .corinthian-columns .left {
