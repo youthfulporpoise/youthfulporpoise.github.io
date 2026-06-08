@@ -62,46 +62,9 @@ function setupImageLightBox() {
   });
 }
 
-function fixBottomVoid() {
-  const oldSpacer = document.getElementById("spacer");
-  if (oldSpacer)
-    oldSpacer.remove();
-
-  const bottomElement = document.getElementById("bottom-element");
-  const voidMark = document.getElementById("void-mark");
-
-  const rect = bottomElement.getBoundingClientRect();
-  const vpHeight = window.screen.height;
-
-  console.log(rect.bottom + " : " + vpHeight);
-  if (rect.bottom < vpHeight) {
-    const gap = vpHeight - rect.bottom;
-
-    const spacer = document.createElement("div");
-    spacer.id = "void-spacer";
-    spacer.style.height = gap + "px";
-    spacer.style.pointerEvents = "none";
-
-    voidMark.parentNode.insertBefore(spacer, voidMark);
-  }
-}
-
-function debounce(func, delay) {
-  let timerId;
-  return function(...args) {
-    clearTimeout(timerId);
-    timerId = setTimeout(() => {
-      func.apply(this, args)
-    }, delay);
-  }
-}
-
-const fixBottomVoidDebounced = debounce(fixBottomVoid, 1000);
-
 document.addEventListener('DOMContentLoaded', () => {
   setupBackToTop();
   setupHypothes();
   setupSideBarAutoClose();
   setupImageLightBox();
-  fixBottomVoid();
 });
