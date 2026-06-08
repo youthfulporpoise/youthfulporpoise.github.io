@@ -12,3 +12,13 @@ annotations: false
   <img src="/img/paimon.png" alt="Sigil of Paimon">
   <img src="/img/gaap.png" alt="Sigil of Gäap">
 </div>
+
+<style>
+  .corinthian-top {
+    display: none;
+  }
+
+  #heaven-mark {
+    display: none;
+  }
+</style>
