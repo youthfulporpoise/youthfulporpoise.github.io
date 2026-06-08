@@ -88,13 +88,6 @@ function fixBottomVoid() {
     console.log("Inserting spaces of " + gap / 2 + "px");
     voidMark.parentNode.insertBefore(voidSpacer, voidMark);
     heavenMark.parentNode.insertBefore(heavenSpacer, heavenMark);
-  } else {
-    const voidSpacer = document.getElementById("void-spacer");
-    const heavenSpacer = document.getElementById("heaven-spacer");
-    if (voidSpacer)
-      voidSpacer.remove();
-    if (heavenSpacer)
-      heavenSpacer.remove();
   }
 }
 
@@ -108,7 +101,7 @@ function debounce(func, delay) {
   }
 }
 
-const fixBottomVoidDebounced = debounce(fixBottomVoid, 900);
+const fixBottomVoidDebounced = debounce(fixBottomVoid, 1000);
 
 document.addEventListener('DOMContentLoaded', () => {
   setupBackToTop();
