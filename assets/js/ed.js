@@ -90,7 +90,7 @@ function fixBottomVoid() {
     heavenMark.parentNode.insertBefore(heavenSpacer, heavenMark);
   } else {
     const voidSpacer = document.getElementById("void-spacer");
-    const heavenSpacer = document.getElementById("heavens-spacer");
+    const heavenSpacer = document.getElementById("heaven-spacer");
     if (voidSpacer)
       voidSpacer.remove();
     if (heavenSpacer)
@@ -108,7 +108,7 @@ function debounce(func, delay) {
   }
 }
 
-const fixBottomVoidDebounced = debounce(fixBottomVoid, 1000);
+const fixBottomVoidDebounced = debounce(fixBottomVoid, 900);
 
 document.addEventListener('DOMContentLoaded', () => {
   setupBackToTop();
