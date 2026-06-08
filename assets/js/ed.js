@@ -67,7 +67,7 @@ function fixBottomVoid() {
   const voidMark = document.getElementById("void-mark");
 
   const rect = bottomElement.getBoundingClientRect();
-  const vpHeight = window.innerHeight;
+  const vpHeight = window.screen.height;
 
   if (rect.bottom < vpHeight) {
     const gap = vpHeight - rect.bottom;
