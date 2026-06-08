@@ -63,21 +63,26 @@ function setupImageLightBox() {
 }
 
 function fixBottomVoid() {
+  const oldSpacer = document.getElementById("spacer");
+  if (oldSpacer)
+    oldSpacer.remove();
+
   const bottomElement = document.getElementById("bottom-element");
   const voidMark = document.getElementById("void-mark");
 
   const rect = bottomElement.getBoundingClientRect();
   const vpHeight = window.screen.height;
 
+  console.log(rect.bottom + " : " + vpHeight);
   if (rect.bottom < vpHeight) {
     const gap = vpHeight - rect.bottom;
 
-    const voidSpacer = document.createElement("div");
-    voidSpacer.id = "void-spacer";
-    voidSpacer.style.height = gap + "px";
-    voidSpacer.style.pointerEvents = "none";
+    const spacer = document.createElement("div");
+    spacer.id = "void-spacer";
+    spacer.style.height = gap + "px";
+    spacer.style.pointerEvents = "none";
 
-    voidMark.parentNode.insertBefore(voidSpacer, voidMark);
+    voidMark.parentNode.insertBefore(spacer, voidMark);
   }
 }
 
