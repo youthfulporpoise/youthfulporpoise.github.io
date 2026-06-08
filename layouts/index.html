@@ -4,7 +4,7 @@
     <div class="introduction">
         {{ . }}
     </div>
-    <hr>
+    <hr style="margin: 0;">
     {{ partial "mini-toc" . }}
 {{ else }}
     {{ $mainSections := site.Params.mainSections | default (slice "posts") }}
