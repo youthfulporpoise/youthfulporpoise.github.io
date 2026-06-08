@@ -92,11 +92,29 @@
     margin-bottom: 0;
   }
 
+
+
   .corinthian-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 16rem;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+    max-width: 38rem;
+    margin: auto;
   }
+
+  .corinthian-columns img {
+    max-height: 14rem;
+  }
+
+  .corinthian-columns .left {
+    padding-right: 8vw;
+  }
+  
+  .corinthian-columns .right {
+    padding-left: 8vw;
+  }
+
+
 
   .introduction {
     margin-bottom: 0rem;
