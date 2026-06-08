@@ -42,6 +42,9 @@ refLinksErrorLevel = 'WARNING'
   # Colour scheme. Options: red, orange, magenta, cyan, blue, brown
   colorScheme = 'brown'
 
+  # Enable corinthian columns
+  corinthian = true
+
   # Sections to be displayed in:
   # - main page
   # - RSS feeds
