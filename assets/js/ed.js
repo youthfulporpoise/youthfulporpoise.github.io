@@ -104,8 +104,4 @@ document.addEventListener('DOMContentLoaded', () => {
   setupSideBarAutoClose();
   setupImageLightBox();
   fixBottomVoid();
-  
-  window.addEventListener("resize", () => {
-    fixBottomVoidDebounced();
-  });
 });
