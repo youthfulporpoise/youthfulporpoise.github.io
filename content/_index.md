@@ -5,4 +5,4 @@ layout: "index"
 annotations: false
 ---
 
-<img src="/img/roman-arch.png" alt="Roman Archway" style="width: 100%; margin: 0;">
+<img src="/img/roman-arch.png" alt="Roman Archway" style="width: 100%;">
