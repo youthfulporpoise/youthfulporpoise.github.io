@@ -25,7 +25,7 @@ refLinksErrorLevel = 'WARNING'
   gtm_id = "GTM-NRJSGLQX"
 
   # Site description. Used in meta description
-  description = "Mens infantis, semper viridis. The infant mind, forever green."
+  description = "mens·infantis·semper·viridis / pacis·plena·fontis"
 
   # SEO keywords. Used in 'meta name="keywords"' tag.
   # May be overridden by .Keywords or .Tags in front matter.
