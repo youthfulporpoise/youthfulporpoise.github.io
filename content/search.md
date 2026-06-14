@@ -1,7 +1,7 @@
 ---
 title: 'Search'
 showdate: false
-corinthian: false
+decor: false
 ---
 
 {{< form-search >}}

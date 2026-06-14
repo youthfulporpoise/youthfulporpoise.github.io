@@ -33,17 +33,20 @@ refLinksErrorLevel = 'WARNING'
     'blog', 'literature', 'personal', 'art']
 
   # Used in site header
-  tagline = 'MMXXVI'
+  tagline = 'M M X X V I'
 
   # Custom footer text on left sidebar. Use HTMl if needed.
   # "&copy;" and "{year}" will be replaced by © and the current year.
-  footer = 'Copyright © 2026'
+  footer = 'Copyright &copy; {year}'
 
   # Colour scheme. Options: red, orange, magenta, cyan, blue, brown
-  colorScheme = 'brown'
+  colorScheme = 'red'
 
-  # Enable corinthian columns
-  corinthian = true
+  # Enable decor columns
+  decor = true
+  decorMain = 'corinthian.png'
+  decorCapital = 'corinthian-capital.png'
+  decorBase = 'corinthian-base.png'
 
   # Sections to be displayed in:
   # - main page

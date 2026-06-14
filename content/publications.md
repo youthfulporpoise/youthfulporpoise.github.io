@@ -4,5 +4,5 @@ title: 'All Posts'
 private: true
 showdate: false
 layout: "publications"
-corinthian: false
+decor: false
 ---

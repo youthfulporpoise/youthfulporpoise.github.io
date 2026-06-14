@@ -31,35 +31,35 @@
                 </div>
             </header>
 
-            <div class="corinthian-content-corinthian">
-            {{ if and (and (default true .Params.corinthian) .Site.Params.corinthian) (not .IsHome) }}
-                <div class="corinthian-columns corinthian-top">
-                  <img class="left" src="/img/corinthian-capital.png" alt="Corinthian Column" style="margin-bottom: 0;">
-                  <img class="right" src="/img/corinthian-capital.png" alt="Corinthian Column" style="margin-bottom: 0;">
+            <div class="decor-content-container">
+            {{ if and (and (default true .Params.decor) .Site.Params.decor) (not .IsHome) }}
+                <div class="decor-columns decor-top">
+                  <img class="left" src="/img/{{ site.Params.decorCapital }}" alt="Decor Column" style="margin-bottom: 0;">
+                  <img class="right" src="/img/{{ site.Params.decorCapital }}" alt="Decor Column" style="margin-bottom: 0;">
                 </div>
             {{ end }}
 
               <main class="container content" id="main">
                   <hr id="heaven-mark" style="margin: 0 0 2.5rem 0;">
                   {{ block "main" . }}{{ end }}
-                  {{ if and (default true .Params.corinthian) .Site.Params.corinthian }}
+                  {{ if and (default true .Params.decor) .Site.Params.decor }}
                     <hr id="void-mark" style="margin: 2.5rem 0 0 0;">
                   {{ end }}
               </main>
 
-              {{ if and (default true .Params.corinthian) .Site.Params.corinthian }}
-              <div class="corinthian-columns corinthian-bottom" id="bottom-element">
+              {{ if and (default true .Params.decor) .Site.Params.decor }}
+              <div class="decor-columns decor-bottom" id="bottom-element">
                 {{ if not .IsHome }}
-                  <img class="left" src="/img/corinthian-base.png" alt="Corinthian Column" style="margin-bottom: 0;">
-                  <img class="right" src="/img/corinthian-base.png" alt="Corinthian Column" style="margin-bottom: 0;">
+                  <img class="left" src="/img/{{ site.Params.decorBase }}" alt="Decor Column" style="margin-bottom: 0;">
+                  <img class="right" src="/img/{{ site.Params.decorBase }}" alt="Decor Column" style="margin-bottom: 0;">
                 {{ else }}
-                  <img class="left" src="/img/corinthian.png" alt="Corinthian Column" style="margin-bottom: 0;">
-                  <img class="right" src="/img/corinthian.png" alt="Corinthian Column" style="margin-bottom: 0;">
+                  <img class="left" src="/img/{{ site.Params.decorMain }}" alt="Decor Column" style="margin-bottom: 0;">
+                  <img class="right" src="/img/{{ site.Params.decorMain }}" alt="Decor Column" style="margin-bottom: 0;">
                 {{ end }}
               {{ end }}
               </div>
             </div>
-            {{ if and (default true .Params.corinthian) .Site.Params.corinthian }}
+            {{ if and (default true .Params.decor) .Site.Params.decor }}
               <hr style="margin: 0">
             {{ end }}
 
