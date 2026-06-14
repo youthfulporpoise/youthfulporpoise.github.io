@@ -15,12 +15,6 @@ for spawns that may bear my hand. <i>What is blood unlike all things red, if it 
 congeal nor smells of iron?</i>
 </p>
 
-The image featured behind the sidebar is [*The
-Colosseum*](https://commons.wikimedia.org/wiki/File:Giovanni_Battista_Piranesi,_The_Colosseum.png),
-a drawing by [Giovanni Battista
-Piranesi](https://en.wikipedia.org/wiki/Giovanni_Battista_Piranesi) in 1757. This drawing
-is in the public domain, since the author died in 1778.
-
 <img src="/img/ophan.png" alt="Chariot-Throne" style="width: 60%; margin: 2rem auto 2rem auto;">
 
 The image featured above of an *ophan*, an inexact illustration of its description from
@@ -28,6 +22,3 @@ Ezekiel’s vision of [God’s Merkabah](https://en.wikipedia.org/wiki/Merkabah_
 the [Tanakh](https://en.wikipedia.org/wiki/Hebrew_Bible), reconstructed with Gemini upon
 references from such and such drawings, to evade issues of rights. More about the ophanim
 [here](https://en.wikipedia.org/wiki/Ophanim).
-
-Considering the current state of the world, any alliance, including **nato** seems to
-have little to no influence in reversing it.
