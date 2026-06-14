@@ -28,3 +28,6 @@ Ezekiel’s vision of [God’s Merkabah](https://en.wikipedia.org/wiki/Merkabah_
 the [Tanakh](https://en.wikipedia.org/wiki/Hebrew_Bible), reconstructed with Gemini upon
 references from such and such drawings, to evade issues of rights. More about the ophanim
 [here](https://en.wikipedia.org/wiki/Ophanim).
+
+Considering the current state of the world, any alliance, including **nato** seems to
+have little to no influence in reversing it.
