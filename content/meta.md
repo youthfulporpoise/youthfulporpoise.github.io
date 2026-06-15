@@ -3,6 +3,7 @@ date: '2026-06-01T20:09:57+05:30'
 title: 'Meta Information'
 private: true
 showdate: false
+math: true
 ---
 
 # What’s This?
