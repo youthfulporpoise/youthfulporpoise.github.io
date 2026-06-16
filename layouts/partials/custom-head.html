@@ -298,8 +298,8 @@
       font-family: var(--primary-sans-typeface), var(--secondary-sans-typeface), sans-serif;
       font-size: 0.9rem;
       background-color: var(--theme-color) !important;
-      width: 100%;
-      left: -100%;
+      width: 75%;
+      left: -75%;
       transition: all 1.2s ease-in-out;
     }
 
@@ -324,13 +324,9 @@
       color: var(--comp-color);
     }
 
-    #sidebar-checkbox:checked~.sidebar, #sidebar-checkbox:checked~.wrap {
-      transform: translateX(100vw);
-    }
-
+    #sidebar-checkbox:checked~.sidebar, #sidebar-checkbox:checked~.wrap,
     #sidebar-checkbox:checked~.sidebar-toggle {
-      z-index: 99;
-      transform: translateX(90vw);
+      transform: translateX(75vw);
     }
 
     .wrap, .sidebar-toggle {
