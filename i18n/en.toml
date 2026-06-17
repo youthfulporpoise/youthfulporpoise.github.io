@@ -38,7 +38,7 @@
   other = 'by {{ . }}'
 
 [send]
-  other = 'Send'
+  other = 'send'
 
 [all_publications]
   other = 'All publications'
