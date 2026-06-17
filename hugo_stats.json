@@ -58,10 +58,7 @@
       "contact-form-textarea",
       "container",
       "content",
-      "decor-bottom",
-      "decor-columns",
       "decor-content-container",
-      "decor-top",
       "footnote-backref",
       "footnote-ref",
       "footnotes",
@@ -78,7 +75,6 @@
       "indent-6",
       "indent-9",
       "introduction",
-      "left",
       "masthead",
       "masthead-title",
       "page",
@@ -98,7 +94,6 @@
       "publication-item",
       "publications-list",
       "read-more",
-      "right",
       "screen-reader-text",
       "search-container",
       "search-error",
@@ -128,7 +123,6 @@
     "ids": [
       "a-thousand-kisses",
       "all-posts-indicator",
-      "bottom-element",
       "chants-of-the-pimp",
       "contact-form",
       "distilling-samsāra",
@@ -168,7 +162,6 @@
       "thinking-of-the-machine",
       "top-of-site",
       "top-of-site-anchor",
-      "void-mark",
       "whats-this"
     ]
   }

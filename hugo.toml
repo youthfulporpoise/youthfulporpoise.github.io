@@ -10,7 +10,7 @@ copyright = '© 2026 H. Ali'
 #
 # NB: Final title of shareable pages will be this plus the
 #     title of the page. E.g. "Posts | Ed."
-title = "Shifting Hues of Being"
+title = "Pārvateya"
 
 theme = "ed"
 
@@ -43,7 +43,7 @@ refLinksErrorLevel = 'WARNING'
   colorScheme = 'red'
 
   # Enable decor columns
-  decor = true
+  decor = false
   decorMain = 'corinthian.png'
   decorCapital = 'corinthian-capital.png'
   decorBase = 'corinthian-base.png'
