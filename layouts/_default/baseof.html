@@ -40,7 +40,9 @@
             {{ end }}
 
               <main class="container content" id="main">
+                  {{ if and (default true .Params.decor) .Site.Params.decor }}
                   <hr id="heaven-mark" style="margin: 0 0 0 0;">
+                  {{ end }}
                   {{ block "main" . }}{{ end }}
                   {{ if and (default true .Params.decor) .Site.Params.decor }}
                     <hr id="void-mark" style="margin: 0 0 0 0;">
