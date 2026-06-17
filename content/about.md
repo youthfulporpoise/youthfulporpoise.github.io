@@ -6,32 +6,26 @@ showdate: false
 decor: false
 ---
 
-This? This is my blog-ish website, except, more than a blog, it is more of an appendix of
-what I do. These are my thoughts, ramblings, opinions, and other things that cross (or
-occupy) my mind. I’ve decided call it *Shifting Hues of Being*, as an ode to the
-ever-firm observation that perception matures, or more generally changes, with time, and
-that this’ll perhaps later reflect that flow.
+(*Ringing.*) \
+(*Picks up phone.*) \
+What? Oh this? This is my blog-ish website, except, more than a blog,
+it is more of an appendix of what I do.  What is blood unlike all things red, if it does
+not congeal nor smells of iron?  Anything never shown is never seen. What do I stand to
+gain by keeping to myself all those thoughts and ruminations that reflect who I really
+am, how unsightly or unsavoury it may be? These things are undeniably me, they make me,
+isn’t it?  And if I conceal myself, if I always hide behind a mask, won’t I gather
+everything that finds an abode in the mask but not me?  And over everything else, such a
+life, isn’t that a wasted life, isn’t that a life simply not *lived*?
 
-![Portrait](/img/profile.png)
-
-I’m *Hathim Ali*. As I write I tread the mires of a bachelor in technology. And what do I
-do? I try to do many things, but mostly, more than anything, I avoid never having lived,
-and always seem to lose my way amongst questions of the likes as, for instance, when can
-a life be said to have been *fully lived*? Trying to get a glimpse of the answers fucks
-you up more than it does englighten you, that I’ve happened to learn. Bad, let’s digress.
-
-I tend to be more at Idukki these days than home. A great place — awing, ethralling, as
-much as it is dark and deep. And often you can hear the ancient hills mumbling among
-themselves. Perhaps dropping an ear then and now might reveal answers to a question or
-two, who knows? A point maybe worth noting is that the stillness between the mountains
-rubs off on someone both ways. Cities were your world? Tough luck. Nevertheless expect to
-be converted within an year or two, to have dawned upon you the significance of such a
-place in a corporate capitalistic plutocratic world. But not necessarily though.  There
-are witless shit-for-brains I know that still gloriously throws a cover of Lay’s right
-into the heart of the forest.  Seriously what are they fucking thinking? Do they even
-*think*? Yikes, bad again, let’s digress. No, in fact let’s end it here. This is
-beginning to look like *samsāra*, I go on and on rambling about things. Surely, this
-isn’t the place for that.
+Who am I now? *Hathim Ali*. I write as I tread the mires of a bachelor in technology.
+And what do I do? I try to do many things, but mostly, more than anything, I avoid never
+having lived, and always seem to lose my way amongst questions of the likes as, for
+instance, when can a life be said to have been *fully lived*? I’ve found it simpler to
+answer when it can be said to have been *not fully lived*. Nevertheless trying to get a
+glimpse of the answers fucks you up more than it does englighten you, that I’ve happened
+to learn. I’m sorry you’re bored? Not much of a head-not-way-up-in-positivity guy
+are you? Yeah, thought so. \
+(*Line cut.*)
 
 [Instagram.](https://www.instagram.com/alihathimm/) \
 [Github.](https://github.com/youthfulporpoise)
