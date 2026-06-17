@@ -61,7 +61,7 @@
       --secondary-text-typeface: "Georgia";
       --text-sc-typeface: "Alegreya SC";
 
-      --primary-heading-typeface: "Marcellus SC";
+      --primary-heading-typeface: "Alegreya SC";
       --secondary-heading-typeface: "Bodoni 72";
 
       --primary-special-typeface: "Playfair Display";
@@ -70,8 +70,8 @@
       --primary-mono-typeface: "Cutive Mono";
       --secondary-mono-typeface: "Courier";
 
-      --primary-sans-typeface: "Helvetica Neue";
-      --secondary-sans-typeface: "Inter";
+      --primary-sans-typeface: "Alegreya";
+      --secondary-sans-typeface: "Georgia";
     }
 
     
@@ -97,16 +97,16 @@
 
     h1, h2, h3, h4, h5, h6 {
       color: #111111;
-      font-family: var(--primary-heading-typeface), var(--secondary-heading-typeface), serif;
+      font-family: var(--primary-text-typeface), var(--secondary-text-typeface), serif;
       font-weight: 400;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       text-align: center;
     }
 
     h1.text-title {
-      font-family: var(--primary-heading-typeface), var(--secondary-heading-typeface), serif;
+      font-family: var(--primary-text-typeface), var(--secondary-text-typeface), serif;
       font-weight: 400;
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       padding-bottom: 1.5rem;
     }
 
@@ -120,6 +120,8 @@
     strong, b {
       font-family: var(--text-sc-typeface), serif;
       font-weight: normal !important;
+      letter-spacing: 0.06rem;
+      text-transform: lowercase;
     }
 
 
@@ -258,8 +260,8 @@
     }
 
     .post-body h2::before {
-      content: counter(h2-counter, lower-roman) ". ";
-      margin-right: 5pt;
+      content: "§" counter(h2-counter, upper-roman) ".—";
+      margin-right: 0pt;
     }
 
 
@@ -304,7 +306,7 @@
 
     .sidebar {
       font-family: var(--primary-sans-typeface), var(--secondary-sans-typeface), sans-serif;
-      font-size: 0.9rem;
+      font-size: 1rem;
       background-color: var(--theme-color) !important;
       width: 75%;
       left: -75%;
@@ -389,6 +391,10 @@
     }
 
 
+    #all-posts-indicator {
+      font-style: italic;
+    }
+
 
     .publications-list {
       display: grid;
@@ -461,7 +467,7 @@
 
 
     ul {
-      list-style: square;
+      list-style: decimal;
     }
 
     li::marker {
