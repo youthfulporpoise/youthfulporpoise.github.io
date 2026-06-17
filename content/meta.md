@@ -13,3 +13,6 @@ for *A New Book of Chinese Designs* from The Metropolitan Mueseum of Art (The Me
 public domain by [Copyright Act,
 1957](https://en.wikipedia.org/wiki/Copyright_law_of_India) and [Copyright Act,
 1976](https://en.wikipedia.org/wiki/Copyright_Act_of_1976).
+
+What does **T. A. T.** mean on the header? It is an acronym for a rearrangement of
+*Tat Tvam Asi*, which means *Thou art That*.
