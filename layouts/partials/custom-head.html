@@ -111,10 +111,19 @@
     }
 
 
+    a {
+      color: inherit !important;
+      text-decoration: underline !important;
+      text-decoration-thickness: 1px !important;
+      text-underline-offset: 4px !important;
+      text-decoration-color: var(--theme-color) !important;
+      transition: 0.5s;
+    }
 
     a:hover {
-      text-decoration-thickness: 1px;
-      text-underline-offset: 4px;
+      color: var(--theme-color) !important;
+      text-decoration-color: var(--fg-color) !important;
+      transition: 0.5s;
     }
 
     strong, b {
@@ -346,7 +355,7 @@
     }
 
     .sidebar a, .sidebar a.active {
-      color: var(--fg-color);
+      color: var(--fg-color) !important;
       text-decoration: underline;
       text-underline-offset: 4px;
       text-decoration-color: var(--theme-color); 
