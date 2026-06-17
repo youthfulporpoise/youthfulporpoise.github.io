@@ -56,7 +56,7 @@ refLinksErrorLevel = 'WARNING'
   mainSections = ['posts', 'dramas', 'narratives', 'poems']
 
   # Posts date format, for example: 2006-01-02
-  dateFormat = '2006 January 02 at 15:04'
+  dateFormat = 'January 02, 2006'
   dateFormatToc = 'January 02'
 
   # Show "Read more" button in list if true
@@ -331,7 +331,7 @@ refLinksErrorLevel = 'WARNING'
 # front matter. We should at least allow ourselves to manually override
 # this value in the front matter.
 [frontmatter]
-  lastmod = ['lastmod', ':git', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+  lastmod = [':fileModTime', 'lastmod', ':git', 'modified', 'date', 'publishdate', 'pubdate', 'published']
 
 [module]
   [module.hugoVersion]
