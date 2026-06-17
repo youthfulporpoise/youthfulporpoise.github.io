@@ -331,7 +331,7 @@ refLinksErrorLevel = 'WARNING'
 # front matter. We should at least allow ourselves to manually override
 # this value in the front matter.
 [frontmatter]
-  lastmod = [':fileModTime', 'lastmod', ':git', 'modified', 'date', 'publishdate', 'pubdate', 'published']
+  lastmod = ['lastmod', ':git', 'modified', 'date', 'publishdate', 'pubdate', 'published']
 
 [module]
   [module.hugoVersion]
