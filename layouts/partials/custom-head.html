@@ -341,6 +341,23 @@
       transition: all 1.2s ease-in-out;
     }
 
+    @media (min-width: 768px) {
+      .sidebar {
+        width: 40%;
+        left: -40%;
+        transition: all 0.8s ease-in-out;
+      }
+
+      #sidebar-checkbox:checked~.sidebar, #sidebar-checkbox:checked~.wrap,
+      #sidebar-checkbox:checked~.sidebar-toggle {
+        transform: translateX(40vw);
+      }
+
+      .wrap, .sidebar-toggle {
+        transition: all 0.8s ease-in-out;
+      }
+    }
+
     .sidebar-toggle {
       top: 1.5rem;
       padding: 15pt 10pt 10pt 10pt;
