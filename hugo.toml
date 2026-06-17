@@ -37,7 +37,7 @@ refLinksErrorLevel = 'WARNING'
 
   # Custom footer text on left sidebar. Use HTMl if needed.
   # "&copy;" and "{year}" will be replaced by © and the current year.
-  footer = 'Copyright &copy; {year}'
+  footer = 'Copyright &copy; {year}. All rights reserved.'
 
   # Colour scheme. Options: red, orange, magenta, cyan, blue, brown
   colorScheme = 'red'
