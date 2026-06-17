@@ -2,7 +2,7 @@
 {{ $lastmod := .Lastmod | time.Format (site.Params.dateFormat | default "January 02, 2006") }}
 
 {{ if (.Params.showdate | default true) }}
-  <!-- {{ i18n "published_on" }} -->
+  {{ i18n "published_on" }}
   <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" class="pub-datetime">
       {{ $date }}
   </time>
