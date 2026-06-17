@@ -33,7 +33,7 @@ refLinksErrorLevel = 'WARNING'
     'blog', 'literature', 'personal', 'art']
 
   # Used in site header
-  tagline = 'I AM CONFUSED — ARE YOU?'
+  tagline = 'T. A. T.'
 
   # Custom footer text on left sidebar. Use HTMl if needed.
   # "&copy;" and "{year}" will be replaced by © and the current year.
