@@ -16,16 +16,17 @@
           <ol class="publications-list" style="list-style: decimal; padding-left: 0; margin-top: 30px;">
             {{ range .Pages }}
                 <li class="publication-item">
-                  <div>
+                  <span>
                     <a href="{{ .Permalink }}">{{ .Title }}</a>
-                  </div>
-                  <div class="publication-date">
+                  </span>
+                  <span>·</span>
+                  <span class="publication-date">
                       {{ if .Date }}
                         {{ .Date.Format site.Params.dateFormat }}
                       {{ else }}
                         <span style="color: #888888; font-style: italic;">No Date</span>
                       {{ end }}
-                  </div>
+                  </span>
                 </li>
             {{ end }}
           </ol>
