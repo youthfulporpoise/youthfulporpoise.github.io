@@ -2,7 +2,6 @@
 date: '2026-06-18T23:37:49+05:30'
 title: 'Kind of Totally Fucked, Aren’t We?'
 private: true
-draft: true
 ---
 
 We all know the things **AI** can do. It’s a tool, isn’t it? Yeah, you think so? Well,
