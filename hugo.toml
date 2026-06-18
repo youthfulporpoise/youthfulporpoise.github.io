@@ -320,12 +320,12 @@ refLinksErrorLevel = 'WARNING'
           block = [["$$", "$$"]]
           inline = [["$", "$"]]
 
-  [[menus.main]]
-    identifier = 'github'
-    name = 'GitHub Project'
-    url = 'https://github.com/youthfulporpoise/youthfulporpoise.github.io/'
-    weight = 20
-    params = {external = true}
+#  [[menus.main]]
+#    identifier = 'github'
+#    name = 'GitHub Project'
+#    url = 'https://github.com/youthfulporpoise/youthfulporpoise.github.io/'
+#    weight = 20
+#    params = {external = true}
 
 # If enableGitInfo is true, it will override any lastmod dates in our
 # front matter. We should at least allow ourselves to manually override
