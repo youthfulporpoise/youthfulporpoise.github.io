@@ -25,7 +25,7 @@ refLinksErrorLevel = 'WARNING'
   gtm_id = "GTM-NRJSGLQX"
 
   # Site description. Used in meta description
-  description = "Sive a maiore ad minorem sive vice versa ibidem manemus."
+  description = "Tasā vā thāvarā vā anavasesā dighā vā ye mahantā majjhimā rassakā anukathūlā mayam idheva titthāma."
 
   # SEO keywords. Used in 'meta name="keywords"' tag.
   # May be overridden by .Keywords or .Tags in front matter.
