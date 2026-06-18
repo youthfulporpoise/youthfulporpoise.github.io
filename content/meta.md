@@ -8,8 +8,9 @@ math: true
 
 Copyright: All original work of this site is licensed under [**CC BY-NC-SA
 4.0**](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en) unless where otherwise
-explicitly stated. Wherever works of other authors have been used, due indication
-according to their licences will be provided.
+explicitly stated. Wherever works of other authors have been used, due indication of such
+to the extent obliged under their licences will be provided therein or elsewhere
+appropriate.
 
 The image on the homepage is an engraving by Matthias Darly and George Edwards in 1754
 for *A New Book of Chinese Designs* from The Metropolitan Mueseum of Art (The Met),
