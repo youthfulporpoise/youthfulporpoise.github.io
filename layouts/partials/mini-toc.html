@@ -12,8 +12,9 @@
     {{ $maxPosts := site.Params.recentPostsSize | default 5 }}
 
     <div class="toc" role="navigation">
-        <h2>{{ i18n "latest_publications" }}</h2>
-        <ul class="texts">
+        <!-- <h2>{{ i18n "latest_publications" }}</h2> -->
+        <br>
+        <ul class="texts" style="list-style: none;">
             {{/* Range through the first $maxPosts items of the $section */}}
             {{ range (first $maxPosts $section) }}
                 <li class="text-title">
@@ -21,7 +22,7 @@
                 </li>
             {{ end }}
         <br>
-        <a href="/publications"><span id="all-posts-indicator">All Posts</span> &raquo;</a>
+        <a href="/publications"><span id="all-posts-indicator">More</span> &raquo;</a>
         </ul>
     </div>
 {{ end }}

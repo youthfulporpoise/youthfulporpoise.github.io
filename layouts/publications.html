@@ -11,9 +11,10 @@
 
         {{ $posts := where .Site.RegularPages "Section" "posts" }}
         {{ range $posts.GroupByDate "January 2006" }}
-          {{ .Key }}
-          <hr style="margin: 0;">
-          <ol class="publications-list" style="list-style: decimal; padding-left: 0; margin-top: 30px;">
+          <div style="display: flex; align-items: center;">
+            <span>{{ .Key }}</span>&nbsp;<hr style="flex-grow: 1; margin: 0;">
+          </div>
+          <ol class="publications-list" style="list-style: none; padding-left: 0; margin-top: 30px;">
             {{ range .Pages }}
                 <li class="publication-item">
                   <span>
