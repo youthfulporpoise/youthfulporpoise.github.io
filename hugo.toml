@@ -27,6 +27,9 @@ refLinksErrorLevel = 'WARNING'
   # Site description. Used in meta description
   description = ""
 
+  # Site title. For standalone sidebar title.
+  title = "Pravicayavihāra"
+
   # SEO keywords. Used in 'meta name="keywords"' tag.
   # May be overridden by .Keywords or .Tags in front matter.
   keywords = ['hugo', 'ed', 'hugo theme', 'minimal', 'responsive', 'clean',

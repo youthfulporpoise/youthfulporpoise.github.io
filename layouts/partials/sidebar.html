@@ -4,9 +4,16 @@
 
 {{/* Toggleable sidebar */}}
 <aside class="sidebar" id="sidebar">
+    <hr style="margin: 0;">
+    <div class="sidebar-item">
+      <span class="sidebar-title">{{ site.Params.Title }}</span>
+    </div>
+    <hr style="margin: 0; margin-bottom: 1em;">
+    <!--
     <div class="sidebar-item">
         <p>{{ site.Params.Description }}</p>
     </div>
+    -->
 
     <nav class="sidebar-nav">
         {{- $current := . -}}
