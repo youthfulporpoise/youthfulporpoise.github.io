@@ -307,6 +307,8 @@ refLinksErrorLevel = 'WARNING'
 [markup]
   defaultMarkdownHandler = 'goldmark'
   [markup.highlight]
+    style = "solarized-dark"
+    lineNos = true
     # false due to generated Syntax Highlighter CSS
     noClasses = false
   [markup.goldmark]

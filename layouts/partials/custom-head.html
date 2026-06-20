@@ -1,7 +1,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     @import url('https://smc.org.in/fonts/malini.css');
-    @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Cutive+Mono&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus+SC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus+SC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
     :lang(ml) {
       font-family: "Malini";
@@ -67,7 +67,7 @@
       --primary-special-typeface: "Playfair Display";
       --secondary-special-typeface: "Garamond";
 
-      --primary-mono-typeface: "Cutive Mono";
+      --primary-mono-typeface: "Courier Prime";
       --secondary-mono-typeface: "Courier";
 
       --primary-sans-typeface: "Alegreya";
@@ -130,6 +130,10 @@
       font-family: var(--text-sc-typeface), serif;
       font-weight: normal !important;
       text-transform: lowercase;
+    }
+
+    code {
+      font-family: var(--primary-mono-typeface), var(--secondary-mono-typeface), monospace;
     }
 
 
