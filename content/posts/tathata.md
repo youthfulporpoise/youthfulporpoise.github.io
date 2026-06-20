@@ -68,7 +68,7 @@ much. Take a look at this, for reference.
 ![The Cycle of
 Samsāra](https://upload.wikimedia.org/wikipedia/commons/7/74/The_wheel_of_life%2C_Buddhism_Bhavachakra.jpg)
 By Nagarjun Kandukuru from Bangalore, India - [The Wheel of
-Life](https://commons.wikimedia.org/w/index.php?curid=48976208), CC BY 2.0.  Read
+Life](https://commons.wikimedia.org/w/index.php?curid=48976208), **CC BY 2.0**.  Read
 [here](https://www.thangka-mandala.com/blog/the-wheel-of-life/) to know more about The
 Wheel of Life and what each detail means.
 
