@@ -27,4 +27,28 @@
     {{ end }}
     {{ partial "comments.html" . }}
 </article>
+
+<div class="article-end">
+  <nav class="end-nav">
+    <div class="nav-item prev-post">
+      {{ with .PrevInSection }}
+        <a href="{{ .Permalink }}" title="{{ .Title }}">« {{ i18n "previous" | default "Previous" }}</a>
+      {{ else }}
+        <span class="disabled-link">« {{ i18n "previous" | default "Previous" }}</span>
+      {{ end }}
+    </div>
+
+    <div class="nav-item all-posts">
+      <a href="/publications/">{{ i18n "all_posts" | default "All" }}</a>
+    </div>
+
+    <div class="nav-item prev-post">
+      {{ with .NextInSection }}
+        <a href="{{ .Permalink }}" title="{{ .Title }}">{{ i18n "next" | default "Next" }} »</a>
+      {{ else }}
+        <span class="disabled-link">{{ i18n "next" | default "Next" }} »</span>
+      {{ end }}
+    </div>
+  </nav>
+</div>
 {{ end }}

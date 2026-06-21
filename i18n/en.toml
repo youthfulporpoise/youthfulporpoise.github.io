@@ -72,3 +72,12 @@
 
 [annotate]
   other = 'Annotate me'
+
+[previous]
+  other = "Previous"
+
+[next]
+  other = "Next"
+
+[all_posts]
+  other = "All"

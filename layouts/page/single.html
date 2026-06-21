@@ -14,5 +14,28 @@
     <div class="{{ $postType }}-body">
         {{ .Content }}
     </div>
+      <div class="body-end">
+        <nav class="end-menu-nav">
+          <div class="nav-item prev-post">
+            {{ with .Prev }}
+              <a href="{{ .Permalink }}" title="{{ .Title }}">« {{ i18n "previous" | default "Previous" }}</a>
+            {{ else }}
+              <span></span>
+            {{ end }}
+          </div>
+
+          <div class="nav-item all-posts">
+            <a href="/posts/">{{ i18n "all_posts" | default "All" }}</a>
+          </div>
+
+          <div class="nav-item prev-post">
+            {{ with .Next }}
+              <a href="{{ .Permalink }}" title="{{ .Title }}">{{ i18n "next" | default "Next" }} »</a>
+            {{ else }}
+              <span></span>
+            {{ end }}
+          </div>
+        </nav>
+      </div>
 </article>
 {{ end }}
