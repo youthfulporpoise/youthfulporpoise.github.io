@@ -1,7 +1,6 @@
 ---
 date: '2026-06-06T20:14:26+05:30'
 title: 'Tathatā'
-toc: true
 private: true
 ---
 
