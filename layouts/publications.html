@@ -9,6 +9,10 @@
       <div class="page-content">
         {{ .Content }}
 
+        <div class="extended-posts-view-link">
+            <a href="/posts/" title="Posts">Long View</a>
+        </div>
+
         {{ $posts := where .Site.RegularPages "Section" "posts" }}
         {{ range $posts.GroupByDate "January 2006" }}
           <div style="display: flex; align-items: center;">
