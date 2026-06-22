@@ -53,7 +53,8 @@
       --fg-color: #2b2b2b;
       /* --bg-color: #f8f5db; */
       --bg-color: #ffffff;
-      --theme-color: #9f4846;
+      /* --theme-color: #9f4846; */
+      --theme-color: #478800;
       --comp-color: #fcfcfc;
       --masthead-color: var(--bg-color);
       --demure-color: #888888;
@@ -427,16 +428,18 @@
       font-size: 3em;
       line-height: 0;
       background-image: none;
+      color: var(--theme-color);
+      background-color: var(--bg-color) !important;
     }
 
     /*.sidebar-toggle:active:before, */
     #sidebar-checkbox:focus~.sidebar-toggle:before, #sidebar-checkbox:checked~.sidebar-toggle:before {
       content: "«";
       background-image: none;
+      color: var(--bg-color) !important;
     }
     .sidebar-toggle:active, #sidebar-checkbox:focus~.sidebar-toggle,
     #sidebar-checkbox:checked~.sidebar-toggle {
-      color: var(--bg-color);
       background-color: var(--theme-color) !important;
     }
 
