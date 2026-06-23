@@ -22,7 +22,9 @@
                 </li>
             {{ end }}
         <br>
-        <a href="/publications"><span id="all-posts-indicator">More</span> &raquo;</a>
+        <a href="/publications">
+          <span class="nav-item">{{ i18n "all_posts" | default "All" }}</span>
+        </a>
         </ul>
     </div>
 {{ end }}

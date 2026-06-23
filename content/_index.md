@@ -1,6 +1,6 @@
 ---
-title: "Shifting Hues of Being"
-description: "An atonement."
+title: "Pravicayavihāra"
+description: ""
 layout: "index"
 cascade:
   annotations: false

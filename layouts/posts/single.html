@@ -29,13 +29,17 @@
 </article>
 
 <div class="article-end">
-  <nav class="end-nav">
+  <nav class="navbar">
     <div class="nav-item prev-post">
       {{ with .PrevInSection }}
         <a href="{{ .Permalink }}" title="{{ .Title }}">« {{ i18n "previous" | default "Previous" }}</a>
       {{ else }}
         <span class="disabled-link">« {{ i18n "previous" | default "Previous" }}</span>
       {{ end }}
+    </div>
+
+    <div class="nav-item go-home">
+      <a href="/">{{ i18n "home" | default "Home" }}</a>
     </div>
 
     <div class="nav-item all-posts">

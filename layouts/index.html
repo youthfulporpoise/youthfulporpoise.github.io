@@ -1,5 +1,25 @@
 {{ define "main" }}
 
+<div class="home-navbar">
+  <nav class="navbar">
+    <div class="nav-item">
+      <a href="/about/" title="About">About</a>
+    </div>
+
+    <div class="nav-item">
+      <a href="/contact/" title="Contact">Contact</a>
+    </div>
+
+    <div class="nav-item">
+      <a href="/search/" title="Search">Search</a>
+    </div>
+
+    <div class="nav-item">
+      <a href="/meta/" title="Meta">Meta</a>
+    </div>
+  </nav>
+</div>
+
 {{ with .Content }}
     <div class="introduction">
         {{ . }}
