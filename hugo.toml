@@ -68,7 +68,7 @@ refLinksErrorLevel = 'WARNING'
   # RSS/Atom feed size
   feedSize = 25
 
-  recentPostsSize = 4
+  recentPostsSize = 3
 
   # Enable rendering of mathematics
   # We leave this disabled to enable as needed in the front matter

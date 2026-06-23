@@ -6,4 +6,6 @@ cascade:
   annotations: false
 ---
 
-<img src="/img/engraving.png" alt="Main Engraving" style="width: 100%;">
+# *Pravicayavihāra*.
+
+![Main Engraving](/img/engraving.png)
