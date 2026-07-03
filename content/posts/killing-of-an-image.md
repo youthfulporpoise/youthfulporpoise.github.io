@@ -1,5 +1,6 @@
 ---
 date: '2026-06-17T11:05:20+05:30'
+lastmod: '2026-07-03T11:05:20+05:30'
 title: 'Killing of an Image'
 private: true
 draft: true
@@ -54,6 +55,7 @@ draft: true
 {{< indent 0 >}} Entwined \
 {{< indent 0 >}} With a dusty veiling haze \
 {{< indent 0 >}} And the boundless shifting sands \
-{{< indent 0 >}} But rifts here and there. \
-{{< indent 9 >}} I sigh. \
-{{< indent 9 >}} I walk away.
+{{< indent 0 >}} But rifts here and there.
+
+{{< indent 0 >}} I sigh. \
+{{< indent 0 >}} I walk away.
