@@ -12,7 +12,7 @@
     (i.e. the last modified date must be after the publish date) */}}
 {{ if (.Params.showdate | default true) }}
   {{ if and (ne $lastmod $date) (gt .Lastmod .Date) }}
-      <span><br></span>
+      <span>·</span>
       {{ i18n "updated_on" }}
       <time datetime="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
           {{ $lastmod }}
