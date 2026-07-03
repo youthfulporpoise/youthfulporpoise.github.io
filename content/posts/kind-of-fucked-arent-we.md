@@ -1,6 +1,6 @@
 ---
 date: '2026-06-18T23:37:49+05:30'
-title: 'Kind of Totally Fucked, Aren’t We?'
+title: 'Kind of totally fucked, aren’t we?'
 private: true
 ---
 
