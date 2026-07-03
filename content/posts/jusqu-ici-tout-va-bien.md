@@ -2,7 +2,6 @@
 date: '2026-07-03T22:50:23+05:30'
 title: 'Jusqu’ici tout va bien.'
 private: true
-draft: true
 ---
 
 I like films, you like films. We all like films. (Sad fact: there are some who dont’t,
