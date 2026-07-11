@@ -1,6 +1,6 @@
 ---
 date: '2026-06-24T00:57:53+05:30'
-title: 'The Sarcophagic Hypocrisy'
+title: 'Sarcophagy'
 private: true
 ---
 

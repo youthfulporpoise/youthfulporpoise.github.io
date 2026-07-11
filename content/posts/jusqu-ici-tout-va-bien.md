@@ -1,7 +1,7 @@
 ---
 date: '2026-07-03T22:50:23+05:30'
 lastmod: '2026-07-06T22:50:23+05:30'
-title: 'Jusqu’ici tout va bien.'
+title: 'Jusqu’ici tout va bien'
 private: true
 ---
 
