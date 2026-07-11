@@ -4,6 +4,7 @@
 
     @import url('https://smc.org.in/fonts/malini.css');
     @import url('https://fonts.googleapis.com/css2?family=Alegreya+SC:ital,wght@0,400;0,500;0,700;0,800;0,900;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Marcellus+SC&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
     :lang(ml) {
       font-family: "Malini";
@@ -59,11 +60,11 @@
       --demure-color: #888888;
       --bg-faint: #f0ecd3;
 
-      --primary-text-typeface: "Alegreya";
+      --primary-text-typeface: "Inter Tight";
       --secondary-text-typeface: "Georgia";
-      --text-sc-typeface: "Alegreya SC";
+      --text-sc-typeface: "Inter Tight";
 
-      --primary-heading-typeface: "Alegreya SC";
+      --primary-heading-typeface: "Inter Tight";
       --secondary-heading-typeface: "Bodoni 72";
 
       --primary-special-typeface: "Playfair Display";
@@ -72,7 +73,7 @@
       --primary-mono-typeface: "Courier Prime";
       --secondary-mono-typeface: "Courier";
 
-      --primary-sans-typeface: "Alegreya";
+      --primary-sans-typeface: "Inter Tight";
       --secondary-sans-typeface: "Georgia";
     }
 
@@ -82,7 +83,9 @@
       background-color: var(--bg-color);
       color: var(--fg-color);
       font-family: var(--primary-text-typeface), var(--secondary-text-typeface), serif;
-      font-size: 1.15rem;
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: -0.8pt;
     }
 
     @media (min-width: 768px) {
@@ -100,17 +103,19 @@
     h1, h2, h3, h4, h5, h6 {
       color: var(--fg-color);
       font-family: var(--primary-text-typeface), var(--secondary-text-typeface), serif;
-      font-weight: 400;
+      font-weight: inherit;
       font-size: 1em;
+      letter-spacing: inherit;
       text-align: center;
     }
 
     h1.text-title {
       font-family: var(--primary-text-typeface), var(--secondary-text-typeface), serif;
-      font-weight: 400;
+      font-weight: inherit;
       color: var(--fg-color);
       font-size: 1.2em;
       padding-bottom: 1.5rem;
+      letter-spacing: -1.2pt;
     }
 
 
@@ -120,20 +125,21 @@
       text-decoration-thickness: 1px !important;
       text-underline-offset: 4px !important;
       text-decoration-color: var(--theme-color) !important;
-      transition: 0.1s;
+      transition: 0s;
     }
 
     a:hover {
       color: var(--theme-color) !important;
       text-decoration-color: var(--fg-color) !important;
-      transition: 0.1s;
+      transition: 0s;
     }
 
     strong, b {
       font-family: var(--text-sc-typeface), serif;
-      font-weight: normal !important;
-      letter-spacing: 1pt;
-      text-transform: lowercase;
+      font-weight: inherit !important;
+      letter-spacing: inherit;
+      text-transform: uppercase;
+      font-size: 90%;
     }
 
     code {
@@ -568,8 +574,9 @@
     .nav-item {
       flex: 1;
       font-family: var(--text-sc-typeface), serif;
-      text-transform: lowercase;
-      letter-spacing: 1pt;
+      font-size: 90%;
+      text-transform: uppercase;
+      letter-spacing: inherit;
       text-align: center;
     }
 
@@ -582,7 +589,7 @@
       justify-content: center;
       margin-bottom: 2em;
       font-family: var(--text-sc-typeface);
-      text-transform: lowercase;
+      text-transform: uppercase;
     }
 
 
