@@ -1,6 +1,5 @@
 ---
 date: '2026-07-14T11:05:20+05:30'
-lastmod: '2026-07-03T11:05:20+05:30'
 title: 'Killing of an Image'
 private: true
 ---
