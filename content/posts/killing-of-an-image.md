@@ -1,9 +1,8 @@
 ---
-date: '2026-06-17T11:05:20+05:30'
+date: '2026-07-14T11:05:20+05:30'
 lastmod: '2026-07-03T11:05:20+05:30'
 title: 'Killing of an Image'
 private: true
-draft: true
 ---
 
 {{< indent 0 >}} Beside my shadow \
@@ -59,3 +58,8 @@ draft: true
 
 {{< indent 0 >}} I sigh. \
 {{< indent 0 >}} I walk away.
+
+---
+
+This was submitted to the college magazine for 2026–27 of Govt. Engineering College,
+Idukki, written in retrospect.
