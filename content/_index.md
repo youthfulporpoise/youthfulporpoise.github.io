@@ -6,6 +6,6 @@ cascade:
   annotations: false
 ---
 
-# *Pravicayavihāra*.
+# *Pravicayavihāra*—meditations on shit happening.
 
 ![Main Engraving](/img/engraving.png)
