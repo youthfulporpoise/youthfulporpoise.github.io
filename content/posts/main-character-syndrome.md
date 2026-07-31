@@ -1,8 +1,7 @@
 ---
-date: '2026-07-19T18:34:18+05:30'
+date: '2026-07-31T18:34:18+05:30'
 title: 'Main Character Syndrome'
 private: true
-draft: true
 ---
 
 I don’t know whether we somehow acquired it early on or if it came to us naturally, we
@@ -39,7 +38,9 @@ everything around them holds (for them), everything that happens to them, their 
 for themselves so high they miss the transitoriness of moments and how they evanesce away
 beneath the eye. They just can’t grasp the permanence of impermanence, they are
 incapable. They harbour a complex of superiority over certainties that aren’t there.
-They see that aren’t and do not that they well should.
+They see that aren’t and do not that they well should. But one day, if they’re wise
+enough, their conceit will fall short and mirrors will shatter. The cataract will ever
+so little be undone.
 
 > Whereas the Blind may see \
 > the Sighted may not.
