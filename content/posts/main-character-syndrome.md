@@ -1,5 +1,5 @@
 ---
-date: '2026-07-31T18:34:18+05:30'
+date: '2026-07-30T18:34:18+05:30'
 title: 'Main Character Syndrome'
 private: true
 ---
