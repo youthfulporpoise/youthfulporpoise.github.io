@@ -2,7 +2,6 @@
 date: '2026-07-31T15:39:06+05:30'
 title: 'Sooner We Accept We’re Lost / Sooner We Can Find Our Way'
 private: true
-draft: true
 ---
 
 There’s a one-window cell. The world outside is alight. The four walls of our limits
