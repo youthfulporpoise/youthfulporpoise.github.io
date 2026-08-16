@@ -10,4 +10,4 @@ toward totalitarian philosophosies contrived inside deranged states of mind achi
 under the callous torture of an apathetic world that bore us and of which we are all
 part. The mind-machine is a strange sort of apparatus, one that eludes all endeavours to
 comprehend it, except when considered an avoidable contraption of artifice and
-investigating its menial mechanical cogs back to its essential miasma.
+investigating its menial mechanical cogs back to its essential miasmal outpouring.
