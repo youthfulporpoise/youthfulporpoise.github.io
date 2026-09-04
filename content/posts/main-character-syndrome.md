@@ -19,7 +19,7 @@ classical epic, or to subconsciously internalize the thought that everything is 
 tied to you, your existence by mere existence subtly influencing everything. Or less
 lame, that you can’t totally and wholeheartedly come to terms with the fact of your stark
 and utter triviality, that you may be no more than a negligible blip that can be
-considered as well to never have existed when rounding off for the macrocosmic scheme.
+considered as well as to never have existed when rounding off for the macrocosmic scheme.
 Yet you exist, you do perceive that you’re doubtlessly alive. In a sense, this
 confinement to a single perspective and the lack of pondering upon your right place in
 the arrangement of life, isn’t that the root of all this self-admiration and egocentrism?

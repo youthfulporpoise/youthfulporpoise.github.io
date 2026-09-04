@@ -24,7 +24,7 @@ study, you can’t do errands, you can’t think anything else even. We have a n
 Limerence. You suffer it as much as you enjoy it. Well yes, limerence is transcient and
 some argue it’s not “real love” because it eventually fades; that’s not our point here.
 
-See the thing is, you haven’t even known them for that long, you haven’t known them that
+See the thing is, you haven’t known them for that long, you haven’t even known them that
 much, yet you burn, you pine, you perish. Now, do you love someone that they are or do
 you love that someone because of the way they are? This is different from what most would
 describe as that you’re loving an “ideal” of that person, not the person itself,
