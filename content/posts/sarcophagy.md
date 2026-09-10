@@ -1,27 +1,9 @@
 ---
 date: '2026-06-24T00:57:53+05:30'
+lastmod: '2026-09-11T00:11:53+05:30'
 title: 'Sarcophagy'
 private: true
 ---
-
-I saw three girls at a shawarma shop. As I came in they were fumbling with the cashier
-(who also happens to be same guy who wraps the shawarmas, not surprising), and there was
-a guy too. All of them fretting on getting change. The shawarma guy ran off to the
-adjacent shop, came back with the change, and mechanically gave them whatever was owed.
-All the while I stood there, just watching, minding my own business, until they went
-their way out the door.
-
-Later at home, as I lied thinking away, something struck me about those girls at the
-shop. I’m not going to delve into the specifics, but they came off as upper middle-class.
-It was the way they were dressed, the things they carried, and most importantly they way
-they behaved. (One of the girls was over the top with her attire, way too overdressed,
-and not in a good way, but that’s beside the point. You know, different strokes for
-different folks.) Why did such a thought rise inside me, I think I believe it had
-something to do with the shawarma. See, the shawarma there was just meat all the way,
-except the two fries, like a cemetery for a husand and wife.  It wasn’t that good, and I
-wouldn’t wholeheartedly recommend it to my friends. Again, beside the point.
-
-It was the meat.
 
 There’s a lot of meat in a single shawarma skewer. That’s a lot of chickens killed. We
 all love chicken, and for many of us it happens to be their favourite kind of meat. Have
