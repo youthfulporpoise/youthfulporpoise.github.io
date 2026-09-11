@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{- $postType := .Type | lower | singularize -}}
-<article class="{{ partial "post-class.html" . }}" role="document"{{ with .Params.lang }} lang="{{ . }}"{{ end }}>
+<article class="{{ partial "post-class.html" . }}" role="document"{{ with .Params.lang }} lang="{{ site.Languages.Lang }}"{{ end }}>
     <header>
         <p class="byline">
             {{ if in (slice "drama" "narrative" "poem") $postType }}
