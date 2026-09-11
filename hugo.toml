@@ -1,5 +1,5 @@
 # You may need to change this line for your real project.
-baseURL = 'https://476ali.github.io/'
+baseURL = '/'
 
 # A "copyright"-line to be added to RSS/Atom files and the footer.
 copyright = '© 2026 H. Ali'
